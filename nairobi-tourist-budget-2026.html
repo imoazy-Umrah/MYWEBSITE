@@ -18,6 +18,31 @@
   <!-- External CSS & Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Override hero background specifically for Nairobi page */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1516026672322-bc52d61e55d5?w=1600&auto=format');
+      background-size: cover;
+      background-position: center 30%;
+    }
+    /* Ensure all text is white with high contrast */
+    .hero h1, .hero-sub, .hero-badge, .hero-btns .btn {
+      color: white;
+    }
+    /* Additional image styling */
+    .inline-img {
+      border-radius: 16px;
+      margin: 20px 0;
+      width: 100%;
+      box-shadow: var(--shadow);
+    }
+    .img-caption {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 6px;
+    }
+  </style>
 </head>
 <body>
 
@@ -38,7 +63,7 @@
   </div>
 </nav>
 
-<!-- Cinematic Hero Section -->
+<!-- Cinematic Hero Section with Skyline Background -->
 <section class="hero">
   <div class="hero-content">
     <div class="hero-badge">Nairobi Travel Guide 2026 – Updated Monthly</div>
@@ -102,6 +127,12 @@
   </div>
 </section>
 
+<!-- Image: Colorful Nairobi Matatu (SEO boost) -->
+<div class="container">
+  <img src="https://images.unsplash.com/photo-1554705946-06d4bc6d9efc?w=1200&auto=format" alt="Colorful matatu minibus in Nairobi, Kenya public transport" class="inline-img" loading="lazy">
+  <div class="img-caption">Nairobi's iconic matatu culture – colourful and vibrant. A must-see aspect of city life.</div>
+</div>
+
 <!-- Comprehensive Cost Tables (Accommodation, Food, Transport) -->
 <section class="section">
   <div class="container">
@@ -123,7 +154,7 @@
 
     <h3 class="mt-32 mb-16">🍽️ Halal-Friendly Food & Dining Costs</h3>
     <div class="table-wrap">
-      <td>
+      <table>
         <thead><tr><th>Type</th><th>Dish / Meal</th><th>KES</th><th>EUR</th></tr></thead>
         <tbody>
           <tr><td>Street food</td><td>Samosa, chapati, mahamri, roasted maize</td><td>50–200</td><td>€0.40–€1.50</td></tr>
@@ -157,6 +188,12 @@
   </div>
 </section>
 
+<!-- Image: Nairobi National Park (wildlife with skyline) -->
+<div class="container">
+  <img src="https://images.unsplash.com/photo-1547471080-7c3e6e3e7f5d?w=1200&auto=format" alt="Lion in Nairobi National Park with city skyline in background" class="inline-img" loading="lazy">
+  <div class="img-caption">Lion in Nairobi National Park – where the wild meets the city. A unique safari experience.</div>
+</div>
+
 <!-- Top Attractions – with costs and insider tips -->
 <section class="section-alt">
   <div class="container">
@@ -165,36 +202,42 @@
       <div class="card scroll-reveal">
         <div style="font-size:2rem;">🦒</div>
         <h3>Giraffe Centre</h3>
-        <p><strong>Cost:</strong> 1,500 KES (~€12). <strong>Best time:</strong> 9–10am (less crowded). Feed endangered Rothschild giraffes from a raised platform. Perfect for families and first‑time visitors.</p>
+        <p><strong>Cost:</strong> 1,500 KES (~€12). <strong>Best time:</strong> 9–10am (less crowded). Feed endangered Rothschild giraffes from a raised platform. Perfect for families.</p>
       </div>
       <div class="card scroll-reveal">
         <div style="font-size:2rem;">🐘</div>
-        <h3>David Sheldrick Elephant Orphanage</h3>
-        <p><strong>Cost:</strong> 2,000 KES (~€15). <strong>Open:</strong> 11am–12pm daily. Booking required. Watch baby elephants being fed. One of Nairobi's most heart‑warming experiences. <strong>Book weeks in advance.</strong></p>
+        <h3>Sheldrick Elephant Orphanage</h3>
+        <p><strong>Cost:</strong> 2,000 KES (~€15). <strong>Open:</strong> 11am–12pm daily. Booking required. Watch baby elephants being fed – book weeks in advance.</p>
       </div>
       <div class="card scroll-reveal">
         <div style="font-size:2rem;">🦁</div>
         <h3>Nairobi National Park</h3>
-        <p><strong>Cost:</strong> $43 park fee + vehicle ($30). Best early morning (6–9am) or late afternoon (4–6pm). See lions, rhinos, giraffes with city skyline backdrop. Half‑day safari is enough.</p>
+        <p><strong>Cost:</strong> $43 park fee + vehicle ($30). Best early morning (6–9am) or late afternoon. Half‑day safari is enough.</p>
       </div>
       <div class="card scroll-reveal">
         <div style="font-size:2rem;">🏛️</div>
         <h3>Karen Blixen Museum</h3>
-        <p><strong>Cost:</strong> 1,200 KES (~€9). Explore the colonial‑era home of the "Out of Africa" author. Beautiful gardens and views of Ngong Hills.</p>
+        <p><strong>Cost:</strong> 1,200 KES (~€9). Colonial‑era home of "Out of Africa" author.</p>
       </div>
       <div class="card scroll-reveal">
         <div style="font-size:2rem;">🌿</div>
         <h3>Karura Forest</h3>
-        <p><strong>Cost:</strong> 600 KES (~€5). 30km of walking/biking trails, waterfalls, caves. Safe and serene – a favourite among expats and locals.</p>
+        <p><strong>Cost:</strong> 600 KES (~€5). 30km of walking/biking trails, waterfalls, caves.</p>
       </div>
       <div class="card scroll-reveal">
         <div style="font-size:2rem;">🛍️</div>
         <h3>Maasai Market</h3>
-        <p><strong>Cost:</strong> Free entry. Bargaining essential. Best days: Tuesday (CBD) and Saturday (KICC roof). Beads, art, fabrics, souvenirs.</p>
+        <p><strong>Cost:</strong> Free entry. Bargaining essential. Best days: Tuesday (CBD) and Saturday (KICC roof).</p>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Image: Giraffe Centre feeding -->
+<div class="container">
+  <img src="https://images.unsplash.com/photo-1547471080-7c3e6e3e7f5d?w=1200&auto=format" alt="Feeding giraffe at Giraffe Centre Nairobi" class="inline-img" loading="lazy">
+  <div class="img-caption">Get up close with endangered Rothschild giraffes at the Giraffe Centre – a Nairobi must-do.</div>
+</div>
 
 <!-- Nairobi Safety & Halal Tips -->
 <section class="section">
