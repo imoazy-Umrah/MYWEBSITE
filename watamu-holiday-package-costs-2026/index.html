@@ -29,6 +29,38 @@
     .hero h1, .hero-sub, .hero-badge, .hero-btns .btn {
       color: white;
     }
+
+    /* ===== INLINE MOBILE FIXES (for subfolder pages) ===== */
+    @media (max-width: 768px) {
+      .hero {
+        min-height: 85svh !important;
+        background-position: top center !important;
+        background-size: cover !important;
+      }
+      .hero h1 {
+        font-size: 2rem !important;
+      }
+      .hero-sub {
+        font-size: 1rem !important;
+        padding: 0 0.5rem !important;
+      }
+      nav .nav-links a {
+        font-size: 0.9rem;
+      }
+    }
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch;
+    }
+    @media (max-width: 640px) {
+      .table-wrap {
+        margin-bottom: 1rem;
+      }
+      th, td {
+        white-space: nowrap;
+      }
+    }
   </style>
 </head>
 <body>
@@ -88,7 +120,7 @@
           </tbody>
         </table>
         <a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20Watamu%20package" target="_blank" class="btn btn-whatsapp" style="width:100%;justify-content:center;margin-bottom:10px;">Book on WhatsApp</a>
-        <a href="https://forms.zoho.com/infowatamuh1/form/LeadsHoliday" target="_blank" class="btn btn-gold" style="width:100%;justify-content:center;">Get a Custom Quote</a>
+        <a href="https://forms.zohopublic.com/infowatamuh1/form/LeadsHoliday/formperma/i-OPSgu3rEYBnnYMDYGLMvVK6vzfZYIsA2pEYKLbX1Q" target="_blank" class="btn btn-gold" style="width:100%;justify-content:center;">Get a Custom Quote</a>
         <p class="text-muted" style="text-align:center;font-size:0.75rem;margin-top:12px;">No hidden fees. Flights not included.</p>
       </div>
     </div>
@@ -207,7 +239,7 @@
     <div class="grid-2">
       <div class="info-box gold">
         <h3>💸 Hidden Costs Tourists Miss</h3>
-        <ul style="margin-top:10px;margin-left:20px;">
+        <ul>
           <li>Marine park fees – often excluded from boat quotes (add $20)</li>
           <li>Card surcharges – 3‑5% at most hotels; bring shillings</li>
           <li>ATM withdrawal fees – 500 KES + 5% forex</li>
@@ -216,7 +248,7 @@
       </div>
       <div class="info-box">
         <h3>📅 Cheapest Months to Visit Watamu</h3>
-        <ul style="margin-top:10px;margin-left:20px;">
+        <ul>
           <li><strong>May – June</strong> (long rains) – 40‑50% hotel discounts</li>
           <li><strong>November</strong> (short rains) – affordable and fewer tourists</li>
           <li>Avoid December‑January & Easter for best rates</li>
