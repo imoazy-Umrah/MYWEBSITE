@@ -649,3 +649,8 @@ footer {
   .cta-block { padding: 32px 20px; }
   .itinerary-day { flex-direction: column; gap: 8px; }
 }
+@media (max-width: 768px) {
+  body::before {
+    display: none;
+  }
+}
