@@ -47,6 +47,35 @@
     .prose ul li, .prose p {
       color: #1e2a3e;
     }
+
+    /* ===== INLINE MOBILE FIXES (for subfolder pages) ===== */
+    @media (max-width: 768px) {
+      .hero {
+        min-height: 85svh !important;
+        background-position: top center !important;
+        background-size: cover !important;
+      }
+      .hero h1 {
+        font-size: 2rem !important;
+      }
+      .hero-sub {
+        font-size: 1rem !important;
+        padding: 0 0.5rem !important;
+      }
+    }
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch;
+    }
+    @media (max-width: 640px) {
+      .table-wrap {
+        margin-bottom: 1rem;
+      }
+      th, td {
+        white-space: nowrap;
+      }
+    }
   </style>
 </head>
 <body>
@@ -151,11 +180,11 @@
     <h3 class="mt-24 mb-16">🏨 Accommodation Prices (per night, double room)</h3>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Type</th><th>Area(s)</th><th>KES</th><th>EUR</th><th>Examples</th></tr></thead>
+        <thead><tr><th>Type</th><th>Area(s)</th><th>KES</th><th>EUR</th><th>Examples</th></td></thead>
         <tbody>
           <tr><td class="fw-bold">Hostel / Budget</td><td>CBD / South B</td><td>1,500–3,500</td><td>€12–€27</td><td>Nairobi Backpackers, Manyatta Hostel</td>
           </tr>
-          <tr><td class="fw-bold">3‑Star Hotel</td><td>Westlands / Kilimani</td><td>7,000–12,000</td><td>€54–€92</td><td>PrideInn Westlands, Boma Inn</td>
+          </tr><td class="fw-bold">3‑Star Hotel</td><td>Westlands / Kilimani</td><td>7,000–12,000</td><td>€54–€92</td><td>PrideInn Westlands, Boma Inn</td>
           </tr>
           <tr><td class="fw-bold">4‑Star Boutique</td><td>Karen / Gigiri</td><td>15,000–25,000</td><td>€115–€192</td><td>Tribe Hotel, Hemak Hotel</td>
           </tr>
@@ -352,7 +381,7 @@
       <p>Let us arrange your Nairobi stopover, airport transfers, city tours, and onward journey to Watamu or safari. WhatsApp us for a free itinerary.</p>
       <div class="cta-btns">
         <a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20Nairobi%20tour" target="_blank" class="btn btn-whatsapp">Chat with Us on WhatsApp</a>
-        <a href="https://forms.zoho.com/infowatamuh1/form/LeadsHoliday" target="_blank" class="btn btn-gold">Get a Custom Quote (Zoho)</a>
+        <a href="https://forms.zohopublic.com/infowatamuh1/form/LeadsHoliday/formperma/i-OPSgu3rEYBnnYMDYGLMvVK6vzfZYIsA2pEYKLbX1Q" target="_blank" class="btn btn-gold">Get a Custom Quote (Zoho)</a>
       </div>
     </div>
   </div>
