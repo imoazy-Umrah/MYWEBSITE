@@ -20,7 +20,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css" />
   <style>
-    /* Hero background override – lion image with dark overlay */
+    /* Hero background with lion image */
     .hero {
       background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=1600&auto=format');
       background-size: cover;
@@ -28,6 +28,35 @@
     }
     .hero h1, .hero-sub, .hero-badge, .hero-btns .btn {
       color: white;
+    }
+
+    /* ===== INLINE MOBILE FIXES (for subfolder pages) ===== */
+    @media (max-width: 768px) {
+      .hero {
+        min-height: 85svh !important;
+        background-position: top center !important;
+        background-size: cover !important;
+      }
+      .hero h1 {
+        font-size: 2rem !important;
+      }
+      .hero-sub {
+        font-size: 1rem !important;
+        padding: 0 0.5rem !important;
+      }
+    }
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch;
+    }
+    @media (max-width: 640px) {
+      .table-wrap {
+        margin-bottom: 1rem;
+      }
+      th, td {
+        white-space: nowrap;
+      }
     }
   </style>
 </head>
@@ -50,7 +79,7 @@
   </div>
 </nav>
 
-<!-- Premium Hero Section with Lion Background -->
+<!-- Hero Section -->
 <section class="hero">
   <div class="hero-content">
     <div class="hero-badge">Kenya Safari Guide 2026</div>
@@ -58,7 +87,36 @@
     <p class="hero-sub">Expert comparison • Real prices • Beach + bush combos from Watamu</p>
     <div class="hero-btns">
       <a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20safari%20package" target="_blank" class="btn btn-whatsapp">Book a Safari on WhatsApp</a>
-      <a href="https://forms.zoho.com/infowatamuh1/form/LeadsHoliday" target="_blank" class="btn btn-outline">Get a Custom Quote</a>
+      <a href="https://forms.zohopublic.com/infowatamuh1/form/LeadsHoliday/formperma/i-OPSgu3rEYBnnYMDYGLMvVK6vzfZYIsA2pEYKLbX1Q" target="_blank" class="btn btn-outline">Get a Custom Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- NEW: History Section – Tsavo East's Wild Past -->
+<section class="section-alt">
+  <div class="container">
+    <div class="grid-2" style="gap:40px;">
+      <div>
+        <h2 class="section-title">The Untamed History of Tsavo East</h2>
+        <div class="prose">
+          <p>Tsavo East National Park is one of the oldest and largest parks in Kenya, established in April 1948 and covering a staggering 13,747 square kilometres of semi‑arid savannah (the former Taru Desert). Its history, however, began long before it became a protected reserve. Stone Age communities lived near the Galana River some 6,000 years ago, leaving behind tools and evidence of early human life.</p>
+          <p>The park’s most famous chapter unfolded in 1898, during the construction of the Uganda Railway. Two maneless male lions terrorised the railway workers building a bridge over the Tsavo River, killing an estimated 135 people. These “Man‑eaters of Tsavo” are now legendary, and the original lions are preserved at the Field Museum in Chicago.</p>
+          <p>Today, Tsavo East is the last stronghold of thousands of elephants, including the iconic “red elephants” whose dust‑bathing in the park’s volcanic soil gives their skin a distinctive reddish‑brown hue. The park’s combination of raw wilderness, abundant wildlife, and proximity to the coast make it an essential part of any Kenya beach & bush adventure.</p>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <img src="https://pxhere.com/images/3c/c5/69c824227ea528572fa5e0946ecb-1127572.jpg" alt="Elephant herd in Tsavo East National Park at sunset" style="width:100%; border-radius:12px; margin-bottom:16px;">
+          <h3>Tsavo East at a Glance</h3>
+          <ul style="margin-top:12px;list-style:none;">
+            <li>📍 <strong>Location:</strong> Coast Province, Kenya</li>
+            <li>🗺️ <strong>Size:</strong> 13,747 km²</li>
+            <li>📅 <strong>Established:</strong> April 1948</li>
+            <li>🐘 <strong>Famous for:</strong> “Red elephants”, maneless lions</li>
+            <li>🕰️ <strong>Historical event:</strong> “Man‑eaters of Tsavo” (1898)</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -140,34 +198,10 @@
   <div class="container">
     <h2 class="section-title mb-24">Sample Itinerary: 7 Nights Watamu Beach + 3 Nights Tsavo East Safari</h2>
     <div class="itinerary">
-      <div class="itinerary-day">
-        <div class="day-label">Days 1–7</div>
-        <div class="day-content">
-          <h4>Watamu Beach Stay</h4>
-          <p>Arrive at Mombasa or Malindi Airport. Private transfer to your 5‑star beachfront hotel. Enjoy marine park snorkeling, dolphin watching, sunset dhow cruises, and pure Indian Ocean relaxation.</p>
-        </div>
-      </div>
-      <div class="itinerary-day">
-        <div class="day-label">Day 8</div>
-        <div class="day-content">
-          <h4>Watamu → Tsavo East</h4>
-          <p>After breakfast, your private driver collects you. 2.5‑hour scenic drive to Tsavo East. Check into a lodge or tented camp inside the park. Afternoon game drive – spot red elephants, lions, and giraffes.</p>
-        </div>
-      </div>
-      <div class="itinerary-day">
-        <div class="day-label">Day 9</div>
-        <div class="day-content">
-          <h4>Full Day in Tsavo East</h4>
-          <p>Dawn game drive at sunrise (best for predators). Visit the Aruba Dam – a year‑round waterhole with hundreds of animals. Afternoon siesta followed by sundowner drinks in the bush.</p>
-        </div>
-      </div>
-      <div class="itinerary-day">
-        <div class="day-label">Day 10</div>
-        <div class="day-content">
-          <h4>Morning Drive + Return to Watamu</h4>
-          <p>One final game drive before breakfast. Return to Watamu by midday – last afternoon on the beach. Transfer to the airport the following day.</p>
-        </div>
-      </div>
+      <div class="itinerary-day"><div class="day-label">Days 1–7</div><div class="day-content"><h4>Watamu Beach Stay</h4><p>Arrive at Mombasa or Malindi Airport. Private transfer to your 5‑star beachfront hotel. Enjoy marine park snorkeling, dolphin watching, sunset dhow cruises, and pure Indian Ocean relaxation.</p></div></div>
+      <div class="itinerary-day"><div class="day-label">Day 8</div><div class="day-content"><h4>Watamu → Tsavo East</h4><p>After breakfast, your private driver collects you. 2.5‑hour scenic drive to Tsavo East. Check into a lodge or tented camp inside the park. Afternoon game drive – spot red elephants, lions, and giraffes.</p></div></div>
+      <div class="itinerary-day"><div class="day-label">Day 9</div><div class="day-content"><h4>Full Day in Tsavo East</h4><p>Dawn game drive at sunrise (best for predators). Visit the Aruba Dam – a year‑round waterhole with hundreds of animals. Afternoon siesta followed by sundowner drinks in the bush.</p></div></div>
+      <div class="itinerary-day"><div class="day-label">Day 10</div><div class="day-content"><h4>Morning Drive + Return to Watamu</h4><p>One final game drive before breakfast. Return to Watamu by midday – last afternoon on the beach. Transfer to the airport the following day.</p></div></div>
     </div>
     <div class="mt-32" style="text-align:center;">
       <a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20beach%20and%20safari%20package" target="_blank" class="btn btn-whatsapp">Book This Itinerary on WhatsApp</a>
@@ -232,7 +266,7 @@
       <p>We curate seamless itineraries combining Watamu's pristine coastline with a luxury safari in Tsavo East. Contact us for a custom quote.</p>
       <div class="cta-btns">
         <a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20safari%20package" target="_blank" class="btn btn-whatsapp">Get a Safari Quote on WhatsApp</a>
-        <a href="https://forms.zoho.com/infowatamuh1/form/LeadsHoliday" target="_blank" class="btn btn-gold">Get a Custom Quote (Zoho)</a>
+        <a href="https://forms.zohopublic.com/infowatamuh1/form/LeadsHoliday/formperma/i-OPSgu3rEYBnnYMDYGLMvVK6vzfZYIsA2pEYKLbX1Q" target="_blank" class="btn btn-gold">Get a Custom Quote (Zoho)</a>
       </div>
     </div>
   </div>
@@ -260,7 +294,7 @@
     <div class="footer-grid">
       <div><div class="footer-brand"><span>Watamu</span> Holidays Kenya</div><p class="footer-desc">Your trusted local expert for luxury Kenyan beach and safari experiences. Operated by Bwanaadi Tours (20+ years).</p></div>
       <div class="footer-col"><h4>Destinations</h4><ul><li><a href="/watamu-holiday-package-costs-2026/">Watamu Beach</a></li><li><a href="/mombasa-travel-costs-2026/">Mombasa</a></li><li><a href="/diani-beach-holiday-costs-2026/">Diani Beach</a></li><li><a href="/masai-mara-safari-cost-2026/">Safari Guide</a></li><li><a href="/nairobi-tourist-budget-2026/">Nairobi</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul><li>Watamu, Kilifi County, Kenya</li><li>+254 706 688 115</li><li>info@watamuholidays.co.ke</li><li><a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20safari%20package" target="_blank">WhatsApp Us</a></li><li><a href="https://forms.zoho.com/infowatamuh1/form/LeadsHoliday" target="_blank">Get a Quote (Zoho)</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li>Watamu, Kilifi County, Kenya</li><li>+254 706 688 115</li><li>info@watamuholidays.co.ke</li><li><a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20safari%20package" target="_blank">WhatsApp Us</a></li><li><a href="https://forms.zohopublic.com/infowatamuh1/form/LeadsHoliday/formperma/i-OPSgu3rEYBnnYMDYGLMvVK6vzfZYIsA2pEYKLbX1Q" target="_blank">Get a Quote (Zoho)</a></li></ul></div>
     </div>
   </div>
   <div class="footer-bottom"><div class="container">&copy; 2026 Watamu Holidays Kenya – Bwanaadi Tours. All rights reserved. | <a href="/kenya-travel-costs-2026/">Kenya Travel Cost Hub</a></div></div>
@@ -270,7 +304,7 @@
 
 <script src="/script.js" defer></script>
 
-<!-- JSON‑LD Structured Data -->
+<!-- Structured Data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
