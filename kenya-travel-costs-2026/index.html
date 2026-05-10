@@ -20,15 +20,43 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css" />
   <style>
-    /* Hero background override – Kenyan flag with dark overlay */
+    /* Hero background – Kenyan flag with dark overlay */
     .hero {
       background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.75)), url('https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Kenya.svg');
       background-size: cover;
       background-position: center;
     }
-    /* Ensure all text is white and readable */
     .hero h1, .hero-sub, .hero-badge, .hero-btns .btn {
       color: white;
+    }
+
+    /* ===== INLINE MOBILE FIXES (for subfolder pages) ===== */
+    @media (max-width: 768px) {
+      .hero {
+        min-height: 85svh !important;
+        background-position: top center !important;
+        background-size: cover !important;
+      }
+      .hero h1 {
+        font-size: 2rem !important;
+      }
+      .hero-sub {
+        font-size: 1rem !important;
+        padding: 0 0.5rem !important;
+      }
+    }
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch;
+    }
+    @media (max-width: 640px) {
+      .table-wrap {
+        margin-bottom: 1rem;
+      }
+      th, td {
+        white-space: nowrap;
+      }
     }
   </style>
 </head>
@@ -59,7 +87,36 @@
     <p class="hero-sub">Real prices for safaris, beach holidays, city stopovers – from backpacker to luxury</p>
     <div class="hero-btns">
       <a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20holiday" target="_blank" class="btn btn-whatsapp">Book on WhatsApp</a>
-      <a href="https://forms.zoho.com/infowatamuh1/form/LeadsHoliday" target="_blank" class="btn btn-outline">Get a Custom Quote</a>
+      <a href="https://forms.zohopublic.com/infowatamuh1/form/LeadsHoliday/formperma/i-OPSgu3rEYBnnYMDYGLMvVK6vzfZYIsA2pEYKLbX1Q" target="_blank" class="btn btn-outline">Get a Custom Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- New section: Kenya's Tourism Heritage – A Brief History -->
+<section class="section-alt">
+  <div class="container">
+    <div class="grid-2" style="gap:40px;">
+      <div>
+        <h2 class="section-title">A Legacy of Adventure – Kenya’s Tourism Story</h2>
+        <div class="prose">
+          <p>Kenya has been a magnet for explorers and travellers for over a century. In the early 1900s, European aristocrats arrived by steamship and the newly built Uganda Railway to hunt big game, establishing the first safari camps. By the 1930s, writers such as Ernest Hemingway and Karen Blixen (author of <em>Out of Africa</em>) immortalised Kenya’s wild landscapes, attracting a steady flow of international visitors.</p>
+          <p>After independence in 1963, Kenya became a pioneer in sustainable wildlife tourism. Nairobi National Park – the only national park on the edge of a capital city – was already protected. In 1977, Kenya banned all hunting, shifting its focus entirely to photographic safaris and eco‑tourism. Today, Kenya welcomes over two million tourists annually, making it the leading safari destination in East Africa.</p>
+          <p>From the palm‑fringed shores of Watamu and Diani to the endless plains of the Masai Mara, Kenya’s combination of pristine beaches, diverse wildlife, and rich cultural heritage remains unmatched. Our family business, Bwanaadi Tours, has been part of this story for 20+ years – sharing Kenya’s beauty with visitors from every corner of the globe.</p>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1168&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Safari jeep at sunset in the African savannah" style="width:100%; border-radius:12px; margin-bottom:16px;">
+          <h3>Kenya at a Glance</h3>
+          <ul style="margin-top:12px;list-style:none;">
+            <li>🇰🇪 <strong>First safari ban:</strong> 1977 (hunting replaced by photography)</li>
+            <li>📸 <strong>Visitors per year:</strong> ~2 million</li>
+            <li>🏆 <strong>World‑famous:</strong> Masai Mara Great Migration</li>
+            <li>🏖️ <strong>Beach length:</strong> Over 500 km of Indian Ocean coastline</li>
+            <li>🦁 <strong>Number of parks & reserves:</strong> 60+</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -109,11 +166,11 @@
           <tr><th>Expense (mid‑range, per day)</th><th>Watamu (Beach)</th><th>Tsavo East (Safari)</th><th>Nairobi (City)</th></tr>
         </thead>
         <tbody>
-          <tr><td class="fw-bold">Accommodation (double room)</td><td>€80–€150</td><td>€150–€300</td><td>€70–€120</td></tr>
-          <tr><td class="fw-bold">Local meal (restaurant)</td><td>€8–€15</td><td>included in safari</td><td>€10–€20</td></tr>
-          <tr><td class="fw-bold">Beer or soft drink (cafe)</td><td>€2–€4</td><td>€3–€5</td><td>€2.50–€4.50</td></tr>
-          <tr><td class="fw-bold">Daily transport</td><td>€1.50–€3 (tuk‑tuk)</td><td>included</td><td>€5–€10 (Uber)</td></tr>
-          <tr><td class="fw-bold">Park/attraction fee</td><td>€15 (marine park)</td><td>€50–€100</td><td>€12 (Giraffe Centre)</td></tr>
+          <tr><td class="fw-bold">Accommodation (double room)</td><td class="price-cell">€80–€150</td><td class="price-cell">€150–€300</td><td class="price-cell">€70–€120</td></tr>
+          <tr><td class="fw-bold">Local meal (restaurant)</td><td class="price-cell">€8–€15</td><td class="price-cell">included in safari</td><td class="price-cell">€10–€20</td></tr>
+          <tr><td class="fw-bold">Beer or soft drink (cafe)</td><td class="price-cell">€2–€4</td><td class="price-cell">€3–€5</td><td class="price-cell">€2.50–€4.50</td></tr>
+          <tr><td class="fw-bold">Daily transport</td><td class="price-cell">€1.50–€3 (tuk‑tuk)</td><td class="price-cell">included</td><td class="price-cell">€5–€10 (Uber)</td></tr>
+          <tr><td class="fw-bold">Park/attraction fee</td><td class="price-cell">€15 (marine park)</td><td class="price-cell">€50–€100</td><td class="price-cell">€12 (Giraffe Centre)</td></tr>
         </tbody>
       </table>
     </div>
@@ -175,10 +232,10 @@
           <tr><th>Destination</th><th>Peak Season (Dec–Mar / Jul–Oct)</th><th>Low Season (Apr–May / Nov)</th><th>Savings</th></tr>
         </thead>
         <tbody>
-          <tr><td class="fw-bold">Watamu Beach Hotel (mid‑range)</td><td>€150–€220/night</td><td>€90–€130/night</td><td>30‑40% off</td></tr>
-          <tr><td class="fw-bold">Tsavo East Safari Lodge</td><td>€280–€450/night</td><td>€180–€280/night</td><td>35‑45% off</td></tr>
-          <tr><td class="fw-bold">Masai Mara Tented Camp</td><td>€400–€1,200/night</td><td>€250–€500/night</td><td>40‑50% off</td></tr>
-          <tr><td class="fw-bold">Nairobi 4‑star Hotel</td><td>€100–€170/night</td><td>€70–€110/night</td><td>25‑35% off</td></tr>
+          <tr><td class="fw-bold">Watamu Beach Hotel (mid‑range)</td><td class="price-cell">€150–€220/night</td><td class="price-cell">€90–€130/night</td><td class="price-cell">30‑40% off</td></tr>
+          <tr><td class="fw-bold">Tsavo East Safari Lodge</td><td class="price-cell">€280–€450/night</td><td class="price-cell">€180–€280/night</td><td class="price-cell">35‑45% off</td></tr>
+          <tr><td class="fw-bold">Masai Mara Tented Camp</td><td class="price-cell">€400–€1,200/night</td><td class="price-cell">€250–€500/night</td><td class="price-cell">40‑50% off</td></tr>
+          <tr><td class="fw-bold">Nairobi 4‑star Hotel</td><td class="price-cell">€100–€170/night</td><td class="price-cell">€70–€110/night</td><td class="price-cell">25‑35% off</td></tr>
         </tbody>
       </table>
     </div>
@@ -263,7 +320,7 @@
       <p>Get a custom itinerary from our local experts – no obligation, no hidden fees.</p>
       <div class="cta-btns">
         <a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20Kenya%20holiday" target="_blank" class="btn btn-whatsapp">Chat on WhatsApp</a>
-        <a href="https://forms.zoho.com/infowatamuh1/form/LeadsHoliday" target="_blank" class="btn btn-gold">Get a Custom Quote (Zoho)</a>
+        <a href="https://forms.zohopublic.com/infowatamuh1/form/LeadsHoliday/formperma/i-OPSgu3rEYBnnYMDYGLMvVK6vzfZYIsA2pEYKLbX1Q" target="_blank" class="btn btn-gold">Get a Custom Quote (Zoho)</a>
       </div>
     </div>
   </div>
@@ -291,7 +348,7 @@
     <div class="footer-grid">
       <div><div class="footer-brand"><span>Watamu</span> Holidays Kenya</div><p class="footer-desc">Your trusted local expert for luxury Kenyan beach and safari experiences. Operated by Bwanaadi Tours (20+ years).</p></div>
       <div class="footer-col"><h4>Destinations</h4><ul><li><a href="/watamu-holiday-package-costs-2026/">Watamu Beach</a></li><li><a href="/mombasa-travel-costs-2026/">Mombasa</a></li><li><a href="/diani-beach-holiday-costs-2026/">Diani Beach</a></li><li><a href="/masai-mara-safari-cost-2026/">Safari Guide</a></li><li><a href="/nairobi-tourist-budget-2026/">Nairobi</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul><li>Watamu, Kilifi County, Kenya</li><li>+254 706 688 115</li><li>info@watamuholidays.co.ke</li><li><a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20holiday" target="_blank">WhatsApp Us</a></li><li><a href="https://forms.zoho.com/infowatamuh1/form/LeadsHoliday" target="_blank">Get a Quote (Zoho)</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li>Watamu, Kilifi County, Kenya</li><li>+254 706 688 115</li><li>info@watamuholidays.co.ke</li><li><a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20holiday" target="_blank">WhatsApp Us</a></li><li><a href="https://forms.zohopublic.com/infowatamuh1/form/LeadsHoliday/formperma/i-OPSgu3rEYBnnYMDYGLMvVK6vzfZYIsA2pEYKLbX1Q" target="_blank">Get a Quote (Zoho)</a></li></ul></div>
     </div>
   </div>
   <div class="footer-bottom"><div class="container">&copy; 2026 Watamu Holidays Kenya – Bwanaadi Tours. All rights reserved. | <a href="/kenya-travel-costs-2026/">Kenya Travel Cost Hub</a></div></div>
@@ -301,7 +358,7 @@
 
 <script src="/script.js" defer></script>
 
-<!-- Structured Data -->
+<!-- Structured Data (TravelAgency, FAQPage, BreadcrumbList) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
