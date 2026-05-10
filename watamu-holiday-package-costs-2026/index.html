@@ -52,6 +52,7 @@
       width: 100%;
       overflow-x: auto !important;
       -webkit-overflow-scrolling: touch;
+      overscroll-behavior-x: contain;
     }
     @media (max-width: 640px) {
       .table-wrap {
@@ -108,7 +109,7 @@
   </div>
 </section>
 
-<!-- Quick Answer + Pricing Table -->
+<!-- Quick Answer + Pricing Table (FIXED STICKY & SCROLL) -->
 <section class="section">
   <div class="container">
     <div class="grid-2" style="gap:48px; align-items:start;">
@@ -122,23 +123,34 @@
           <strong>🧠 Local insider:</strong> Tuk‑tuk rides inside Watamu town should cost <strong>200–300 KES (€1.50–€2.30)</strong> – never pay more. After 10pm near the beach, negotiate down to 400 KES.
         </div>
       </div>
-      <div class="card" style="position:sticky;top:88px;">
-        <h3 style="font-size:1.3rem;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border);">Package Costs (per person)</h3>
-        <!-- Added table-wrap around the table -->
-        <div class="table-wrap">
-          <table style="width:100%;min-width:0;margin-bottom:0;">
-            <tbody>
-              <tr><td style="padding:10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">Daily Rate</td><td style="padding:10px 0;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">€279 / day</td></tr>
-              <tr><td style="padding:10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">5 Nights (minimum)</td><td style="padding:10px 0;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">From €1,395</td></tr>
-              <tr><td style="padding:10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">7 Nights (recommended)</td><td style="padding:10px 0;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">From €1,953</td></tr>
-              <tr><td style="padding:10px 0;color:var(--text-muted);">10 Nights (beach + safari)</td><td style="padding:10px 0;font-weight:700;text-align:right;">From €2,790</td></tr>
-            </tbody>
-          </table>
+
+      <!-- STICKY WRAPPER (outside the card) – allows horizontal scroll without blocking -->
+      <div style="position:sticky; top:88px;">
+        <div class="card" style="overflow:visible;">
+          <h3 style="font-size:1.3rem;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border);">Package Costs (per person)</h3>
+          <div class="table-wrap">
+            <table style="width:100%;min-width:0;margin-bottom:0;">
+              <tbody>
+                <tr><td style="padding:10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">Daily Rate</td>
+                  <td style="padding:10px 0;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">€279 / day</td>
+                </tr>
+                <tr><td style="padding:10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">5 Nights (minimum)</td>
+                  <td style="padding:10px 0;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">From €1,395</td>
+                </tr>
+                <tr><td style="padding:10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">7 Nights (recommended)</td>
+                  <td style="padding:10px 0;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">From €1,953</td>
+                </tr>
+                <tr><td style="padding:10px 0;color:var(--text-muted);">10 Nights (beach + safari)</td>
+                  <td style="padding:10px 0;font-weight:700;text-align:right;">From €2,790</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="swipe-hint">← Swipe to see all prices →</div>
+          <a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20Watamu%20package" target="_blank" class="btn btn-whatsapp" style="width:100%;justify-content:center;margin-bottom:10px;">Book on WhatsApp</a>
+          <a href="https://forms.zohopublic.com/infowatamuh1/form/LeadsHoliday/formperma/i-OPSgu3rEYBnnYMDYGLMvVK6vzfZYIsA2pEYKLbX1Q" target="_blank" class="btn btn-gold" style="width:100%;justify-content:center;">Get a Custom Quote</a>
+          <p class="text-muted" style="text-align:center;font-size:0.75rem;margin-top:12px;">No hidden fees. Flights not included.</p>
         </div>
-        <div class="swipe-hint">← Swipe to see all prices →</div>
-        <a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20Watamu%20package" target="_blank" class="btn btn-whatsapp" style="width:100%;justify-content:center;margin-bottom:10px;">Book on WhatsApp</a>
-        <a href="https://forms.zohopublic.com/infowatamuh1/form/LeadsHoliday/formperma/i-OPSgu3rEYBnnYMDYGLMvVK6vzfZYIsA2pEYKLbX1Q" target="_blank" class="btn btn-gold" style="width:100%;justify-content:center;">Get a Custom Quote</a>
-        <p class="text-muted" style="text-align:center;font-size:0.75rem;margin-top:12px;">No hidden fees. Flights not included.</p>
       </div>
     </div>
   </div>
@@ -190,7 +202,7 @@
       <div>
         <h3 class="section-title" style="font-size:1.3rem;">Food & Restaurant Prices</h3>
         <div class="table-wrap">
-          <table>
+          </table>
             <thead><tr><th>Item</th><th>KES</th><th>EUR</th></tr></thead>
             <tbody>
               <tr><td class="fw-bold">Street food (samosa, chapati)</td><td>150–400</td><td>€1–3</td></tr>
