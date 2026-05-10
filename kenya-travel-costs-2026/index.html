@@ -30,7 +30,7 @@
       color: white;
     }
 
-    /* ===== INLINE MOBILE FIXES (for subfolder pages) ===== */
+    /* ===== INLINE MOBILE FIXES ===== */
     @media (max-width: 768px) {
       .hero {
         min-height: 85svh !important;
@@ -58,6 +58,19 @@
         white-space: nowrap;
       }
     }
+    /* Swipe hint for mobile tables */
+    .swipe-hint {
+      text-align: center;
+      font-size: 0.7rem;
+      color: #5a6a7a;
+      margin-top: 8px;
+      font-style: italic;
+    }
+    @media (min-width: 640px) {
+      .swipe-hint {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
@@ -79,7 +92,7 @@
   </div>
 </nav>
 
-<!-- Hero Section with Kenya flag background -->
+<!-- Hero Section -->
 <section class="hero">
   <div class="hero-content">
     <div class="hero-badge">Updated Monthly – May 2026</div>
@@ -92,7 +105,7 @@
   </div>
 </section>
 
-<!-- New section: Kenya's Tourism Heritage – A Brief History -->
+<!-- History section -->
 <section class="section-alt">
   <div class="container">
     <div class="grid-2" style="gap:40px;">
@@ -106,7 +119,7 @@
       </div>
       <div>
         <div class="card">
-          <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1168&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Safari jeep at sunset in the African savannah" style="width:100%; border-radius:12px; margin-bottom:16px;">
+          <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1168&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Safari jeep at sunset" style="width:100%; border-radius:12px; margin-bottom:16px;">
           <h3>Kenya at a Glance</h3>
           <ul style="margin-top:12px;list-style:none;">
             <li>🇰🇪 <strong>First safari ban:</strong> 1977 (hunting replaced by photography)</li>
@@ -142,14 +155,18 @@
       </div>
       <div class="card">
         <h3 style="font-size:1.3rem;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border);">Daily Budget per Person</h3>
-        <table style="width:100%;min-width:0;">
-          <thead><tr><th>Travel Style</th><th>KES</th><th>EUR</th><th>Ideal For</th></tr></thead>
-          <tbody>
-            <tr><td class="fw-bold">🎒 Backpacker</td><td>6,500–10,500</td><td>€50–€80</td><td>Solo travellers, hostels, street food</td></tr>
-            <tr class="highlight-row"><td class="fw-bold">🏨 Mid‑Range</td><td>15,500–28,500</td><td>€120–€220</td><td>Couples, families, 3‑star hotels, local tours</td></tr>
-            <tr><td class="fw-bold">✨ Luxury (our package)</td><td>36,000+</td><td>€279+</td><td>5‑star hotels, private transfers, all‑inclusive</td></tr>
-          </tbody>
-        </table>
+        <!-- added .table-wrap and swipe hint -->
+        <div class="table-wrap">
+          <table style="width:100%;min-width:0;">
+            <thead><tr><th>Travel Style</th><th>KES</th><th>EUR</th><th>Ideal For</th></tr></thead>
+            <tbody>
+              <tr><td class="fw-bold">🎒 Backpacker</td><td>6,500–10,500</td><td>€50–€80</td><td>Solo travellers, hostels, street food</td></tr>
+              <tr class="highlight-row"><td class="fw-bold">🏨 Mid‑Range</td><td>15,500–28,500</td><td>€120–€220</td><td>Couples, families, 3‑star hotels, local tours</td></tr>
+              <tr><td class="fw-bold">✨ Luxury (our package)</td><td>36,000+</td><td>€279+</td><td>5‑star hotels, private transfers, all‑inclusive</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="swipe-hint">← Swipe to see all budgets →</div>
         <p class="text-muted" style="font-size:0.75rem;text-align:center;margin-top:16px;">*Rates exclude international flights. Updated May 2026.</p>
       </div>
     </div>
@@ -174,6 +191,7 @@
         </tbody>
       </table>
     </div>
+    <div class="swipe-hint">← Swipe to compare costs →</div>
     <p class="text-muted mt-8"><strong>💡 Best value combo:</strong> 5 nights Watamu (mid‑range beach) + 2 nights Tsavo East (safari) – total approx. <strong>€2,200 per person</strong> including most meals and activities.</p>
   </div>
 </section>
@@ -232,13 +250,14 @@
           <tr><th>Destination</th><th>Peak Season (Dec–Mar / Jul–Oct)</th><th>Low Season (Apr–May / Nov)</th><th>Savings</th></tr>
         </thead>
         <tbody>
-          <tr><td class="fw-bold">Watamu Beach Hotel (mid‑range)</td><td class="price-cell">€150–€220/night</td><td class="price-cell">€90–€130/night</td><td class="price-cell">30‑40% off</td></tr>
-          <tr><td class="fw-bold">Tsavo East Safari Lodge</td><td class="price-cell">€280–€450/night</td><td class="price-cell">€180–€280/night</td><td class="price-cell">35‑45% off</td></tr>
-          <tr><td class="fw-bold">Masai Mara Tented Camp</td><td class="price-cell">€400–€1,200/night</td><td class="price-cell">€250–€500/night</td><td class="price-cell">40‑50% off</td></tr>
-          <tr><td class="fw-bold">Nairobi 4‑star Hotel</td><td class="price-cell">€100–€170/night</td><td class="price-cell">€70–€110/night</td><td class="price-cell">25‑35% off</td></tr>
+          <tr><td class="fw-bold">Watamu Beach Hotel (mid‑range)</td><td class="price-cell">€150–€220/night</td><td class="price-cell">€90–€130/night</td><td>30‑40% off</td></tr>
+          <tr><td class="fw-bold">Tsavo East Safari Lodge</td><td class="price-cell">€280–€450/night</td><td class="price-cell">€180–€280/night</td><td>35‑45% off</td></tr>
+          <tr><td class="fw-bold">Masai Mara Tented Camp</td><td class="price-cell">€400–€1,200/night</td><td class="price-cell">€250–€500/night</td><td>40‑50% off</td></tr>
+          <td><td class="fw-bold">Nairobi 4‑star Hotel</td><td class="price-cell">€100–€170/night</td><td class="price-cell">€70–€110/night</td><td>25‑35% off</td></tr>
         </tbody>
       </table>
     </div>
+    <div class="swipe-hint">← Swipe to see seasonal prices →</div>
     <div class="info-box gold mt-16">
       <strong>💰 Pro tip:</strong> The long rains (April–May) offer the lowest prices on the coast, but many safari lodges close. For a balance of good weather and lower costs, travel in <strong>June or November</strong> – shoulder seasons with moderate crowds and up to 30% savings.
     </div>
@@ -251,23 +270,11 @@
     <div class="grid-2">
       <div class="info-box">
         <h3>💸 Hidden Costs Tourists Often Miss</h3>
-        <ul style="margin-top:12px;margin-left:20px;">
-          <li>Marine park fees – often excluded from boat trip quotes (add €15–€20)</li>
-          <li>Card surcharges – 3‑5% at many hotels; carry shillings or cash (Euros/USD)</li>
-          <li>ATM withdrawal fees – 500 KES + 5% forex</li>
-          <li>“Beach boy” markups – bargain to 40‑50% of the first price</li>
-          <li>Park entry fees for non‑residents – Tsavo: €52/day, Masai Mara: €80/day</li>
-        </ul>
+        <ul style="margin-top:12px;margin-left:20px;"><li>Marine park fees – often excluded from boat trip quotes (add €15–€20)</li><li>Card surcharges – 3‑5% at many hotels; carry shillings or cash (Euros/USD)</li><li>ATM withdrawal fees – 500 KES + 5% forex</li><li>“Beach boy” markups – bargain to 40‑50% of the first price</li><li>Park entry fees for non‑residents – Tsavo: €52/day, Masai Mara: €80/day</li></ul>
       </div>
       <div class="info-box">
         <h3>💰 How to Save on Kenya Travel</h3>
-        <ul style="margin-top:12px;margin-left:20px;">
-          <li>Use local SIM (Safaricom) – 1GB for €1.50 (200 KES)</li>
-          <li>Eat at local “hoteli” – chapati + beans = €2–€3</li>
-          <li>Book safaris directly with local operators (not international agents) – save 20‑30%</li>
-          <li>Take the SGR train from Nairobi to Mombasa (economy €8, first class €23) rather than flying</li>
-          <li>Tuk‑tuk instead of taxi – 80% cheaper for short trips</li>
-        </ul>
+        <ul style="margin-top:12px;margin-left:20px;"><li>Use local SIM (Safaricom) – 1GB for €1.50 (200 KES)</li><li>Eat at local “hoteli” – chapati + beans = €2–€3</li><li>Book safaris directly with local operators (not international agents) – save 20‑30%</li><li>Take the SGR train from Nairobi to Mombasa (economy €8, first class €23) rather than flying</li><li>Tuk‑tuk instead of taxi – 80% cheaper for short trips</li></ul>
       </div>
     </div>
   </div>
@@ -358,7 +365,7 @@
 
 <script src="/script.js" defer></script>
 
-<!-- Structured Data (TravelAgency, FAQPage, BreadcrumbList) -->
+<!-- Structured Data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
