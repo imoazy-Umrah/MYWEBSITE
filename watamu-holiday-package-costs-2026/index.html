@@ -30,7 +30,7 @@
       color: white;
     }
 
-    /* ===== INLINE MOBILE FIXES (for subfolder pages) ===== */
+    /* ===== INLINE MOBILE FIXES ===== */
     @media (max-width: 768px) {
       .hero {
         min-height: 85svh !important;
@@ -61,6 +61,19 @@
         white-space: nowrap;
       }
     }
+    /* Swipe hint for mobile tables */
+    .swipe-hint {
+      text-align: center;
+      font-size: 0.7rem;
+      color: #5a6a7a;
+      margin-top: 8px;
+      font-style: italic;
+    }
+    @media (min-width: 640px) {
+      .swipe-hint {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
@@ -82,7 +95,7 @@
   </div>
 </nav>
 
-<!-- Hero Section with beautiful, reliable tropical beach background -->
+<!-- Hero Section -->
 <section class="hero">
   <div class="hero-content">
     <div class="hero-badge">Watamu Holiday Packages 2026</div>
@@ -111,14 +124,18 @@
       </div>
       <div class="card" style="position:sticky;top:88px;">
         <h3 style="font-size:1.3rem;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border);">Package Costs (per person)</h3>
-        <table style="width:100%;min-width:0;margin-bottom:20px;">
-          <tbody>
-            <tr><td style="padding:10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">Daily Rate</td><td style="padding:10px 0;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">€279 / day</td></tr>
-            <tr><td style="padding:10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">5 Nights (minimum)</td><td style="padding:10px 0;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">From €1,395</td></tr>
-            <tr><td style="padding:10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">7 Nights (recommended)</td><td style="padding:10px 0;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">From €1,953</td></tr>
-            <tr><td style="padding:10px 0;color:var(--text-muted);">10 Nights (beach + safari)</td><td style="padding:10px 0;font-weight:700;text-align:right;">From €2,790</td></tr>
-          </tbody>
-        </table>
+        <!-- Added table-wrap around the table -->
+        <div class="table-wrap">
+          <table style="width:100%;min-width:0;margin-bottom:0;">
+            <tbody>
+              <tr><td style="padding:10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">Daily Rate</td><td style="padding:10px 0;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">€279 / day</td></tr>
+              <tr><td style="padding:10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">5 Nights (minimum)</td><td style="padding:10px 0;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">From €1,395</td></tr>
+              <tr><td style="padding:10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">7 Nights (recommended)</td><td style="padding:10px 0;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">From €1,953</td></tr>
+              <tr><td style="padding:10px 0;color:var(--text-muted);">10 Nights (beach + safari)</td><td style="padding:10px 0;font-weight:700;text-align:right;">From €2,790</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="swipe-hint">← Swipe to see all prices →</div>
         <a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20Watamu%20package" target="_blank" class="btn btn-whatsapp" style="width:100%;justify-content:center;margin-bottom:10px;">Book on WhatsApp</a>
         <a href="https://forms.zohopublic.com/infowatamuh1/form/LeadsHoliday/formperma/i-OPSgu3rEYBnnYMDYGLMvVK6vzfZYIsA2pEYKLbX1Q" target="_blank" class="btn btn-gold" style="width:100%;justify-content:center;">Get a Custom Quote</a>
         <p class="text-muted" style="text-align:center;font-size:0.75rem;margin-top:12px;">No hidden fees. Flights not included.</p>
@@ -127,7 +144,7 @@
   </div>
 </section>
 
-<!-- Comparison: Watamu vs Diani vs Mombasa (halal-friendly wording) -->
+<!-- Comparison: Watamu vs Diani vs Mombasa (already has .table-wrap) -->
 <section class="section-alt">
   <div class="container">
     <h2 class="section-title">Watamu vs Diani vs Mombasa – Which Kenyan Coast Fits Your Budget?</h2>
@@ -147,7 +164,7 @@
   </div>
 </section>
 
-<!-- Accommodation Breakdown -->
+<!-- Accommodation Breakdown (already has .table-wrap) -->
 <section class="section">
   <div class="container">
     <h2 class="section-title">Watamu Accommodation Costs 2026 – Hotels, Villas & Lodges</h2>
@@ -166,7 +183,7 @@
   </div>
 </section>
 
-<!-- Food & Transport (halal-friendly drinks) -->
+<!-- Food & Transport (both tables already have .table-wrap) -->
 <section class="section-alt">
   <div class="container">
     <div class="grid-2">
@@ -209,26 +226,10 @@
   <div class="container">
     <h2 class="section-title">Watamu Activity Prices – Marine Park, Snorkeling, Dhow & Safaris</h2>
     <div class="grid-2">
-      <div class="card scroll-reveal">
-        <div style="font-size:2rem;">🐠</div>
-        <h3>Watamu Marine Park Snorkeling</h3>
-        <p>$25–$60 per person (boat, guide, gear). Park entry $20 extra unless included in package. Best months: June–October.</p>
-      </div>
-      <div class="card scroll-reveal">
-        <div style="font-size:2rem;">🐬</div>
-        <h3>Dolphin Watching Tour</h3>
-        <p>$30–$80 – morning trips from Watamu beach. Dolphin sighting rate >90% in dry season.</p>
-      </div>
-      <div class="card scroll-reveal">
-        <div style="font-size:2rem;">🌅</div>
-        <h3>Mida Creek Sunset Dhow</h3>
-        <p>$20–$50 includes mangrove tour, bird watching, and Swahili seafood meal.</p>
-      </div>
-      <div class="card scroll-reveal">
-        <div style="font-size:2rem;">🦁</div>
-        <h3>Tsavo East Day Safari</h3>
-        <p>$150–$250 per person – full day including park fees, lunch, and game drives. Overnight extensions from $250.</p>
-      </div>
+      <div class="card scroll-reveal"><div style="font-size:2rem;">🐠</div><h3>Watamu Marine Park Snorkeling</h3><p>$25–$60 per person (boat, guide, gear). Park entry $20 extra unless included in package. Best months: June–October.</p></div>
+      <div class="card scroll-reveal"><div style="font-size:2rem;">🐬</div><h3>Dolphin Watching Tour</h3><p>$30–$80 – morning trips from Watamu beach. Dolphin sighting rate >90% in dry season.</p></div>
+      <div class="card scroll-reveal"><div style="font-size:2rem;">🌅</div><h3>Mida Creek Sunset Dhow</h3><p>$20–$50 includes mangrove tour, bird watching, and Swahili seafood meal.</p></div>
+      <div class="card scroll-reveal"><div style="font-size:2rem;">🦁</div><h3>Tsavo East Day Safari</h3><p>$150–$250 per person – full day including park fees, lunch, and game drives. Overnight extensions from $250.</p></div>
     </div>
   </div>
 </section>
@@ -237,28 +238,13 @@
 <section class="section-alt">
   <div class="container">
     <div class="grid-2">
-      <div class="info-box gold">
-        <h3>💸 Hidden Costs Tourists Miss</h3>
-        <ul>
-          <li>Marine park fees – often excluded from boat quotes (add $20)</li>
-          <li>Card surcharges – 3‑5% at most hotels; bring shillings</li>
-          <li>ATM withdrawal fees – 500 KES + 5% forex</li>
-          <li>"Beach boy" markups – bargain to 40‑50% of first price</li>
-        </ul>
-      </div>
-      <div class="info-box">
-        <h3>📅 Cheapest Months to Visit Watamu</h3>
-        <ul>
-          <li><strong>May – June</strong> (long rains) – 40‑50% hotel discounts</li>
-          <li><strong>November</strong> (short rains) – affordable and fewer tourists</li>
-          <li>Avoid December‑January & Easter for best rates</li>
-        </ul>
-      </div>
+      <div class="info-box gold"><h3>💸 Hidden Costs Tourists Miss</h3><ul><li>Marine park fees – often excluded from boat quotes (add $20)</li><li>Card surcharges – 3‑5% at most hotels; bring shillings</li><li>ATM withdrawal fees – 500 KES + 5% forex</li><li>"Beach boy" markups – bargain to 40‑50% of first price</li></ul></div>
+      <div class="info-box"><h3>📅 Cheapest Months to Visit Watamu</h3><ul><li><strong>May – June</strong> (long rains) – 40‑50% hotel discounts</li><li><strong>November</strong> (short rains) – affordable and fewer tourists</li><li>Avoid December‑January & Easter for best rates</li></ul></div>
     </div>
   </div>
 </section>
 
-<!-- FAQ Section (with schema) -->
+<!-- FAQ Section -->
 <section class="section">
   <div class="container" style="max-width:760px;">
     <h2 class="section-title mb-32">Frequently Asked Questions — Watamu Holiday Costs</h2>
