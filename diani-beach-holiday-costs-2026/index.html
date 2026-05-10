@@ -77,8 +77,35 @@
       color: #f4b942;
       text-decoration: underline;
     }
+
+    /* ===== INLINE MOBILE FIXES ===== */
     @media (max-width: 768px) {
-      .hero h1 { font-size: 2rem; }
+      .hero {
+        min-height: 85svh !important;
+        background-position: top center !important;
+        background-size: cover !important;
+        padding: 4rem 1rem !important;
+      }
+      .hero h1 {
+        font-size: 2rem !important;
+      }
+      .hero p {
+        font-size: 1rem !important;
+        padding: 0 0.5rem !important;
+      }
+    }
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch;
+    }
+    @media (max-width: 640px) {
+      .table-wrap {
+        margin-bottom: 1rem;
+      }
+      th, td {
+        white-space: nowrap;
+      }
     }
   </style>
 </head>
@@ -109,7 +136,7 @@
     <p>Budgeting for a premium stay on one of Africa's most celebrated beaches — plus a comparison with Watamu for travellers choosing between the two.</p>
     <div class="hero-btns">
       <a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20Diani%20holiday" target="_blank" class="btn btn-whatsapp">Book on WhatsApp</a>
-      <a href="https://forms.zoho.com/infowatamuh1/form/LeadsHoliday" target="_blank" class="btn btn-outline">Get a Custom Quote</a>
+      <a href="https://forms.zohopublic.com/infowatamuh1/form/LeadsHoliday/formperma/i-OPSgu3rEYBnnYMDYGLMvVK6vzfZYIsA2pEYKLbX1Q" target="_blank" class="btn btn-outline">Get a Custom Quote</a>
     </div>
   </div>
 </section>
@@ -122,11 +149,16 @@
       <table>
         <thead><tr><th>Expense Category</th><th>Est. Daily Cost (Premium)</th><th>Details</th></tr></thead>
         <tbody>
-          <tr><td class="fw-bold">Boutique Oceanfront Resorts</td><td class="price-cell">€250 – €600</td><td>Exclusive oceanfront properties, full board. High season rates apply Dec–Feb.</td></tr>
-          <tr><td class="fw-bold">High-End Dining</td><td class="price-cell">€100 – €200</td><td>Cave restaurants, premium seafood, beachfront cafes. Book Ali Barbour's in advance.</td></tr>
-          <tr><td class="fw-bold">Transfers from Ukunda Airstrip</td><td class="price-cell">€30 – €80</td><td>Airport to resort. Fly directly into UKA to avoid the Mombasa ferry crossing.</td></tr>
-          <tr><td class="fw-bold">Water Sports & Adventures</td><td class="price-cell">€150 – €300</td><td>Kite surfing, scuba diving, deep sea fishing, windsurfing, dhow trips.</td></tr>
-          <tr><td class="fw-bold">Day Excursions</td><td class="price-cell">€80 – €180</td><td>Shimba Hills National Reserve, Funzi Island boat trips, colobus monkey conservation.</td></tr>
+          <tr><td class="fw-bold">Boutique Oceanfront Resorts</td><td class="price-cell">€250 – €600</td><td>Exclusive oceanfront properties, full board. High season rates apply Dec–Feb.</td>
+          </tr>
+          <tr><td class="fw-bold">High-End Dining</td><td class="price-cell">€100 – €200</td><td>Cave restaurants, premium seafood, beachfront cafes. Book Ali Barbour's in advance.</td>
+          </tr>
+          <tr><td class="fw-bold">Transfers from Ukunda Airstrip</td><td class="price-cell">€30 – €80</td><td>Airport to resort. Fly directly into UKA to avoid the Mombasa ferry crossing.</td>
+          </tr>
+          <tr><td class="fw-bold">Water Sports & Adventures</td><td class="price-cell">€150 – €300</td><td>Kite surfing, scuba diving, deep sea fishing, windsurfing, dhow trips.</td>
+          </tr>
+          <tr><td class="fw-bold">Day Excursions</td><td class="price-cell">€80 – €180</td><td>Shimba Hills National Reserve, Funzi Island boat trips, colobus monkey conservation.</td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -195,7 +227,7 @@
       <p>We arrange flights, transfers, and stays across the entire Kenyan coast — Watamu, Diani, Mombasa, and beyond.</p>
       <div class="cta-btns">
         <a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20Diani%20holiday" target="_blank" class="btn btn-whatsapp">Chat on WhatsApp</a>
-        <a href="https://forms.zoho.com/infowatamuh1/form/LeadsHoliday" target="_blank" class="btn btn-gold">Get a Custom Quote</a>
+        <a href="https://forms.zohopublic.com/infowatamuh1/form/LeadsHoliday/formperma/i-OPSgu3rEYBnnYMDYGLMvVK6vzfZYIsA2pEYKLbX1Q" target="_blank" class="btn btn-gold">Get a Custom Quote</a>
       </div>
     </div>
   </div>
@@ -271,7 +303,7 @@
           <li>+254 706 688 115</li>
           <li>info@watamuholidays.co.ke</li>
           <li><a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20holiday" target="_blank">WhatsApp Us</a></li>
-          <li><a href="https://forms.zoho.com/infowatamuh1/form/LeadsHoliday" target="_blank">Get a Quote (Zoho)</a></li>
+          <li><a href="https://forms.zohopublic.com/infowatamuh1/form/LeadsHoliday/formperma/i-OPSgu3rEYBnnYMDYGLMvVK6vzfZYIsA2pEYKLbX1Q" target="_blank">Get a Quote (Zoho)</a></li>
         </ul>
       </div>
     </div>
