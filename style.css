@@ -58,7 +58,7 @@ a:hover { color: var(--gold); }
   z-index: 2;
 }
 
-/* ===== NAV (unchanged structure, only slight tweaks) ===== */
+/* ===== NAV ===== */
 nav {
   position: sticky;
   top: 0;
@@ -150,7 +150,7 @@ nav {
   .nav-links a { padding: 10px 12px; width: 100%; font-size: 1rem; }
 }
 
-/* ===== BUTTONS (unchanged) ===== */
+/* ===== BUTTONS ===== */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -177,10 +177,10 @@ nav {
 .btn-gold { background: var(--gold); color: var(--white); }
 .btn-gold:hover { background: var(--gold-light); color: var(--text); transform: translateY(-2px); }
 
-/* ===== PREMIUM HERO (cinematic + animations) ===== */
+/* ===== HERO (base – each page provides its own background image) ===== */
 .hero {
   position: relative;
-  background: url('https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1600&auto=format') center/cover no-repeat;
+  /* background removed from base – set per page inline */
   min-height: 88vh;
   display: flex;
   align-items: center;
@@ -272,7 +272,7 @@ nav {
   }
 }
 
-/* ===== PAGE HERO (inner pages) – keep your original style, but add slight animation if desired ===== */
+/* ===== PAGE HERO (inner pages) ===== */
 .page-hero {
   background: linear-gradient(135deg, #0a3d62 0%, #1a6b9a 60%, #2196a8 100%);
   padding: 80px 20px 60px;
@@ -306,7 +306,7 @@ nav {
   margin: 0 auto;
 }
 
-/* ===== SECTIONS (unchanged) ===== */
+/* ===== SECTIONS ===== */
 section { padding: 72px 0; }
 .section-alt { background: var(--off-white); }
 
@@ -642,52 +642,73 @@ footer {
 .prose ul li { color: var(--text-muted); margin-bottom: 6px; }
 .prose strong { color: var(--text); }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 600px) {
-  section { padding: 48px 0; }
-  .hero { min-height: 70vh; padding: 80px 20px 48px; }
-  .cta-block { padding: 32px 20px; }
-  .itinerary-day { flex-direction: column; gap: 8px; }
-}
-@media (max-width: 768px) {
-  body::before {
-    display: none;
-  }
-}
-/* ===== MOBILE FIXES ===== */
+/* ===== MOBILE RESPONSIVE OVERRIDES (preserve desktop, improve mobile) ===== */
 
-/* 1. Fix hero image for mobile devices */
+/* Hero section on tablets and phones – prevent excessive height */
 @media (max-width: 768px) {
   .hero {
-    min-height: 85svh !important;
-    background-position: top center !important;
-    background-size: cover !important;
+    min-height: 65vh !important;
+    padding: 60px 20px 40px !important;
   }
-  
   .hero h1 {
     font-size: 2rem !important;
   }
-  
   .hero-sub {
     font-size: 1rem !important;
     padding: 0 0.5rem !important;
   }
+  .hero-btns {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .hero-btns .btn {
+    width: auto;
+    min-width: 200px;
+  }
+  /* Remove the dark fixed overlay on mobile for better readability */
+  body::before {
+    display: none;
+  }
 }
 
-/* 2. Ensure tables scroll horizontally on mobile */
+/* Ensure all cards and grids are full width and don't overflow */
+@media (max-width: 760px) {
+  .grid-2, .grid-3, .grid-4 {
+    display: flex;
+    flex-direction: column;
+  }
+  .card {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* Tables: force horizontal scroll, prevent layout breaking */
 .table-wrap {
   width: 100%;
-  overflow-x: auto !important;
+  overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
-
-/* Optional: Improve table readability on mobile */
 @media (max-width: 640px) {
   .table-wrap {
     margin-bottom: 1rem;
   }
-  
   th, td {
     white-space: nowrap;
+  }
+}
+
+/* Reduce padding on sections for small screens */
+@media (max-width: 600px) {
+  section {
+    padding: 48px 0;
+  }
+  .cta-block {
+    padding: 32px 20px;
+  }
+  .itinerary-day {
+    flex-direction: column;
+    gap: 8px;
   }
 }
