@@ -30,7 +30,7 @@
       color: white;
     }
 
-    /* ===== INLINE MOBILE FIXES (for subfolder pages) ===== */
+    /* ===== INLINE MOBILE FIXES ===== */
     @media (max-width: 768px) {
       .hero {
         min-height: 85svh !important;
@@ -56,6 +56,19 @@
       }
       th, td {
         white-space: nowrap;
+      }
+    }
+    /* Swipe hint for mobile tables */
+    .swipe-hint {
+      text-align: center;
+      font-size: 0.7rem;
+      color: #5a6a7a;
+      margin-top: 8px;
+      font-style: italic;
+    }
+    @media (min-width: 640px) {
+      .swipe-hint {
+        display: none;
       }
     }
   </style>
@@ -92,7 +105,7 @@
   </div>
 </section>
 
-<!-- NEW: History Section – Tsavo East's Wild Past -->
+<!-- History Section -->
 <section class="section-alt">
   <div class="container">
     <div class="grid-2" style="gap:40px;">
@@ -160,9 +173,10 @@
             <td>Flight from Mombasa or Nairobi</td>
             <td class="price-cell">€550–€1,200+</td>
             <td>World's best Big Five. Great Migration July–Oct. Premium luxury tented camps.</td>
-          </tr>
+          对
         </tbody>
       </table>
+      <div class="swipe-hint">← Swipe to see all safari options →</div>
     </div>
 
     <!-- Why Tsavo East is slightly better (detailed) -->
@@ -226,6 +240,7 @@
           <tr><td class="fw-bold">Amboseli</td><td class="fw-bold">Mid‑range lodge</td><td class="price-cell">€300–€450</td><td>Full board, game drives, park fees, Mt Kilimanjaro views</td></tr>
         </tbody>
       </table>
+      <div class="swipe-hint">← Swipe to see all safari costs →</div>
     </div>
     <p class="text-muted mt-8">All rates are estimates for 2026. Contact us for exact dates and group size.</p>
   </div>
@@ -244,7 +259,7 @@
   </div>
 </section>
 
-<!-- FAQ Section (with schema) -->
+<!-- FAQ Section -->
 <section class="section">
   <div class="container" style="max-width:760px;">
     <h2 class="section-title mb-32">Frequently Asked Questions – Kenya Safaris</h2>
