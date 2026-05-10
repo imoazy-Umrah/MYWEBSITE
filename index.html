@@ -57,6 +57,19 @@
       color: #1e6f3f;
       font-weight: bold;
     }
+    /* Swipe hint for mobile tables */
+    .swipe-hint {
+      text-align: center;
+      font-size: 0.7rem;
+      color: #5a6a7a;
+      margin-top: 8px;
+      font-style: italic;
+    }
+    @media (min-width: 640px) {
+      .swipe-hint {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
@@ -181,11 +194,16 @@
       <caption>Daily Budget Comparison (per person)</caption>
       <thead><tr><th>Travel Style</th><th>KES</th><th>USD</th><th>GBP</th><th>EUR</th></tr></thead>
       <tbody>
-        <tr><td class="fw-bold">Backpacker</td><td>6,500–10,500</td><td>50–80</td><td>40–65</td><td>46–75</td></tr>
-        <tr class="highlight-row"><td class="fw-bold">Mid-Range (recommended)</td><td>15,500–28,500</td><td>120–220</td><td>95–170</td><td>110–200</td></tr>
-        <tr><td class="fw-bold">Luxury (our package)</td><td>36,000+</td><td>280+</td><td>220+</td><td>279+</td></tr>
+        <tr><td class="fw-bold">Backpacker</td><td>6,500–10,500</td><td>50–80</td><td>40–65</td><td>46–75</td>
+        </tr>
+        <tr class="highlight-row"><td class="fw-bold">Mid-Range (recommended)</td><td>15,500–28,500</td><td>120–220</td><td>95–170</td><td>110–200</td>
+        </tr>
+        <tr><td class="fw-bold">Luxury (our package)</td><td>36,000+</td><td>280+</td><td>220+</td><td>279+</td>
+        </tr>
       </tbody>
     </table>
+    <!-- Subtle swipe hint for mobile users -->
+    <div class="swipe-hint">← Swipe to see all prices →</div>
   </div>
 
   <!-- ETA Quick Summary Box -->
