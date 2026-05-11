@@ -71,6 +71,21 @@
         display: none;
       }
     }
+
+    /* ===== FIX FOR THE SEASONAL PRICE TABLE (DESKTOP) ===== */
+    .section-alt .table-wrap table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    @media (min-width: 769px) {
+      .section-alt .table-wrap table {
+        table-layout: fixed;
+      }
+      .section-alt .table-wrap th:nth-child(1) { width: 28%; }  /* Destination */
+      .section-alt .table-wrap th:nth-child(2) { width: 28%; }  /* Peak Season */
+      .section-alt .table-wrap th:nth-child(3) { width: 28%; }  /* Low Season */
+      .section-alt .table-wrap th:nth-child(4) { width: 16%; }  /* Savings */
+    }
   </style>
 </head>
 <body>
@@ -155,7 +170,6 @@
       </div>
       <div class="card">
         <h3 style="font-size:1.3rem;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border);">Daily Budget per Person</h3>
-        <!-- added .table-wrap and swipe hint -->
         <div class="table-wrap">
           <table style="width:100%;min-width:0;">
             <thead><tr><th>Travel Style</th><th>KES</th><th>EUR</th><th>Ideal For</th></tr></thead>
@@ -201,46 +215,17 @@
   <div class="container">
     <h2 class="section-title">Detailed Kenya Destination Costs (2026)</h2>
     <div class="grid-3">
-      <div class="card scroll-reveal">
-        <div style="font-size:2rem;">🏖️</div>
-        <h3><a href="/watamu-holiday-package-costs-2026/">Watamu Beach Costs</a></h3>
-        <p>Daily budget: €50–€80 (backpacker) / €120–€220 (mid‑range) / €279+ (luxury). Includes marine park, snorkeling, dhow trips.</p>
-        <a href="/watamu-holiday-package-costs-2026/" class="card-arrow">Full Watamu cost breakdown →</a>
-      </div>
-      <div class="card scroll-reveal">
-        <div style="font-size:2rem;">⛵</div>
-        <h3><a href="/mombasa-travel-costs-2026/">Mombasa Travel Budget</a></h3>
-        <p>Daily budget: €35–€55 (backpacker) / €80–€150 (mid‑range). Fort Jesus, Old Town, ferry costs, and local cuisine prices.</p>
-        <a href="/mombasa-travel-costs-2026/" class="card-arrow">Mombasa cost guide →</a>
-      </div>
-      <div class="card scroll-reveal">
-        <div style="font-size:2rem;">🏄</div>
-        <h3><a href="/diani-beach-holiday-costs-2026/">Diani Beach Costs</a></h3>
-        <p>Daily budget: €120–€350 (mid‑range to luxury). Kite surfing, cave restaurants, and Shimba Hills day trips.</p>
-        <a href="/diani-beach-holiday-costs-2026/" class="card-arrow">Diani price guide →</a>
-      </div>
-      <div class="card scroll-reveal">
-        <div style="font-size:2rem;">🦁</div>
-        <h3><a href="/masai-mara-safari-cost-2026/">Tsavo East & Masai Mara Costs</a></h3>
-        <p>Safari daily rates: €150–€280 (budget camping) / €280–€500 (mid‑range lodge) / €500–€1,200+ (luxury). Park fees, vehicle hire, guides.</p>
-        <a href="/masai-mara-safari-cost-2026/" class="card-arrow">Full safari cost breakdown →</a>
-      </div>
-      <div class="card scroll-reveal">
-        <div style="font-size:2rem;">🏙️</div>
-        <h3><a href="/nairobi-tourist-budget-2026/">Nairobi Tourist Budget</a></h3>
-        <p>Daily budget: €40–€60 (backpacker) / €80–€140 (mid‑range). Uber fares, Giraffe Centre, Elephant Orphanage, hotel recommendations.</p>
-        <a href="/nairobi-tourist-budget-2026/" class="card-arrow">Nairobi cost guide →</a>
-      </div>
-      <div class="card scroll-reveal">
-        <div style="font-size:2rem;">📅</div>
-        <h3>Best Time to Visit Kenya</h3>
-        <p>Beach: Dec–Mar & Jun–Oct. Safari: Jul–Oct (Great Migration), year‑round Tsavo. Cheapest: Apr–May (long rains). See seasonal price differences below.</p>
-      </div>
+      <div class="card scroll-reveal"><div style="font-size:2rem;">🏖️</div><h3><a href="/watamu-holiday-package-costs-2026/">Watamu Beach Costs</a></h3><p>Daily budget: €50–€80 (backpacker) / €120–€220 (mid‑range) / €279+ (luxury). Includes marine park, snorkeling, dhow trips.</p><a href="/watamu-holiday-package-costs-2026/" class="card-arrow">Full Watamu cost breakdown →</a></div>
+      <div class="card scroll-reveal"><div style="font-size:2rem;">⛵</div><h3><a href="/mombasa-travel-costs-2026/">Mombasa Travel Budget</a></h3><p>Daily budget: €35–€55 (backpacker) / €80–€150 (mid‑range). Fort Jesus, Old Town, ferry costs, and local cuisine prices.</p><a href="/mombasa-travel-costs-2026/" class="card-arrow">Mombasa cost guide →</a></div>
+      <div class="card scroll-reveal"><div style="font-size:2rem;">🏄</div><h3><a href="/diani-beach-holiday-costs-2026/">Diani Beach Costs</a></h3><p>Daily budget: €120–€350 (mid‑range to luxury). Kite surfing, cave restaurants, and Shimba Hills day trips.</p><a href="/diani-beach-holiday-costs-2026/" class="card-arrow">Diani price guide →</a></div>
+      <div class="card scroll-reveal"><div style="font-size:2rem;">🦁</div><h3><a href="/masai-mara-safari-cost-2026/">Tsavo East & Masai Mara Costs</a></h3><p>Safari daily rates: €150–€280 (budget camping) / €280–€500 (mid‑range lodge) / €500–€1,200+ (luxury). Park fees, vehicle hire, guides.</p><a href="/masai-mara-safari-cost-2026/" class="card-arrow">Full safari cost breakdown →</a></div>
+      <div class="card scroll-reveal"><div style="font-size:2rem;">🏙️</div><h3><a href="/nairobi-tourist-budget-2026/">Nairobi Tourist Budget</a></h3><p>Daily budget: €40–€60 (backpacker) / €80–€140 (mid‑range). Uber fares, Giraffe Centre, Elephant Orphanage, hotel recommendations.</p><a href="/nairobi-tourist-budget-2026/" class="card-arrow">Nairobi cost guide →</a></div>
+      <div class="card scroll-reveal"><div style="font-size:2rem;">📅</div><h3>Best Time to Visit Kenya</h3><p>Beach: Dec–Mar & Jun–Oct. Safari: Jul–Oct (Great Migration), year‑round Tsavo. Cheapest: Apr–May (long rains). See seasonal price differences below.</p></div>
     </div>
   </div>
 </section>
 
-<!-- Seasonal Price Table -->
+<!-- Seasonal Price Table (FIXED) -->
 <section class="section-alt">
   <div class="container">
     <h2 class="section-title">Cheapest vs Most Expensive Months – Kenya Travel</h2>
@@ -250,10 +235,10 @@
           <tr><th>Destination</th><th>Peak Season (Dec–Mar / Jul–Oct)</th><th>Low Season (Apr–May / Nov)</th><th>Savings</th></tr>
         </thead>
         <tbody>
-          <tr><td class="fw-bold">Watamu Beach Hotel (mid‑range)</td><td class="price-cell">€150–€220/night</td><td class="price-cell">€90–€130/night</td><td>30‑40% off</td></tr>
-          <tr><td class="fw-bold">Tsavo East Safari Lodge</td><td class="price-cell">€280–€450/night</td><td class="price-cell">€180–€280/night</td><td>35‑45% off</td></tr>
-          <tr><td class="fw-bold">Masai Mara Tented Camp</td><td class="price-cell">€400–€1,200/night</td><td class="price-cell">€250–€500/night</td><td>40‑50% off</td></tr>
-          <td><td class="fw-bold">Nairobi 4‑star Hotel</td><td class="price-cell">€100–€170/night</td><td class="price-cell">€70–€110/night</td><td>25‑35% off</td></tr>
+          <tr><td class="fw-bold">Watamu Beach Hotel (mid‑range)</td><td class="price-cell">€150–€220/night</td><td class="price-cell">€90–€130/night</td><td class="price-cell">30‑40% off</td></tr>
+          <tr class="highlight-row"><td class="fw-bold">Tsavo East Safari Lodge</td><td class="price-cell">€280–€450/night</td><td class="price-cell">€180–€280/night</td><td class="price-cell">35‑45% off</td></tr>
+          <tr><td class="fw-bold">Masai Mara Tented Camp</td><td class="price-cell">€400–€1,200/night</td><td class="price-cell">€250–€500/night</td><td class="price-cell">40‑50% off</td></tr>
+          <tr><td class="fw-bold">Nairobi 4‑star Hotel</td><td class="price-cell">€100–€170/night</td><td class="price-cell">€70–€110/night</td><td class="price-cell">25‑35% off</td></tr>
         </tbody>
       </table>
     </div>
@@ -268,14 +253,8 @@
 <section class="section">
   <div class="container">
     <div class="grid-2">
-      <div class="info-box">
-        <h3>💸 Hidden Costs Tourists Often Miss</h3>
-        <ul style="margin-top:12px;margin-left:20px;"><li>Marine park fees – often excluded from boat trip quotes (add €15–€20)</li><li>Card surcharges – 3‑5% at many hotels; carry shillings or cash (Euros/USD)</li><li>ATM withdrawal fees – 500 KES + 5% forex</li><li>“Beach boy” markups – bargain to 40‑50% of the first price</li><li>Park entry fees for non‑residents – Tsavo: €52/day, Masai Mara: €80/day</li></ul>
-      </div>
-      <div class="info-box">
-        <h3>💰 How to Save on Kenya Travel</h3>
-        <ul style="margin-top:12px;margin-left:20px;"><li>Use local SIM (Safaricom) – 1GB for €1.50 (200 KES)</li><li>Eat at local “hoteli” – chapati + beans = €2–€3</li><li>Book safaris directly with local operators (not international agents) – save 20‑30%</li><li>Take the SGR train from Nairobi to Mombasa (economy €8, first class €23) rather than flying</li><li>Tuk‑tuk instead of taxi – 80% cheaper for short trips</li></ul>
-      </div>
+      <div class="info-box"><h3>💸 Hidden Costs Tourists Often Miss</h3><ul><li>Marine park fees – often excluded from boat trip quotes (add €15–€20)</li><li>Card surcharges – 3‑5% at many hotels; carry shillings or cash (Euros/USD)</li><li>ATM withdrawal fees – 500 KES + 5% forex</li><li>“Beach boy” markups – bargain to 40‑50% of the first price</li><li>Park entry fees for non‑residents – Tsavo: €52/day, Masai Mara: €80/day</li></ul></div>
+      <div class="info-box"><h3>💰 How to Save on Kenya Travel</h3><ul><li>Use local SIM (Safaricom) – 1GB for €1.50 (200 KES)</li><li>Eat at local “hoteli” – chapati + beans = €2–€3</li><li>Book safaris directly with local operators (not international agents) – save 20‑30%</li><li>Take the SGR train from Nairobi to Mombasa (economy €8, first class €23) rather than flying</li><li>Tuk‑tuk instead of taxi – 80% cheaper for short trips</li></ul></div>
     </div>
   </div>
 </section>
@@ -298,13 +277,13 @@
   <div class="container" style="max-width:760px;">
     <h2 class="section-title mb-32">Frequently Asked Questions – Kenya Travel Costs</h2>
     <div class="faq">
-      <div class="faq-item"><div class="faq-q">Is Kenya expensive for tourists? <i class="chevron">▾</i></div><div class="faq-a">No – mid‑range travellers spend €120–€220 per day, which is cheaper than Zanzibar or South Africa. Backpackers can manage on €50/day. Our luxury packages start at €279/day all‑inclusive.</div></div>
+      <div class="faq-item"><div class="faq-q">Is Kenya expensive for tourists? <i class="chevron">▾</i></div><div class="faq-a">No – mid‑range travellers spend €120–€220 per day, cheaper than Zanzibar or South Africa. Backpackers manage on €50/day. Our luxury packages start at €279/day all‑inclusive.</div></div>
       <div class="faq-item"><div class="faq-q">How much does a Kenya safari cost per person? <i class="chevron">▾</i></div><div class="faq-a">Tsavo East: €150–€280 (budget camping) / €280–€500 (mid‑range lodge) / €500+ (luxury). Masai Mara is 30‑50% higher, especially during the Great Migration (July–October).</div></div>
-      <div class="faq-item"><div class="faq-q">How much is a meal in Kenya? <i class="chevron">▾</i></div><div class="faq-a">Local meal (kibanda): €2–€4. Casual restaurant: €8–€15. Fine dining or seafood platter: €20–€40. Coffee at a café: €2–€3.</div></div>
-      <div class="faq-item"><div class="faq-q">Is Kenya cheaper than Zanzibar? <i class="chevron">▾</i></div><div class="faq-a">Yes – by about 30%. Accommodation and food in Watamu, Mombasa, and Tsavo are noticeably less expensive. Zanzibar’s tourist prices have risen sharply since 2024.</div></div>
-      <div class="faq-item"><div class="faq-q">What is the cheapest month to visit Kenya? <i class="chevron">▾</i></div><div class="faq-a">May and June (long rains). Hotels and lodges offer 40‑50% discounts. Weather still warm with brief afternoon showers. June is better for safaris (dry season starts).</div></div>
-      <div class="faq-item"><div class="faq-q">How much spending money for 1 week in Kenya? <i class="chevron">▾</i></div><div class="faq-a">For mid‑range independent travel (excluding accommodation), budget €300–€600 per person. Our all‑inclusive package covers almost everything – you only need extra for souvenirs and tips.</div></div>
-      <div class="faq-item"><div class="faq-q">Do I need a visa for Kenya? <i class="chevron">▾</i></div><div class="faq-a">Most nationalities require an electronic Travel Authorisation (eTA). Apply online at etakenya.go.ke. Fee is $32.50. Process takes 2‑5 days.</div></div>
+      <div class="faq-item"><div class="faq-q">How much is a meal in Kenya? <i class="chevron">▾</i></div><div class="faq-a">Local meal (kibanda): €2–€4. Casual restaurant: €8–€15. Fine dining: €20–€40.</div></div>
+      <div class="faq-item"><div class="faq-q">Is Kenya cheaper than Zanzibar? <i class="chevron">▾</i></div><div class="faq-a">Yes – about 30% cheaper.</div></div>
+      <div class="faq-item"><div class="faq-q">What is the cheapest month to visit Kenya? <i class="chevron">▾</i></div><div class="faq-a">May and June (long rains) – 40‑50% discounts. June is better for safaris.</div></div>
+      <div class="faq-item"><div class="faq-q">How much spending money for 1 week in Kenya? <i class="chevron">▾</i></div><div class="faq-a">Mid‑range independent (excl. accommodation): €300–€600. Our packages are all‑inclusive.</div></div>
+      <div class="faq-item"><div class="faq-q">Do I need a visa for Kenya? <i class="chevron">▾</i></div><div class="faq-a">Most nationalities need an eTA. Apply at etakenya.go.ke. Fee $32.50.</div></div>
     </div>
   </div>
 </section>
@@ -366,8 +345,7 @@
 <script src="/script.js" defer></script>
 
 <!-- Structured Data -->
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "TravelAgency",
   "name": "Watamu Holidays Kenya",
@@ -377,10 +355,7 @@
   "telephone": "+254706688115",
   "email": "info@watamuholidays.co.ke",
   "priceRange": "€50–€600 per day",
-  "sameAs": [
-    "https://wa.me/254706688115",
-    "https://www.tiktok.com/@watamu.holidays"
-  ]
+  "sameAs": ["https://wa.me/254706688115", "https://www.tiktok.com/@watamu.holidays"]
 }
 </script>
 <script type="application/ld+json">
