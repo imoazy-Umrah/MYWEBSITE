@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://watamuholidays.co.ke/sitemap.xml
