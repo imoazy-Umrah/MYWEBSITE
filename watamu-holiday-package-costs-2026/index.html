@@ -16,20 +16,37 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://watamuholidays.co.ke/watamu-holiday-package-costs-2026/" />
   <meta name="twitter:card" content="summary_large_image" />
+  <!-- External CSS & Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css" />
   <style>
+    /* Tropical beach hero from Pexels – reliable, no people, dark overlay for contrast */
     .hero {
       background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.8)), url('https://images.pexels.com/photos/22481003/pexels-photo-22481003.jpeg?auto=compress&cs=tinysrgb&w=1600');
       background-size: cover;
       background-position: center;
     }
-    .hero h1, .hero-sub, .hero-badge, .hero-btns .btn { color: white; }
+    .hero h1, .hero-sub, .hero-badge, .hero-btns .btn {
+      color: white;
+    }
+
+    /* ===== INLINE MOBILE FIXES ===== */
     @media (max-width: 768px) {
-      .hero { min-height: 85svh !important; background-position: top center !important; background-size: cover !important; }
-      .hero h1 { font-size: 2rem !important; }
-      .hero-sub { font-size: 1rem !important; padding: 0 0.5rem !important; }
-      nav .nav-links a { font-size: 0.9rem; }
+      .hero {
+        min-height: 85svh !important;
+        background-position: top center !important;
+        background-size: cover !important;
+      }
+      .hero h1 {
+        font-size: 2rem !important;
+      }
+      .hero-sub {
+        font-size: 1rem !important;
+        padding: 0 0.5rem !important;
+      }
+      nav .nav-links a {
+        font-size: 0.9rem;
+      }
     }
     .table-wrap {
       width: 100%;
@@ -38,9 +55,14 @@
       overscroll-behavior-x: contain;
     }
     @media (max-width: 640px) {
-      .table-wrap { margin-bottom: 1rem; }
-      th, td { white-space: nowrap; }
+      .table-wrap {
+        margin-bottom: 1rem;
+      }
+      th, td {
+        white-space: nowrap;
+      }
     }
+    /* Swipe hint for mobile tables */
     .swipe-hint {
       text-align: center;
       font-size: 0.7rem;
@@ -48,58 +70,11 @@
       margin-top: 8px;
       font-style: italic;
     }
-    @media (min-width: 640px) { .swipe-hint { display: none; } }
-    .experiences-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin: 30px 0;
+    @media (min-width: 640px) {
+      .swipe-hint {
+        display: none;
+      }
     }
-    .exp-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 20px;
-      text-align: center;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .exp-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-    .exp-card .exp-icon { font-size: 2.2rem; margin-bottom: 12px; }
-    .exp-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; color: var(--blue-dark); }
-    .exp-card p { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px; }
-    .exp-card .exp-link { font-size: 0.85rem; font-weight: 600; color: var(--gold); text-decoration: none; }
-    .exp-card .exp-link:hover { text-decoration: underline; }
-    .testimonial {
-      background: #eef2e9;
-      border-left: 6px solid #f4b942;
-      padding: 20px 25px;
-      border-radius: 20px;
-      margin: 30px 0;
-      font-style: italic;
-    }
-    .testimonial .author {
-      margin-top: 12px;
-      font-style: normal;
-      font-weight: 600;
-      color: var(--blue-dark);
-    }
-    .uvp-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 15px;
-      margin: 30px 0;
-      background: var(--off-white);
-      padding: 25px;
-      border-radius: 24px;
-    }
-    .uvp-item {
-      flex: 1;
-      min-width: 150px;
-      text-align: center;
-    }
-    .uvp-item .uvp-icon { font-size: 1.6rem; margin-bottom: 8px; }
-    .uvp-item .uvp-text { font-size: 0.85rem; font-weight: 600; color: var(--blue-dark); }
   </style>
 </head>
 <body>
@@ -121,6 +96,7 @@
   </div>
 </nav>
 
+<!-- Hero Section -->
 <section class="hero">
   <div class="hero-content">
     <div class="hero-badge">Watamu Holiday Packages 2026</div>
@@ -133,6 +109,7 @@
   </div>
 </section>
 
+<!-- Quick Answer + Pricing Table (FIXED STICKY & SCROLL) -->
 <section class="section">
   <div class="container">
     <div class="grid-2" style="gap:48px; align-items:start;">
@@ -142,26 +119,33 @@
           <p>A Watamu holiday costs between <strong>€50 and €500+ per day</strong> depending on your travel style. Our all‑inclusive luxury package starts at <strong>€279 per day</strong> (minimum 5 nights) and includes everything you need for a stress‑free beach escape: 5‑star beachfront hotel, private transfers, marine park access, and 24/7 concierge.</p>
           <p>For independent travellers, a <strong>mid‑range budget</strong> (3‑star hotel, local restaurants, tuk‑tuks) is around <strong>€120–€200 per day</strong>. Backpackers can manage on <strong>€50–€80/day</strong> using guesthouses and street food.</p>
         </div>
-        <!-- Strategic Callout for Tsavo East Safari -->
-        <div class="info-box gold mt-24">
-          <strong>🐘 Make it a Safari & Beach Holiday:</strong> Add 2‑3 nights in Tsavo East National Park. See red elephants, lions, and vast savannah – then return to your beachfront hotel. 
-          <a href="/tsavo-east-cost-2026/">See Tsavo East prices & itineraries →</a>
-        </div>
         <div class="info-box mt-24">
           <strong>🧠 Local insider:</strong> Tuk‑tuk rides inside Watamu town should cost <strong>200–300 KES (€1.50–€2.30)</strong> – never pay more. After 10pm near the beach, negotiate down to 400 KES.
         </div>
       </div>
+
+      <!-- STICKY WRAPPER (outside the card) – allows horizontal scroll without blocking -->
       <div style="position:sticky; top:88px;">
         <div class="card" style="overflow:visible;">
           <h3 style="font-size:1.3rem;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border);">Package Costs (per person)</h3>
           <div class="table-wrap">
             <table style="width:100%;min-width:0;margin-bottom:0;">
-              <tbody><tr><td style="padding:10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">Daily Rate<\/td><td style="padding:10px 0;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">€279 / day<\/td>
-              <\/tr><tr><td style="padding:10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">5 Nights (minimum)<\/td><td style="padding:10px 0;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">From €1,395<\/td>
-              <\/tr><tr><td style="padding:10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">7 Nights (recommended)<\/td><td style="padding:10px 0;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">From €1,953<\/td>
-              <\/tr><tr><td style="padding:10px 0;color:var(--text-muted);">10 Nights (beach + safari)<\/td><td style="padding:10px 0;font-weight:700;text-align:right;">From €2,790<\/td>
-            <\/tr><\/tbody><\/table>
-          <\/div>
+              <tbody>
+                <tr><td style="padding:10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">Daily Rate</td>
+                  <td style="padding:10px 0;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">€279 / day</td>
+                </tr>
+                <tr><td style="padding:10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">5 Nights (minimum)</td>
+                  <td style="padding:10px 0;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">From €1,395</td>
+                </tr>
+                <tr><td style="padding:10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">7 Nights (recommended)</td>
+                  <td style="padding:10px 0;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">From €1,953</td>
+                </tr>
+                <tr><td style="padding:10px 0;color:var(--text-muted);">10 Nights (beach + safari)</td>
+                  <td style="padding:10px 0;font-weight:700;text-align:right;">From €2,790</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <div class="swipe-hint">← Swipe to see all prices →</div>
           <a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20Watamu%20package" target="_blank" class="btn btn-whatsapp" style="width:100%;justify-content:center;margin-bottom:10px;">Book on WhatsApp</a>
           <a href="https://forms.zohopublic.com/infowatamuh1/form/LeadsHoliday/formperma/i-OPSgu3rEYBnnYMDYGLMvVK6vzfZYIsA2pEYKLbX1Q" target="_blank" class="btn btn-gold" style="width:100%;justify-content:center;">Get a Custom Quote</a>
@@ -172,58 +156,8 @@
   </div>
 </section>
 
-<!-- Unique Value Proposition Section -->
-<div class="container">
-  <div class="uvp-grid">
-    <div class="uvp-item"><div class="uvp-icon">✅</div><div class="uvp-text">Direct Local Operator – 20+ years in Watamu</div></div>
-    <div class="uvp-item"><div class="uvp-icon">💰</div><div class="uvp-text">Real-Time Local Prices – No outdated estimates</div></div>
-    <div class="uvp-item"><div class="uvp-icon">✨</div><div class="uvp-text">All-Inclusive Simplicity – Your only job is to relax</div></div>
-    <div class="uvp-item"><div class="uvp-icon">🚗</div><div class="uvp-text">Private Transfers & Support – From airport to safari</div></div>
-  </div>
-</div>
-
-<!-- New: Extend Your Watamu Stay – Local Experiences Hub -->
+<!-- Comparison: Watamu vs Diani vs Mombasa (already has .table-wrap) -->
 <section class="section-alt">
-  <div class="container">
-    <h2 class="section-title">Extend Your Watamu Stay – Local Experiences</h2>
-    <p class="section-sub mb-24">Turn your beach holiday into a complete Kenya adventure. All experiences can be arranged from your Watamu hotel.</p>
-    <div class="experiences-grid">
-      <div class="exp-card">
-        <div class="exp-icon">🐘</div>
-        <h4>Tsavo East Safari</h4>
-        <p>2-3 night add‑on. Red elephants, lions, vast savannah. The ultimate beach & bush combo.</p>
-        <a href="/tsavo-east-cost-2026/" class="exp-link">See Tsavo East costs →</a>
-      </div>
-      <div class="exp-card">
-        <div class="exp-icon">🐠</div>
-        <h4>Watamu Marine Park</h4>
-        <p>Snorkeling, dolphins, coral reefs. Half‑day or full‑day trips.</p>
-        <a href="/watamu-marine-park-cost-2026/" class="exp-link">Marine park prices →</a>
-      </div>
-      <div class="exp-card">
-        <div class="exp-icon">🌅</div>
-        <h4>Mida Creek Sunset Dhow</h4>
-        <p>Mangroves, bird watching, Swahili seafood. Magical sunset cruise.</p>
-        <a href="/mida-creek-cost-2026/" class="exp-link">Mida Creek costs →</a>
-      </div>
-      <div class="exp-card">
-        <div class="exp-icon">🏛️</div>
-        <h4>Gede Ruins</h4>
-        <p>12th‑century Swahili town, sacred forest, UNESCO‑nominated.</p>
-        <a href="/gede-ruins-cost-2026/" class="exp-link">Gede Ruins entry fees →</a>
-      </div>
-      <div class="exp-card">
-        <div class="exp-icon">🏜️</div>
-        <h4>Marafa – Hell's Kitchen</h4>
-        <p>Sandstone gorge, sunset colours, local legends. Half‑day trip.</p>
-        <a href="/marafa-sunset-trip-cost-2026/" class="exp-link">Marafa trip costs →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Comparison: Watamu vs Diani vs Mombasa -->
-<section class="section">
   <div class="container">
     <h2 class="section-title">Watamu vs Diani vs Mombasa – Which Kenyan Coast Fits Your Budget?</h2>
     <div class="table-wrap mt-24">
@@ -242,8 +176,8 @@
   </div>
 </section>
 
-<!-- Accommodation Breakdown -->
-<section class="section-alt">
+<!-- Accommodation Breakdown (already has .table-wrap) -->
+<section class="section">
   <div class="container">
     <h2 class="section-title">Watamu Accommodation Costs 2026 – Hotels, Villas & Lodges</h2>
     <div class="table-wrap">
@@ -261,14 +195,14 @@
   </div>
 </section>
 
-<!-- Food & Transport -->
-<section class="section">
+<!-- Food & Transport (both tables already have .table-wrap) -->
+<section class="section-alt">
   <div class="container">
     <div class="grid-2">
       <div>
         <h3 class="section-title" style="font-size:1.3rem;">Food & Restaurant Prices</h3>
         <div class="table-wrap">
-          <table>
+          </table>
             <thead><tr><th>Item</th><th>KES</th><th>EUR</th></tr></thead>
             <tbody>
               <tr><td class="fw-bold">Street food (samosa, chapati)</td><td>150–400</td><td>€1–3</td></tr>
@@ -299,21 +233,21 @@
   </div>
 </section>
 
-<!-- Activities & Excursions (updated with links) -->
-<section class="section-alt">
+<!-- Activities & Excursions -->
+<section class="section">
   <div class="container">
     <h2 class="section-title">Watamu Activity Prices – Marine Park, Snorkeling, Dhow & Safaris</h2>
     <div class="grid-2">
-      <div class="card scroll-reveal"><div style="font-size:2rem;">🐠</div><h3>Watamu Marine Park Snorkeling</h3><p>$25–$60 per person (boat, guide, gear). Park entry $20 extra unless included in package. Best months: June–October. <a href="/watamu-marine-park-cost-2026/">Full marine park guide →</a></p></div>
+      <div class="card scroll-reveal"><div style="font-size:2rem;">🐠</div><h3>Watamu Marine Park Snorkeling</h3><p>$25–$60 per person (boat, guide, gear). Park entry $20 extra unless included in package. Best months: June–October.</p></div>
       <div class="card scroll-reveal"><div style="font-size:2rem;">🐬</div><h3>Dolphin Watching Tour</h3><p>$30–$80 – morning trips from Watamu beach. Dolphin sighting rate >90% in dry season.</p></div>
-      <div class="card scroll-reveal"><div style="font-size:2rem;">🌅</div><h3>Mida Creek Sunset Dhow</h3><p>$20–$50 includes mangrove tour, bird watching, and Swahili seafood meal. <a href="/mida-creek-cost-2026/">Mida Creek prices →</a></p></div>
-      <div class="card scroll-reveal"><div style="font-size:2rem;">🦁</div><h3>Tsavo East Safari</h3><p>From €280/night including transfers, lodge, game drives. 2‑3 night extensions available. <a href="/tsavo-east-cost-2026/">Full Tsavo East cost guide →</a></p></div>
+      <div class="card scroll-reveal"><div style="font-size:2rem;">🌅</div><h3>Mida Creek Sunset Dhow</h3><p>$20–$50 includes mangrove tour, bird watching, and Swahili seafood meal.</p></div>
+      <div class="card scroll-reveal"><div style="font-size:2rem;">🦁</div><h3>Tsavo East Day Safari</h3><p>$150–$250 per person – full day including park fees, lunch, and game drives. Overnight extensions from $250.</p></div>
     </div>
   </div>
 </section>
 
 <!-- Hidden Costs + Best Cheapest Months -->
-<section class="section">
+<section class="section-alt">
   <div class="container">
     <div class="grid-2">
       <div class="info-box gold"><h3>💸 Hidden Costs Tourists Miss</h3><ul><li>Marine park fees – often excluded from boat quotes (add $20)</li><li>Card surcharges – 3‑5% at most hotels; bring shillings</li><li>ATM withdrawal fees – 500 KES + 5% forex</li><li>"Beach boy" markups – bargain to 40‑50% of first price</li></ul></div>
@@ -322,16 +256,8 @@
   </div>
 </section>
 
-<!-- Testimonial Section -->
-<div class="container">
-  <div class="testimonial">
-    "The Tsavo East safari was the highlight of our trip. Seeing the red elephants was unforgettable, and being back on the beach in Watamu the next afternoon was just perfect. Bwanaadi Tours handled everything seamlessly."
-    <div class="author">– Sarah & Tom, UK (May 2026)</div>
-  </div>
-</div>
-
-<!-- Expanded FAQ Section (targeting featured snippets) -->
-<section class="section-alt">
+<!-- FAQ Section -->
+<section class="section">
   <div class="container" style="max-width:760px;">
     <h2 class="section-title mb-32">Frequently Asked Questions — Watamu Holiday Costs</h2>
     <div class="faq">
@@ -339,17 +265,13 @@
       <div class="faq-item"><div class="faq-q">How much is a meal in Watamu? <i class="chevron">▾</i></div><div class="faq-a">Local meal: 500–1,200 KES (€4–9). Seafood dinner: 2,000–4,000 KES (€15–31). Italian dinner: 1,500–3,000 KES (€12–23).</div></div>
       <div class="faq-item"><div class="faq-q">Is Watamu cheaper than Zanzibar? <i class="chevron">▾</i></div><div class="faq-a">Yes – by about 30%. Accommodation and food in Watamu are significantly less expensive, and marine park fees are lower.</div></div>
       <div class="faq-item"><div class="faq-q">How much spending money for 1 week in Watamu? <i class="chevron">▾</i></div><div class="faq-a">For mid‑range independent travel (excluding accommodation), budget €800–€1,500 for two people. Our all‑inclusive package covers almost everything except lunch and souvenirs.</div></div>
-      <div class="faq-item"><div class="faq-q">Can I combine Watamu with a Tsavo safari? <i class="chevron">▾</i></div><div class="faq-a">Absolutely. Tsavo East is just 2–3 hours away. Our package can be extended with 2‑3 nights in a safari lodge – ask for a custom quote. <a href="/tsavo-east-cost-2026/">See Tsavo East costs →</a></div></div>
-      <div class="faq-item"><div class="faq-q">How do I get from Watamu to Tsavo East National Park? <i class="chevron">▾</i></div><div class="faq-a">The drive from Watamu to Tsavo East's Voi Gate takes about 2.5 hours by private transfer. We arrange pick‑up directly from your beach hotel, and you'll be on an afternoon game drive by lunchtime.</div></div>
-      <div class="faq-item"><div class="faq-q">What is the best time of year to visit Watamu for good weather? <i class="chevron">▾</i></div><div class="faq-a">December–March and June–October offer the best beach conditions – calm seas, low humidity, and sunny days. April–May is the long rainy season, but hotels offer 40‑50% discounts.</div></div>
-      <div class="faq-item"><div class="faq-q">Is it better to stay in Watamu or Diani Beach? <i class="chevron">▾</i></div><div class="faq-a">Watamu is quieter, more exclusive, and closer to Tsavo East for a safari add‑on. Diani has more luxury resorts and a livelier atmosphere. Watamu is generally 30‑40% cheaper for similar quality accommodation.</div></div>
-      <div class="faq-item"><div class="faq-q">What should I pack for a beach and safari holiday in Kenya? <i class="chevron">▾</i></div><div class="faq-a">Lightweight clothes, swimsuit, high‑SPF sunscreen, insect repellent, a light fleece for early morning game drives, and a camera with zoom lens. Neutral colours (khaki, olive, beige) are best for safari.</div></div>
+      <div class="faq-item"><div class="faq-q">Can I combine Watamu with a Tsavo safari? <i class="chevron">▾</i></div><div class="faq-a">Absolutely. Tsavo East is just 2–3 hours away. Our package can be extended with 2‑3 nights in a safari lodge – ask for a custom quote.</div></div>
     </div>
   </div>
 </section>
 
 <!-- Internal Links -->
-<section class="section">
+<section class="section-alt">
   <div class="container">
     <div class="links-bar">
       <p>Continue Planning Your Kenya Trip</p>
@@ -358,7 +280,6 @@
         <a href="/mombasa-travel-costs-2026/">Mombasa Travel Budget</a>
         <a href="/diani-beach-holiday-costs-2026/">Diani Beach Costs</a>
         <a href="/masai-mara-safari-cost-2026/">Masai Mara Safari Cost</a>
-        <a href="/tsavo-east-cost-2026/">Tsavo East Safari Cost</a>
         <a href="/nairobi-tourist-budget-2026/">Nairobi Tourist Budget</a>
       </div>
     </div>
@@ -380,6 +301,7 @@
 
 <script src="/script.js" defer></script>
 
+<!-- JSON‑LD Structured Data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -412,10 +334,25 @@
     {"@type":"Question","name":"How much is a meal in Watamu?","acceptedAnswer":{"@type":"Answer","text":"Local meal: 500–1,200 KES (€4–9). Seafood dinner: 2,000–4,000 KES (€15–31)."}},
     {"@type":"Question","name":"Is Watamu cheaper than Zanzibar?","acceptedAnswer":{"@type":"Answer","text":"Yes – about 30% cheaper for accommodation and food."}},
     {"@type":"Question","name":"How much spending money for 1 week in Watamu?","acceptedAnswer":{"@type":"Answer","text":"Independent mid‑range: €800–€1,500 for two (excluding accommodation)."}},
-    {"@type":"Question","name":"Can I combine Watamu with a safari?","acceptedAnswer":{"@type":"Answer","text":"Yes – Tsavo East is 2‑3 hours away. We arrange 2‑3 night extensions."}},
-    {"@type":"Question","name":"How do I get from Watamu to Tsavo East?","acceptedAnswer":{"@type":"Answer","text":"2.5 hours by private transfer from your hotel. We arrange pick‑up directly from Watamu."}},
-    {"@type":"Question","name":"What is the best time to visit Watamu?","acceptedAnswer":{"@type":"Answer","text":"December–March and June–October offer the best beach conditions. April–May is rainy but hotels offer 40‑50% discounts."}}
+    {"@type":"Question","name":"Can I combine Watamu with a safari?","acceptedAnswer":{"@type":"Answer","text":"Yes – Tsavo East is 2‑3 hours away. We arrange 2‑3 night extensions."}}
   ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://watamuholidays.co.ke/"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Watamu Holiday Package Costs 2026",
+    "item": "https://watamuholidays.co.ke/watamu-holiday-package-costs-2026/"
+  }]
 }
 </script>
 </body>
