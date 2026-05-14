@@ -16,11 +16,9 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://watamuholidays.co.ke/watamu-holiday-package-costs-2026/" />
   <meta name="twitter:card" content="summary_large_image" />
-  <!-- External CSS & Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css" />
   <style>
-    /* Tropical beach hero from Pexels – reliable, no people, dark overlay for contrast */
     .hero {
       background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.8)), url('https://images.pexels.com/photos/22481003/pexels-photo-22481003.jpeg?auto=compress&cs=tinysrgb&w=1600');
       background-size: cover;
@@ -30,7 +28,6 @@
       color: white;
     }
 
-    /* ===== INLINE MOBILE FIXES ===== */
     @media (max-width: 768px) {
       .hero {
         min-height: 85svh !important;
@@ -62,7 +59,6 @@
         white-space: nowrap;
       }
     }
-    /* Swipe hint for mobile tables */
     .swipe-hint {
       text-align: center;
       font-size: 0.7rem;
@@ -74,6 +70,35 @@
       .swipe-hint {
         display: none;
       }
+    }
+    /* Simple extra links section - only new addition */
+    .extra-links-section {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .extra-links-section h3 {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: var(--blue-dark);
+    }
+    .extra-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .extra-links a {
+      background: var(--off-white);
+      padding: 0.5rem 1rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      color: var(--blue-mid);
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .extra-links a:hover {
+      background: var(--gold);
+      color: var(--white);
     }
   </style>
 </head>
@@ -96,7 +121,6 @@
   </div>
 </nav>
 
-<!-- Hero Section -->
 <section class="hero">
   <div class="hero-content">
     <div class="hero-badge">Watamu Holiday Packages 2026</div>
@@ -109,7 +133,6 @@
   </div>
 </section>
 
-<!-- Quick Answer + Pricing Table (FIXED STICKY & SCROLL) -->
 <section class="section">
   <div class="container">
     <div class="grid-2" style="gap:48px; align-items:start;">
@@ -124,24 +147,19 @@
         </div>
       </div>
 
-      <!-- STICKY WRAPPER (outside the card) – allows horizontal scroll without blocking -->
       <div style="position:sticky; top:88px;">
         <div class="card" style="overflow:visible;">
           <h3 style="font-size:1.3rem;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border);">Package Costs (per person)</h3>
           <div class="table-wrap">
             <table style="width:100%;min-width:0;margin-bottom:0;">
               <tbody>
-                <tr><td style="padding:10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">Daily Rate</td>
-                  <td style="padding:10px 0;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">€279 / day</td>
+                <tr><td style="padding:10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">Daily Rate</td><td style="padding:10px 0;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">€279 / day</td>
                 </tr>
-                <tr><td style="padding:10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">5 Nights (minimum)</td>
-                  <td style="padding:10px 0;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">From €1,395</td>
+                <tr><td style="padding:10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">5 Nights (minimum)</td><td style="padding:10px 0;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">From €1,395</td>
                 </tr>
-                <tr><td style="padding:10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">7 Nights (recommended)</td>
-                  <td style="padding:10px 0;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">From €1,953</td>
+                <tr><td style="padding:10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">7 Nights (recommended)</td><td style="padding:10px 0;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">From €1,953</td>
                 </tr>
-                <tr><td style="padding:10px 0;color:var(--text-muted);">10 Nights (beach + safari)</td>
-                  <td style="padding:10px 0;font-weight:700;text-align:right;">From €2,790</td>
+                <tr><td style="padding:10px 0;color:var(--text-muted);">10 Nights (beach + safari)</td><td style="padding:10px 0;font-weight:700;text-align:right;">From €2,790</td>
                 </tr>
               </tbody>
             </table>
@@ -156,7 +174,6 @@
   </div>
 </section>
 
-<!-- Comparison: Watamu vs Diani vs Mombasa (already has .table-wrap) -->
 <section class="section-alt">
   <div class="container">
     <h2 class="section-title">Watamu vs Diani vs Mombasa – Which Kenyan Coast Fits Your Budget?</h2>
@@ -164,9 +181,12 @@
       <table>
         <thead><tr><th>Destination</th><th>Best For</th><th>Daily Budget (Mid‑range)</th><th>Vibe</th></tr></thead>
         <tbody>
-          <tr><td class="fw-bold">Watamu</td><td>Boutique beaches & marine parks</td><td>€120–€200</td><td>Relaxed, Italian influence, snorkeling</td></tr>
-          <tr><td class="fw-bold">Diani</td><td>Luxury resorts & entertainment</td><td>€180–€350</td><td>Upscale, lively, water sports</td></tr>
-          <tr><td class="fw-bold">Mombasa</td><td>Culture + city beaches</td><td>€80–€150</td><td>Historic, authentic, busy</td></tr>
+          <tr><td class="fw-bold">Watamu</td><td>Boutique beaches & marine parks</td><td>€120–€200</td><td>Relaxed, Italian influence, snorkeling</td>
+          </tr>
+          <tr><td class="fw-bold">Diani</td><td>Luxury resorts & entertainment</td><td>€180–€350</td><td>Upscale, lively, water sports</td>
+          </tr>
+          <tr><td class="fw-bold">Mombasa</td><td>Culture + city beaches</td><td>€80–€150</td><td>Historic, authentic, busy</td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -176,7 +196,6 @@
   </div>
 </section>
 
-<!-- Accommodation Breakdown (already has .table-wrap) -->
 <section class="section">
   <div class="container">
     <h2 class="section-title">Watamu Accommodation Costs 2026 – Hotels, Villas & Lodges</h2>
@@ -184,32 +203,41 @@
       <table>
         <thead><tr><th>Accommodation Type</th><th>Nightly (KES)</th><th>Nightly (USD)</th><th>Examples</th></tr></thead>
         <tbody>
-          <tr><td class="fw-bold">Backpacker Hostel</td><td>1,500–3,000</td><td>$12–23</td><td>Watamu Backpackers, Distant Relatives</td></tr>
-          <tr><td class="fw-bold">Budget Guesthouse</td><td>4,000–8,000</td><td>$31–62</td><td>Local B&Bs near Turtle Bay</td></tr>
-          <tr><td class="fw-bold">Boutique Beach Hotel</td><td>12,000–25,000</td><td>$92–192</td><td>Sea Horse, Temple Point</td></tr>
-          <tr><td class="fw-bold">5‑Star Partner Hotel (our package)</td><td>35,000–60,000</td><td>$270–460</td><td>Garoda Hotel, Kobe Suit Resort</td></tr>
-          <tr><td class="fw-bold">Luxury Private Villa</td><td>70,000–200,000+</td><td>$540–1,540+</td><td>Hemingways, private rentals</td></tr>
+          <tr><td class="fw-bold">Backpacker Hostel</td><td>1,500–3,000</td><td>$12–23</td><td>Watamu Backpackers, Distant Relatives</td>
+          </tr>
+          <tr><td class="fw-bold">Budget Guesthouse</td><td>4,000–8,000</td><td>$31–62</td><td>Local B&Bs near Turtle Bay</td>
+          </tr>
+          <tr><td class="fw-bold">Boutique Beach Hotel</td><td>12,000–25,000</td><td>$92–192</td><td>Sea Horse, Temple Point</td>
+          </tr>
+          <tr><td class="fw-bold">5‑Star Partner Hotel (our package)</td><td>35,000–60,000</td><td>$270–460</td><td>Garoda Hotel, Kobe Suit Resort</td>
+          </tr>
+          <tr><td class="fw-bold">Luxury Private Villa</td><td>70,000–200,000+</td><td>$540–1,540+</td><td>Hemingways, private rentals</td>
+          </tr>
         </tbody>
       </table>
     </div>
   </div>
 </section>
 
-<!-- Food & Transport (both tables already have .table-wrap) -->
 <section class="section-alt">
   <div class="container">
     <div class="grid-2">
       <div>
         <h3 class="section-title" style="font-size:1.3rem;">Food & Restaurant Prices</h3>
         <div class="table-wrap">
-          </table>
+          <table>
             <thead><tr><th>Item</th><th>KES</th><th>EUR</th></tr></thead>
             <tbody>
-              <tr><td class="fw-bold">Street food (samosa, chapati)</td><td>150–400</td><td>€1–3</td></tr>
-              <tr><td class="fw-bold">Local restaurant meal (ugali + fish)</td><td>500–1,200</td><td>€4–9</td></tr>
-              <tr><td class="fw-bold">Seafood dinner (lobster/prawns)</td><td>2,000–4,000</td><td>€15–31</td></tr>
-              <tr><td class="fw-bold">Italian restaurant (pizza/pasta)</td><td>1,500–3,000</td><td>€12–23</td></tr>
-              <tr><td class="fw-bold">Soft drinks / fresh juice at beach cafe</td><td>500–1,200</td><td>€4–9</td></tr>
+              <tr><td class="fw-bold">Street food (samosa, chapati)</td><td>150–400</td><td>€1–3</td>
+              </tr>
+              <tr><td class="fw-bold">Local restaurant meal (ugali + fish)</td><td>500–1,200</td><td>€4–9</td>
+              </tr>
+              <tr><td class="fw-bold">Seafood dinner (lobster/prawns)</td><td>2,000–4,000</td><td>€15–31</td>
+              </tr>
+              <tr><td class="fw-bold">Italian restaurant (pizza/pasta)</td><td>1,500–3,000</td><td>€12–23</td>
+              </tr>
+              <tr><td class="fw-bold">Soft drinks / fresh juice at beach cafe</td><td>500–1,200</td><td>€4–9</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -220,11 +248,16 @@
           <table>
             <thead><tr><th>Service</th><th>Real Cost (KES)</th></tr></thead>
             <tbody>
-              <tr><td class="fw-bold">Tuk‑tuk within Watamu (day)</td><td>200–300</td></tr>
-              <tr><td class="fw-bold">Tuk‑tuk after 10pm (bargain)</td><td>300–400</td></tr>
-              <tr><td class="fw-bold">Malindi Airport → Watamu (private)</td><td>2,000–3,000</td></tr>
-              <tr><td class="fw-bold">Mombasa Airport → Watamu (private)</td><td>5,000–7,000</td></tr>
-              <tr><td class="fw-bold">Watamu → Tsavo East (safari transfer)</td><td>4,000–6,000 (one way)</td></tr>
+              <tr><td class="fw-bold">Tuk‑tuk within Watamu (day)</td><td>200–300</td>
+              </tr>
+              <tr><td class="fw-bold">Tuk‑tuk after 10pm (bargain)</td><td>300–400</td>
+              </tr>
+              <tr><td class="fw-bold">Malindi Airport → Watamu (private)</td><td>2,000–3,000</td>
+              </tr>
+              <tr><td class="fw-bold">Mombasa Airport → Watamu (private)</td><td>5,000–7,000</td>
+              </tr>
+              <tr><td class="fw-bold">Watamu → Tsavo East (safari transfer)</td><td>4,000–6,000 (one way)</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -233,7 +266,6 @@
   </div>
 </section>
 
-<!-- Activities & Excursions -->
 <section class="section">
   <div class="container">
     <h2 class="section-title">Watamu Activity Prices – Marine Park, Snorkeling, Dhow & Safaris</h2>
@@ -246,7 +278,6 @@
   </div>
 </section>
 
-<!-- Hidden Costs + Best Cheapest Months -->
 <section class="section-alt">
   <div class="container">
     <div class="grid-2">
@@ -256,7 +287,6 @@
   </div>
 </section>
 
-<!-- FAQ Section -->
 <section class="section">
   <div class="container" style="max-width:760px;">
     <h2 class="section-title mb-32">Frequently Asked Questions — Watamu Holiday Costs</h2>
@@ -269,6 +299,20 @@
     </div>
   </div>
 </section>
+
+<!-- NEW: Extra links section – only this section added -->
+<div class="container">
+  <div class="extra-links-section">
+    <h3>🌴 Explore More Watamu Experiences</h3>
+    <div class="extra-links">
+      <a href="/tsavo-east-cost-2026/">🐘 Tsavo East Safari</a>
+      <a href="/watamu-marine-park-cost-2026/">🐠 Watamu Marine Park</a>
+      <a href="/mida-creek-cost-2026/">🌅 Mida Creek Sunset Dhow</a>
+      <a href="/gede-ruins-cost-2026/">🏛️ Gede Ruins</a>
+      <a href="/marafa-sunset-trip-cost-2026/">🏜️ Marafa – Hell's Kitchen</a>
+    </div>
+  </div>
+</div>
 
 <!-- Internal Links -->
 <section class="section-alt">
@@ -301,7 +345,6 @@
 
 <script src="/script.js" defer></script>
 
-<!-- JSON‑LD Structured Data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
