@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | Watamu Holidays</title>
+  <meta name="description" content="The page you're looking for isn't available. Return to Watamu Holidays to plan your perfect Kenya beach holiday." />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #d9f0f7 0%, #f0f7fa 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      position: relative;
+    }
+
+    /* Decorative wave elements */
+    body::before {
+      content: '';
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.52,165.18,96.61,231.17,71.53c32.1-12.42,56.38-24.52,90.22-15.09z" fill="rgba(212,160,23,0.08)"></path></svg>') repeat-x;
+      background-size: 1200px 120px;
+      background-position: bottom;
+      pointer-events: none;
+    }
+
+    .container {
+      max-width: 600px;
+      width: 100%;
+      background: white;
+      border-radius: 32px;
+      box-shadow: 0 20px 40px -12px rgba(0,0,0,0.15);
+      overflow: hidden;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Decorative top bar */
+    .top-bar {
+      height: 8px;
+      background: linear-gradient(90deg, #f4b942, #1e6f3f, #0f5c6e, #f4b942);
+      background-size: 300% 100%;
+      animation: shimmer 3s infinite;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    .content {
+      padding: 3rem 2rem;
+    }
+
+    /* Ocean wave icon */
+    .wave-icon {
+      font-size: 5rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    h1 {
+      font-family: 'Playfair Display', 'Georgia', serif;
+      font-size: 8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #0f5c6e, #1e6f3f, #f4b942);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 0.5rem;
+      line-height: 1;
+      letter-spacing: -2px;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', 'Georgia', serif;
+      font-size: 1.5rem;
+      color: #0b3b2a;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: #5a6a7a;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    /* Search suggestion box */
+    .suggestions {
+      background: #f8f9fb;
+      border-radius: 20px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      text-align: left;
+    }
+
+    .suggestions h3 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #0f5c6e;
+      margin-bottom: 1rem;
+    }
+
+    .suggestions ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .suggestions li a {
+      display: inline-block;
+      background: white;
+      border: 1px solid #dde4ec;
+      padding: 0.5rem 1rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      color: #1e6f3f;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .suggestions li a:hover {
+      background: #1e6f3f;
+      border-color: #1e6f3f;
+      color: white;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #1e6f3f;
+      color: white;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 700;
+      transition: 0.2s;
+      margin: 0 0.5rem;
+    }
+
+    .btn:hover {
+      background: #0f5532;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #1e6f3f;
+      color: #1e6f3f;
+    }
+
+    .btn-outline:hover {
+      background: #1e6f3f;
+      color: white;
+    }
+
+    .beach-icon {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      color: #cbd5e1;
+    }
+
+    @media (max-width: 640px) {
+      .content { padding: 2rem 1.5rem; }
+      h1 { font-size: 5rem; }
+      h2 { font-size: 1.2rem; }
+      .suggestions ul { gap: 0.5rem; }
+      .suggestions li a { font-size: 0.75rem; padding: 0.4rem 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="top-bar"></div>
+  <div class="content">
+    <div class="wave-icon">🌊</div>
+    <h1>404</h1>
+    <h2>Page Drifted Away</h2>
+    <p>Looks like the page you're looking for has floated off to sea. Don't worry – our beaches are still waiting for you.</p>
+
+    <div class="suggestions">
+      <h3>☀️ Popular pages you might be looking for</h3>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/watamu-holiday-package-costs-2026/">Watamu Holiday Packages</a></li>
+        <li><a href="/kenya-travel-costs-2026/">Kenya Travel Costs 2026</a></li>
+        <li><a href="/tsavo-east-cost-2026/">Tsavo East Safari</a></li>
+        <li><a href="/mombasa-travel-costs-2026/">Mombasa Travel Guide</a></li>
+        <li><a href="/diani-beach-holiday-costs-2026/">Diani Beach Costs</a></li>
+        <li><a href="/masai-mara-safari-cost-2026/">Masai Mara Safari</a></li>
+        <li><a href="/nairobi-tourist-budget-2026/">Nairobi Budget Guide</a></li>
+        <li><a href="/watamu-marine-park-cost-2026/">Watamu Marine Park</a></li>
+        <li><a href="/mida-creek-cost-2026/">Mida Creek Sunset Dhow</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <a href="/" class="btn">🏝️ Return to Paradise</a>
+      <a href="https://wa.me/254706688115?text=I%20got%20lost%20on%20your%20website" target="_blank" rel="noopener noreferrer" class="btn btn-outline">💬 Need help? WhatsApp us</a>
+    </div>
+
+    <div class="beach-icon">
+      <span>🏖️</span> <span>🌴</span> <span>🐠</span> <span>🦁</span> <span>☀️</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
