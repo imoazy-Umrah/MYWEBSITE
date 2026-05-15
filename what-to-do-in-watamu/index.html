@@ -93,29 +93,39 @@
       border-radius: 16px;
       margin: 28px 0;
     }
-    .swipe-hint {
-      font-size: 0.7rem;
-      color: var(--text-muted);
-      text-align: right;
-      margin-top: 6px;
-      display: none;
+    
+    /* ===== FIXED FAQ ACCORDION STYLES (robust) ===== */
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 0;
     }
-    @media (max-width: 640px) {
-      .swipe-hint { display: block; }
-    }
-    .faq-item .faq-q {
+    .faq-q {
       display: flex;
       justify-content: space-between;
       align-items: center;
       cursor: pointer;
-      padding: 16px 0;
+      padding: 18px 0;
       font-weight: 600;
-      border-bottom: 1px solid var(--border);
+      color: var(--blue-dark);
+      font-size: 1rem;
     }
-    .faq-item .faq-q span { font-size: 1.2rem; transition: transform 0.2s; }
-    .faq-item.open .faq-q span { transform: rotate(180deg); }
-    .faq-a { display: none; padding: 0 0 16px 0; color: var(--text-muted); }
-    .faq-item.open .faq-a { display: block; }
+    .faq-q span {
+      transition: transform 0.2s ease;
+      display: inline-block;
+      font-size: 1.2rem;
+    }
+    .faq-item.open .faq-q span {
+      transform: rotate(180deg);
+    }
+    .faq-a {
+      display: none;
+      padding-bottom: 20px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .faq-item.open .faq-a {
+      display: block;
+    }
   </style>
 </head>
 <body>
@@ -178,7 +188,6 @@
       <h2 class="section-title">Top things to do in Watamu</h2>
       <div class="attraction-grid">
         
-        <!-- 1. Watamu Marine Park & Snorkeling -->
         <div class="attraction-card">
           <img class="attraction-img" src="https://images.unsplash.com/photo-1645689258319-3dcb737eee5e?q=80&w=1200&auto=format" alt="Snorkeling in Watamu Marine Park coral gardens" loading="lazy">
           <div class="attraction-content">
@@ -191,7 +200,6 @@
           </div>
         </div>
         
-        <!-- 2. Mida Creek – Sunset Dhow & Kayaking -->
         <div class="attraction-card">
           <img class="attraction-img" src="https://images.pexels.com/photos/22481003/pexels-photo-22481003.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Traditional dhow sailing on Mida Creek mangroves at sunset" loading="lazy">
           <div class="attraction-content">
@@ -204,7 +212,6 @@
           </div>
         </div>
         
-        <!-- 3. Gede Ruins – Lost Swahili City (fixed image) -->
         <div class="attraction-card">
           <img class="attraction-img" src="https://upload.wikimedia.org/wikipedia/commons/5/55/Great_Mosque_of_Gede.jpg" alt="Great Mosque of Gede ruins, Watamu" loading="lazy">
           <div class="attraction-content">
@@ -217,7 +224,6 @@
           </div>
         </div>
         
-        <!-- 4. Marafa – Hell's Kitchen Sunset -->
         <div class="attraction-card">
           <img class="attraction-img" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Marafa_sunset_-_kenya.jpg" alt="Marafa Depression colorful sandstone canyon at sunset" loading="lazy">
           <div class="attraction-content">
@@ -230,7 +236,6 @@
           </div>
         </div>
         
-        <!-- 5. Tsavo East Safari – Lionesses & red elephants (updated text) -->
         <div class="attraction-card">
           <img class="attraction-img" src="https://images.unsplash.com/photo-1711488480005-3dd18f3c4092?q=80&w=1200&auto=format" alt="Lioness resting on red soil in Tsavo East National Park" loading="lazy">
           <div class="attraction-content">
@@ -243,7 +248,6 @@
           </div>
         </div>
         
-        <!-- 6. Dolphin Watching – smiling dolphin image -->
         <div class="attraction-card">
           <img class="attraction-img" src="https://images.unsplash.com/photo-1570481662006-a3a1374699e8?q=80&w=765&auto=format&fit=crop" alt="Smiling dolphin swimming in Watamu ocean" loading="lazy">
           <div class="attraction-content">
@@ -259,7 +263,6 @@
     </div>
   </section>
 
-  <!-- Budget & Practical Info Side-by-Side -->
   <section class="section">
     <div class="container">
       <div class="info-grid">
@@ -283,7 +286,6 @@
     </div>
   </section>
 
-  <!-- Quick Insider Tips Box -->
   <div class="container">
     <div class="tip-card" style="background: #eef3fc; margin-bottom: 40px;">
       <h3 style="color: var(--blue-dark); margin-bottom: 12px;">🧠 Local insider secrets</h3>
@@ -297,21 +299,35 @@
     </div>
   </div>
 
-  <!-- FAQ Section -->
+  <!-- FAQ SECTION - FULLY FUNCTIONAL (robust) -->
   <section class="section-alt">
     <div class="container" style="max-width: 760px;">
       <h2 class="section-title mb-32">Frequently Asked Questions — Watamu Activities</h2>
       <div class="faq">
-        <div class="faq-item"><div class="faq-q">Is Watamu good for snorkeling? <span>▾</span></div><div class="faq-a">Absolutely! Watamu Marine National Park is one of the best snorkeling spots in Kenya. The coral gardens are only 100–300 metres from shore, with calm, shallow waters perfect for beginners. You’ll see parrotfish, angelfish, butterflyfish, and often sea turtles.</div></div>
-        <div class="faq-item"><div class="faq-q">Can I see dolphins in Watamu? <span>▾</span></div><div class="faq-a">Yes – Watamu is a prime dolphin watching destination. Bottlenose and spinner dolphins are frequently spotted, especially on morning boat trips (7–10am). Sightings are over 90% during dry season (July–September).</div></div>
-        <div class="faq-item"><div class="faq-q">How far is Tsavo East from Watamu? <span>▾</span></div><div class="faq-a">Tsavo East is approximately 2.5–3 hours by private transfer from Watamu (about 150 km). It’s the closest major safari park to the coast – perfect for a 2‑night safari without long travel days.</div></div>
-        <div class="faq-item"><div class="faq-q">What’s the best time for sunset at Marafa? <span>▾</span></div><div class="faq-a">The best time is between 4:30pm and 6:30pm. This is when the low sun hits the sandstone canyon walls, turning them into brilliant shades of orange, red, and gold. Avoid midday – it’s extremely hot and the colours are flat.</div></div>
-        <div class="faq-item"><div class="faq-q">Are Gede Ruins worth visiting? <span>▾</span></div><div class="faq-a">Definitely. Gede is one of the most complete and mysterious Swahili town ruins on the East African coast. The site is beautifully preserved within a sacred forest of baobabs – a guide brings the history to life. Allow 1.5–2 hours.</div></div>
+        <div class="faq-item">
+          <div class="faq-q">Is Watamu good for snorkeling? <span>▾</span></div>
+          <div class="faq-a">Absolutely! Watamu Marine National Park is one of the best snorkeling spots in Kenya. The coral gardens are only 100–300 metres from shore, with calm, shallow waters perfect for beginners. You’ll see parrotfish, angelfish, butterflyfish, and often sea turtles.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I see dolphins in Watamu? <span>▾</span></div>
+          <div class="faq-a">Yes – Watamu is a prime dolphin watching destination. Bottlenose and spinner dolphins are frequently spotted, especially on morning boat trips (7–10am). Sightings are over 90% during dry season (July–September).</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How far is Tsavo East from Watamu? <span>▾</span></div>
+          <div class="faq-a">Tsavo East is approximately 2.5–3 hours by private transfer from Watamu (about 150 km). It’s the closest major safari park to the coast – perfect for a 2‑night safari without long travel days.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What’s the best time for sunset at Marafa? <span>▾</span></div>
+          <div class="faq-a">The best time is between 4:30pm and 6:30pm. This is when the low sun hits the sandstone canyon walls, turning them into brilliant shades of orange, red, and gold. Avoid midday – it’s extremely hot and the colours are flat.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Are Gede Ruins worth visiting? <span>▾</span></div>
+          <div class="faq-a">Definitely. Gede is one of the most complete and mysterious Swahili town ruins on the East African coast. The site is beautifully preserved within a sacred forest of baobabs – a guide brings the history to life. Allow 1.5–2 hours.</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- internal related pages -->
   <div class="container">
     <div class="links-bar">
       <p>Plan more of your Kenya coast adventure</p>
@@ -341,26 +357,43 @@
 
 <script src="/script.js" defer></script>
 <script>
-  // mobile nav + FAQ accordion
-  (function(){
+  // Mobile navigation toggle (robust)
+  (function() {
     const toggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
-    if(toggle && navLinks){
-      toggle.addEventListener('click', (e) => {
+    if (toggle && navLinks) {
+      toggle.addEventListener('click', function(e) {
         e.stopPropagation();
         navLinks.classList.toggle('open');
       });
-      document.addEventListener('click', (e) => {
-        if(navLinks.classList.contains('open') && !navLinks.contains(e.target) && !toggle.contains(e.target))
+      document.addEventListener('click', function(e) {
+        if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && !toggle.contains(e.target)) {
           navLinks.classList.remove('open');
+        }
       });
     }
-    document.querySelectorAll('.faq-item .faq-q').forEach(q => {
-      q.addEventListener('click', () => {
-        const item = q.closest('.faq-item');
-        if(item) item.classList.toggle('open');
+  })();
+
+  // FAQ Accordion - reliable, prevents double binding
+  (function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    if (faqItems.length) {
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-q');
+        if (question) {
+          question.removeEventListener('click', toggleHandler);
+          question.addEventListener('click', toggleHandler);
+        }
       });
-    });
+    }
+    function toggleHandler(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const item = this.closest('.faq-item');
+      if (item) {
+        item.classList.toggle('open');
+      }
+    }
   })();
 </script>
 </body>
