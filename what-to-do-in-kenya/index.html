@@ -74,6 +74,13 @@
       display: inline-block;
       margin-right: 12px;
     }
+    .tip-box {
+      background: #fef5e7;
+      padding: 12px 16px;
+      border-radius: 12px;
+      margin-top: 16px;
+      border-left: 3px solid var(--gold);
+    }
     @media (max-width: 768px) {
       .day-header {
         flex-direction: column;
@@ -126,15 +133,18 @@
     <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="navLinks">
       <li><a href="/">Home</a></li>
-      <li><a href="/what-to-do-in-kenya/" class="active">What to Do in Kenya</a></li>
-      <li><a href="/kenya-travel-costs-2026/">Kenya Costs</a></li>
-      <li><a href="/watamu-holiday-package-costs-2026/">Watamu Packages</a></li>
-      <li><a href="https://wa.me/254706688115?text=I%20want%20to%20plan%20my%20Kenya%20trip" target="_blank" class="btn-nav">Book on WhatsApp</a></li>
+      <li><a href="/watamu-holiday-package-costs-2026/">Watamu Costs</a></li>
+      <li><a href="/kenya-travel-costs-2026/" class="active">Kenya Guide</a></li>
+      <li><a href="/mombasa-travel-costs-2026/">Mombasa</a></li>
+      <li><a href="/diani-beach-holiday-costs-2026/">Diani</a></li>
+      <li><a href="/masai-mara-safari-cost-2026/">Safari</a></li>
+      <li><a href="/nairobi-tourist-budget-2026/">Nairobi</a></li>
+      <li><a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20holiday" target="_blank" class="btn-nav">Book on WhatsApp</a></li>
     </ul>
   </div>
 </nav>
 
-<!-- Hero with forced white text via CSS above -->
+<!-- Hero with forced white text -->
 <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1579005318686-5a86bbb3bf03?q=80&w=1600'); background-size: cover; background-position: center;">
   <div class="hero-content">
     <div class="hero-badge">Ultimate Kenya Travel Guide 2026</div>
@@ -178,6 +188,7 @@
     <div class="container">
       <h2 class="section-title">Day-by-Day Kenya Itinerary</h2>
       
+      <!-- Day 1 -->
       <div class="itinerary-day">
         <div class="day-header">
           <span class="day-number">Day 1</span>
@@ -194,11 +205,13 @@
         </div>
       </div>
 
+      <!-- Day 2 - Fort Jesus image -->
       <div class="itinerary-day">
         <div class="day-header">
           <span class="day-number">Day 2</span>
           <span class="day-title">Explore Mombasa – Fort Jesus & Old Town</span>
         </div>
+        <img class="day-img" src="https://images.unsplash.com/photo-1613453578536-2409c9314ee0?q=80&w=880&auto=format&fit=crop" alt="Fort Jesus historical fortress in Mombasa Kenya">
         <div class="day-content">
           <p><span class="price-tag">Morning</span> After breakfast, visit <strong>Fort Jesus</strong> (€12 entry). This 16th-century Portuguese fort is a UNESCO World Heritage site.</p>
           <p><span class="price-tag">Afternoon</span> Stroll through Mombasa's <strong>Old Town</strong> – narrow streets, carved doors, and spice-scented air.</p>
@@ -206,6 +219,7 @@
         </div>
       </div>
 
+      <!-- Day 3 -->
       <div class="itinerary-day">
         <div class="day-header">
           <span class="day-number">Day 3</span>
@@ -219,11 +233,13 @@
         </div>
       </div>
 
+      <!-- Day 4 - Added image -->
       <div class="itinerary-day">
         <div class="day-header">
           <span class="day-number">Day 4</span>
           <span class="day-title">Full Day Tsavo East – Mudanda Rock & Lugard Falls</span>
         </div>
+        <img class="day-img" src="https://plus.unsplash.com/premium_photo-1666254114402-cd16bc302aea?q=80&w=1171&auto=format&fit=crop" alt="Mudanda Rock inselberg in Tsavo East National Park">
         <div class="day-content">
           <p><span class="price-tag">Sunrise Game Drive</span> Depart at 6:00 AM to catch predators returning from night hunts.</p>
           <p><span class="price-tag">Mid-morning</span> Visit <strong>Mudanda Rock</strong> – a 1.6 km long inselberg where elephants gather.</p>
@@ -232,11 +248,13 @@
         </div>
       </div>
 
+      <!-- Day 5 - Added image -->
       <div class="itinerary-day">
         <div class="day-header">
           <span class="day-number">Day 5</span>
           <span class="day-title">Tsavo East → Watamu – Coast Return</span>
         </div>
+        <img class="day-img" src="https://images.unsplash.com/photo-1692935045168-c80632f56b06?q=80&w=1074&auto=format&fit=crop" alt="Watamu beach view with turquoise water and palm trees">
         <div class="day-content">
           <p><span class="price-tag">Morning</span> Final game drive, then drive 2.5 hours to <strong>Watamu</strong>.</p>
           <p><span class="price-tag">Afternoon</span> Check into your beach hotel. Unwind by the pool or walk along Turtle Bay.</p>
@@ -244,6 +262,7 @@
         </div>
       </div>
 
+      <!-- Day 6 -->
       <div class="itinerary-day">
         <div class="day-header">
           <span class="day-number">Day 6</span>
@@ -257,6 +276,7 @@
         </div>
       </div>
 
+      <!-- Day 7 -->
       <div class="itinerary-day">
         <div class="day-header">
           <span class="day-number">Day 7</span>
@@ -270,11 +290,13 @@
         </div>
       </div>
 
+      <!-- Day 8 - Added image -->
       <div class="itinerary-day">
         <div class="day-header">
           <span class="day-number">Day 8</span>
           <span class="day-title">Watamu → Nairobi – Giraffe Centre</span>
         </div>
+        <img class="day-img" src="https://images.unsplash.com/photo-1502088346722-1c81b25109cb?q=80&w=1116&auto=format&fit=crop" alt="Feeding a giraffe at the Giraffe Centre in Nairobi">
         <div class="day-content">
           <p><span class="price-tag">Morning</span> Fly to Nairobi (1 hour, €120–180).</p>
           <p><span class="price-tag">Afternoon</span> Visit <strong>Giraffe Centre</strong> (€12) – feed endangered Rothschild giraffes.</p>
@@ -282,11 +304,13 @@
         </div>
       </div>
 
+      <!-- Day 9 - Added image -->
       <div class="itinerary-day">
         <div class="day-header">
           <span class="day-number">Day 9</span>
           <span class="day-title">Elephant Orphanage & Karen Blixen Museum</span>
         </div>
+        <img class="day-img" src="https://images.unsplash.com/photo-1768850395392-c6ef685329ae?q=80&w=1074&auto=format&fit=crop" alt="Baby elephants at Sheldrick Elephant Orphanage in Nairobi">
         <div class="day-content">
           <p><span class="price-tag">Morning</span> Visit <strong>Sheldrick Elephant Orphanage</strong> (€12) – 11 AM–12 PM only. Book in advance.</p>
           <p><span class="price-tag">Afternoon</span> Explore <strong>Karen Blixen Museum</strong> (€10) – "Out of Africa" author's home.</p>
@@ -294,11 +318,13 @@
         </div>
       </div>
 
+      <!-- Day 10 - Added image -->
       <div class="itinerary-day">
         <div class="day-header">
           <span class="day-number">Day 10</span>
           <span class="day-title">Departure – Nairobi → Home</span>
         </div>
+        <img class="day-img" src="https://images.unsplash.com/photo-1542296332-2e4473faf563?q=80&w=1170&auto=format&fit=crop" alt="Jomo Kenyatta International Airport Nairobi departure">
         <div class="day-content">
           <p><span class="price-tag">Morning</span> Optional: <strong>Nairobi National Park</strong> (€45) – see lions with city skyscrapers.</p>
           <p><span class="price-tag">Transfer</span> Drive to Jomo Kenyatta International Airport for your flight home.</p>
@@ -352,37 +378,30 @@
 <footer>
   <div class="container">
     <div class="footer-grid">
-      <div>
-        <div class="footer-brand"><span>Watamu</span> Holidays Kenya</div>
-        <p class="footer-desc">Your local expert for Kenyan beach & safari holidays. Family-owned, 20+ years experience.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Plan Your Trip</h4>
-        <ul>
-          <li><a href="/what-to-do-in-kenya/">What to Do in Kenya</a></li>
-          <li><a href="/kenya-travel-costs-2026/">Kenya Travel Costs</a></li>
-          <li><a href="/watamu-holiday-package-costs-2026/">Watamu Packages</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li>Watamu, Kilifi County, Kenya</li>
-          <li>+254 706 688 115</li>
-          <li><a href="https://wa.me/254706688115">WhatsApp Chat</a></li>
-        </ul>
-      </div>
+      <div><div class="footer-brand"><span>Watamu</span> Holidays Kenya</div><p class="footer-desc">Your trusted local expert for luxury Kenyan beach and safari experiences. Operated by Bwanaadi Tours (20+ years).</p></div>
+      <div class="footer-col"><h4>Destinations</h4><ul><li><a href="/watamu-holiday-package-costs-2026/">Watamu Beach</a></li><li><a href="/mombasa-travel-costs-2026/">Mombasa</a></li><li><a href="/diani-beach-holiday-costs-2026/">Diani Beach</a></li><li><a href="/masai-mara-safari-cost-2026/">Safari (Tsavo / Mara)</a></li><li><a href="/nairobi-tourist-budget-2026/">Nairobi</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li>Watamu, Kilifi County, Kenya</li><li>+254 706 688 115</li><li>info@watamuholidays.co.ke</li><li><a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20holiday" target="_blank">WhatsApp Us</a></li><li><a href="https://forms.zohopublic.com/infowatamuh1/form/LeadsHoliday/formperma/i-OPSgu3rEYBnnYMDYGLMvVK6vzfZYIsA2pEYKLbX1Q" target="_blank">Get a Quote (Zoho)</a></li></ul></div>
     </div>
   </div>
-  <div class="footer-bottom">
-    <div class="container">&copy; 2026 Watamu Holidays Kenya – Bwanaadi Tours. | <a href="/kenya-travel-costs-2026/">Kenya Travel Cost Hub</a></div>
-  </div>
+  <div class="footer-bottom"><div class="container">&copy; 2026 Watamu Holidays Kenya – Bwanaadi Tours. All rights reserved. | <a href="/kenya-travel-costs-2026/">Kenya Travel Cost Hub</a></div></div>
 </footer>
 
-<a href="https://wa.me/254706688115?text=I%20want%20to%20book%20the%2010-day%20Kenya%20itinerary" target="_blank" class="wa-float">💬</a>
+<a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20holiday" target="_blank" class="wa-float" title="Chat on WhatsApp">💬</a>
 
-<!-- Link to your existing JavaScript file -->
-<script src="/script.js"></script>
-
+<script src="/script.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "Watamu Holidays Kenya",
+  "alternateName": "Bwanaadi Tours",
+  "description": "Luxury Kenya beach holidays in Watamu from 279 EUR per day. Family-owned with 20+ years experience.",
+  "url": "https://watamuholidays.co.ke/",
+  "telephone": "+254706688115",
+  "email": "info@watamuholidays.co.ke",
+  "priceRange": "279 EUR per day",
+  "sameAs": ["https://wa.me/254706688115", "https://www.tiktok.com/@watamu.holidays"]
+}
+</script>
 </body>
 </html>
