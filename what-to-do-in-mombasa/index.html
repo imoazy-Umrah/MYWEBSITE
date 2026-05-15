@@ -108,6 +108,39 @@
       .local-flavor { flex-direction: column; text-align: center; }
       .local-flavor img { width: 100%; max-width: 280px; }
     }
+    
+    /* === FIXED FAQ ACCORDION STYLES === */
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 0;
+    }
+    .faq-q {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      padding: 18px 0;
+      font-weight: 600;
+      color: var(--blue-dark);
+      font-size: 1rem;
+    }
+    .faq-q span {
+      transition: transform 0.2s ease;
+      display: inline-block;
+      font-size: 1.2rem;
+    }
+    .faq-item.open .faq-q span {
+      transform: rotate(180deg);
+    }
+    .faq-a {
+      display: none;
+      padding-bottom: 20px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .faq-item.open .faq-a {
+      display: block;
+    }
   </style>
 </head>
 <body>
@@ -168,7 +201,6 @@
       <h2 class="section-title">Top things to do in Mombasa</h2>
       <div class="attraction-grid">
         
-        <!-- Fort Jesus – using the Pexels cannon image -->
         <div class="attraction-card">
           <img class="attraction-img" src="https://images.pexels.com/photos/28407840/pexels-photo-28407840/free-photo-of-historic-cannon-at-fort-jesus-mombasa.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Historic cannon at Fort Jesus, Mombasa" loading="lazy">
           <div class="attraction-content">
@@ -178,7 +210,6 @@
           </div>
         </div>
         
-        <!-- Old Town – landscape photo of Mombasa buildings (narrow street, carved doors) -->
         <div class="attraction-card">
           <img class="attraction-img" src="https://images.unsplash.com/photo-1613453578536-2409c9314ee0?q=80&w=880&auto=format" alt="Mombasa Old Town – Swahili architecture and carved doors" loading="lazy">
           <div class="attraction-content">
@@ -188,7 +219,6 @@
           </div>
         </div>
         
-        <!-- Haller Park – giraffe feeding (fixed image) -->
         <div class="attraction-card">
           <img class="attraction-img" src="https://images.unsplash.com/photo-1528140304883-f8d39a02fc7a?q=80&w=1170&auto=format" alt="Feeding a Rothschild giraffe at Haller Park, Mombasa" loading="lazy">
           <div class="attraction-content">
@@ -198,7 +228,6 @@
           </div>
         </div>
         
-        <!-- Camel riding on the beach -->
         <div class="attraction-card">
           <img class="attraction-img" src="https://images.unsplash.com/photo-1535349838154-27b18aa98c2d?q=80&w=686&auto=format" alt="Camel ride along Nyali Beach at sunset" loading="lazy">
           <div class="attraction-content">
@@ -208,7 +237,6 @@
           </div>
         </div>
         
-        <!-- Marine Park / snorkeling -->
         <div class="attraction-card">
           <img class="attraction-img" src="https://images.unsplash.com/photo-1645689258319-3dcb737eee5e?q=80&w=1200&auto=format" alt="Snorkeling in Mombasa Marine Park" loading="lazy">
           <div class="attraction-content">
@@ -221,7 +249,6 @@
     </div>
   </section>
 
-  <!-- Local food section – custard apple image (Marikiti market) -->
   <div class="container">
     <div class="local-flavor">
       <img src="https://images.unsplash.com/photo-1775679886812-5ff151b5cb84?q=80&w=687&auto=format&fit=crop" alt="Fresh custard apple (stafeli) at Marikiti Market, Mombasa" loading="lazy">
@@ -233,7 +260,6 @@
     </div>
   </div>
 
-  <!-- Budget & practical info -->
   <section class="section">
     <div class="container">
       <div class="grid-2">
@@ -260,7 +286,6 @@
     </div>
   </section>
 
-  <!-- Beach life / local kids playing – flagged photo -->
   <div class="container">
     <div class="local-flavor" style="background: #eef3fc; margin-bottom: 20px;">
       <img src="https://images.unsplash.com/flagged/photo-1557828823-b5bb7f45d726?q=80&w=1170&auto=format&fit=crop" alt="Local children playing and diving on Mombasa beach sand" loading="lazy">
@@ -272,7 +297,6 @@
     </div>
   </div>
 
-  <!-- Hidden gems + FAQ -->
   <section class="section-alt">
     <div class="container">
       <h2 class="section-title">Insider’s corner – Off the beaten path</h2>
@@ -288,10 +312,21 @@
           <p>Authentic wooden carvings, kikois and Tinga Tinga art – better prices than beach vendors and you support local artisans. Bargain respectfully.</p>
         </div>
       </div>
+      
+      <!-- FAQ SECTION - NOW FULLY FUNCTIONAL -->
       <div class="faq" style="margin-top: 48px;">
-        <div class="faq-item"><div class="faq-q">Is Mombasa safe for tourists? <span>▾</span></div><div class="faq-a">Yes – tourist areas like Nyali, Diani and the city centre are generally safe. Use common sense, avoid dark alleys at night, and always use registered taxis. Stick with a local guide for Old Town walking tours.</div></div>
-        <div class="faq-item"><div class="faq-q">How many days do I need in Mombasa? <span>▾</span></div><div class="faq-a">2-3 days are ideal: one day for Fort Jesus + Old Town + markets, one day for Haller Park and Nyali Beach, and an extra day to explore marine park. Many travellers combine Mombasa with Watamu or Tsavo safari.</div></div>
-        <div class="faq-item"><div class="faq-q">Can I do a day safari from Mombasa? <span>▾</span></div><div class="faq-a">Absolutely. Tsavo East National Park is 2.5 hours from Mombasa – full day safaris or overnight trips are easily arranged. Also Shimba Hills Reserve (elephants & waterfalls) is just 1 hour away.</div></div>
+        <div class="faq-item">
+          <div class="faq-q">Is Mombasa safe for tourists? <span>▾</span></div>
+          <div class="faq-a">Yes – tourist areas like Nyali, Diani and the city centre are generally safe. Use common sense, avoid dark alleys at night, and always use registered taxis. Stick with a local guide for Old Town walking tours.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How many days do I need in Mombasa? <span>▾</span></div>
+          <div class="faq-a">2-3 days are ideal: one day for Fort Jesus + Old Town + markets, one day for Haller Park and Nyali Beach, and an extra day to explore marine park. Many travellers combine Mombasa with Watamu or Tsavo safari.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I do a day safari from Mombasa? <span>▾</span></div>
+          <div class="faq-a">Absolutely. Tsavo East National Park is 2.5 hours from Mombasa – full day safaris or overnight trips are easily arranged. Also Shimba Hills Reserve (elephants & waterfalls) is just 1 hour away.</div>
+        </div>
       </div>
     </div>
   </section>
@@ -325,25 +360,44 @@
 
 <script src="/script.js" defer></script>
 <script>
-  (function(){
+  // Mobile nav toggle
+  (function() {
     const toggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
-    if(toggle && navLinks){
-      toggle.addEventListener('click', (e) => {
+    if (toggle && navLinks) {
+      toggle.addEventListener('click', function(e) {
         e.stopPropagation();
         navLinks.classList.toggle('open');
       });
-      document.addEventListener('click', (e) => {
-        if(navLinks.classList.contains('open') && !navLinks.contains(e.target) && !toggle.contains(e.target))
+      document.addEventListener('click', function(e) {
+        if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && !toggle.contains(e.target)) {
           navLinks.classList.remove('open');
+        }
       });
     }
-    document.querySelectorAll('.faq-item .faq-q').forEach(q => {
-      q.addEventListener('click', () => {
-        const item = q.closest('.faq-item');
-        if(item) item.classList.toggle('open');
+  })();
+
+  // FAQ Accordion - robust and reliable
+  (function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    if (faqItems.length) {
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-q');
+        if (question) {
+          // Remove any existing click listeners to avoid double binding
+          question.removeEventListener('click', toggleHandler);
+          question.addEventListener('click', toggleHandler);
+        }
       });
-    });
+    }
+    function toggleHandler(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const item = this.closest('.faq-item');
+      if (item) {
+        item.classList.toggle('open');
+      }
+    }
   })();
 </script>
 </body>
