@@ -114,19 +114,39 @@
       .local-flavor { flex-direction: column; text-align: center; }
       .local-flavor img { width: 100%; max-width: 280px; }
     }
-    .faq-item .faq-q {
+    
+    /* ===== FIXED FAQ ACCORDION STYLES (robust) ===== */
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 0;
+    }
+    .faq-q {
       display: flex;
       justify-content: space-between;
       align-items: center;
       cursor: pointer;
-      padding: 16px 0;
+      padding: 18px 0;
       font-weight: 600;
-      border-bottom: 1px solid var(--border);
+      color: var(--blue-dark);
+      font-size: 1rem;
     }
-    .faq-item .faq-q span { font-size: 1.2rem; transition: transform 0.2s; }
-    .faq-item.open .faq-q span { transform: rotate(180deg); }
-    .faq-a { display: none; padding: 0 0 16px 0; color: var(--text-muted); }
-    .faq-item.open .faq-a { display: block; }
+    .faq-q span {
+      transition: transform 0.2s ease;
+      display: inline-block;
+      font-size: 1.2rem;
+    }
+    .faq-item.open .faq-q span {
+      transform: rotate(180deg);
+    }
+    .faq-a {
+      display: none;
+      padding-bottom: 20px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .faq-item.open .faq-a {
+      display: block;
+    }
   </style>
 </head>
 <body>
@@ -183,13 +203,11 @@
     </div>
   </section>
 
-  <!-- ATTRACTIONS CARDS (based on your photo links + updated info) -->
   <section id="attractions" class="section-alt">
     <div class="container">
       <h2 class="section-title">Top things to do in Nairobi</h2>
       <div class="attraction-grid">
         
-        <!-- Nairobi National Park – with your zebra+skyscrapers photo -->
         <div class="attraction-card">
           <img class="attraction-img" src="https://images.unsplash.com/photo-1635595358293-03620e36be48?q=80&w=1170&auto=format" alt="Zebras grazing in Nairobi National Park with city skyscrapers visible behind" loading="lazy">
           <div class="attraction-content">
@@ -197,12 +215,11 @@
             <h3>Nairobi National Park</h3>
             <p>See lions, giraffes, rhinos and zebras with the backdrop of Nairobi’s modern skyline – a photographer’s dream. The park’s open plains, riverine forest and famous “Ivory Burning Site” make it a truly unique safari destination right inside the capital.</p>
             <div class="tip-card" style="margin-top: 12px; padding: 10px 14px;">
-              💡 <strong>Costs & hours:</strong> USD 80 per adult non‑resident, open 6am–6pm daily. Pay cashless via ecitizen.[reference:0]
+              💡 <strong>Costs & hours:</strong> USD 80 per adult non‑resident, open 6am–6pm daily. Pay cashless via ecitizen.
             </div>
           </div>
         </div>
         
-        <!-- Giraffe Centre – feed endangered Rothschild giraffes -->
         <div class="attraction-card">
           <img class="attraction-img" src="https://images.unsplash.com/photo-1528140304883-f8d39a02fc7a?q=80&w=1170&auto=format" alt="Feeding a Rothschild giraffe at Giraffe Centre in Nairobi" loading="lazy">
           <div class="attraction-content">
@@ -210,12 +227,11 @@
             <h3>Giraffe Centre</h3>
             <p>Feed endangered Rothschild giraffes from a raised platform, and even get a “kiss” from one of these gentle giants. The centre also runs a breeding programme and a lovely nature trail through Gogo River Bird Sanctuary.</p>
             <div class="tip-card" style="margin-top: 12px; padding: 10px 14px;">
-              💡 <strong>Costs & hours:</strong> KES 1,500 (non‑resident adult), open daily 9am–5pm. Cashless only.[reference:1]
+              💡 <strong>Costs & hours:</strong> KES 1,500 (non‑resident adult), open daily 9am–5pm. Cashless only.
             </div>
           </div>
         </div>
         
-        <!-- Sheldrick Elephant Orphanage -->
         <div class="attraction-card">
           <img class="attraction-img" src="https://images.unsplash.com/photo-1768850395392-c6ef685329ae?q=80&w=1074&auto=format" alt="Keepers feeding baby elephants at Sheldrick Elephant Orphanage" loading="lazy">
           <div class="attraction-content">
@@ -223,12 +239,11 @@
             <h3>Sheldrick Elephant Orphanage</h3>
             <p>Watch orphaned baby elephants being bottle‑fed and rolling in mud baths. This world‑famous sanctuary has successfully raised and released over 300 elephants back into the wild.</p>
             <div class="tip-card" style="margin-top: 12px; padding: 10px 14px;">
-              💡 <strong>Costs & hours:</strong> Public viewing strictly 11am–12pm daily (closed 25 Dec). Entry ~USD 10, book in advance.[reference:2][reference:3]
+              💡 <strong>Costs & hours:</strong> Public viewing strictly 11am–12pm daily (closed 25 Dec). Entry ~USD 10, book in advance.
             </div>
           </div>
         </div>
         
-        <!-- Karen Blixen Museum -->
         <div class="attraction-card">
           <img class="attraction-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Karen_Blixen_House%2C_Nairobi%2C_Kenya_%2822288985045%29.jpg/500px-Karen_Blixen_House%2C_Nairobi%2C_Kenya_%2822288985045%29.jpg" alt="Karen Blixen Museum main house, Nairobi" loading="lazy">
           <div class="attraction-content">
@@ -236,12 +251,11 @@
             <h3>Karen Blixen Museum</h3>
             <p>The former home of the famous Danish author, where she wrote “Out of Africa”. Step inside the beautifully preserved colonial farmhouse and wander through the gardens at the foot of the Ngong Hills.</p>
             <div class="tip-card" style="margin-top: 12px; padding: 10px 14px;">
-              💡 <strong>Costs & hours:</strong> KES 550 adult (Kenyan/East African), foreign adults USD 9–17. Open daily 8:30am–5:30pm.[reference:4][reference:5]
+              💡 <strong>Costs & hours:</strong> KES 550 adult (Kenyan/East African), foreign adults USD 9–17. Open daily 8:30am–5:30pm.
             </div>
           </div>
         </div>
         
-        <!-- KICC Rooftop + city photo (Your sunset building image) -->
         <div class="attraction-card">
           <img class="attraction-img" src="https://i.pinimg.com/1200x/23/2c/44/232c449f1eaa5b6e9aa0ed1d5c5ecb35.jpg" alt="Nairobi city skyline at sunset with modern buildings" loading="lazy">
           <div class="attraction-content">
@@ -249,12 +263,11 @@
             <h3>KICC Rooftop (Helipad)</h3>
             <p>Take the elevator to the rooftop helipad for a spectacular 360‑degree view of Nairobi’s skyline, the Ngong Hills, and on clear days even Mount Kenya. The circular tower is an iconic landmark built in 1973.</p>
             <div class="tip-card" style="margin-top: 12px; padding: 10px 14px;">
-              💡 <strong>Costs & hours:</strong> KES 500 per person. Open daily 9am–6pm.[reference:6] Rooftop access via KICC reception.
+              💡 <strong>Costs & hours:</strong> KES 500 per person. Open daily 9am–6pm. Rooftop access via KICC reception.
             </div>
           </div>
         </div>
         
-        <!-- Nairobi National Museum -->
         <div class="attraction-card">
           <img class="attraction-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/The_National_Museums_of_Kenya_-_Nairobi_02.jpg/960px-The_National_Museums_of_Kenya_-_Nairobi_02.jpg" alt="Nairobi National Museum building entrance" loading="lazy">
           <div class="attraction-content">
@@ -262,12 +275,11 @@
             <h3>Nairobi National Museum</h3>
             <p>Discover Kenya’s rich history, from prehistoric fossils (including a replica of “Turkana Boy”) to ethnographic displays of tribal cultures, and an impressive Hall of Mammals. Temporary exhibitions cover Swahili art and contemporary Kenyan artists.</p>
             <div class="tip-card" style="margin-top: 12px; padding: 10px 14px;">
-              💡 <strong>Costs & hours:</strong> KES 350 adult (East African), foreign adults USD 18. Open daily 8:30am–5:30pm.[reference:7]
+              💡 <strong>Costs & hours:</strong> KES 350 adult (East African), foreign adults USD 18. Open daily 8:30am–5:30pm.
             </div>
           </div>
         </div>
         
-        <!-- Carnivore Restaurant (food experience) -->
         <div class="attraction-card">
           <img class="attraction-img" src="https://i.pinimg.com/736x/06/8e/21/068e21f2cd8b0d2305f3bb078913cd4c.jpg" alt="Nyama choma feast at Carnivore Restaurant Nairobi" loading="lazy">
           <div class="attraction-content">
@@ -275,7 +287,7 @@
             <h3>Carnivore Restaurant</h3>
             <p>An all‑you‑can‑eat meat feast where waiters carve sizzling meats (including ostrich, crocodile and camel) from Masai swords straight onto your plate. A true Nairobi institution and a carnivore’s paradise.</p>
             <div class="tip-card" style="margin-top: 12px; padding: 10px 14px;">
-              💡 <strong>Costs:</strong> Set menu approx. USD 30–40 per person (drinks extra). Book in advance.[reference:8]
+              💡 <strong>Costs:</strong> Set menu approx. USD 30–40 per person (drinks extra). Book in advance.
             </div>
           </div>
         </div>
@@ -283,21 +295,19 @@
     </div>
   </section>
 
-  <!-- Extra: Bomas of Kenya + Maasai Market + Railway Museum highlights -->
   <div class="container">
     <div class="local-flavor">
       <img src="https://images.unsplash.com/photo-1613453578536-2409c9314ee0?q=80&w=880&auto=format" alt="Traditional Kenyan dancers at Bomas of Kenya" loading="lazy">
       <div>
         <h3>🎭 Immerse yourself in Kenyan culture</h3>
         <p><strong>Bomas of Kenya</strong> presents a spectacular 90‑minute show featuring traditional dances, songs and folklore from over 40 ethnic groups. The open‑air arena also displays authentic homestead replicas (“bomas”). Entry ~600 KSH, showtimes 2:30pm weekdays / 3:15pm weekends.<br>
-        <strong>Maasai Market</strong> rotates locations: Tuesday (Westgate Mall), Thursday (Kijabe St), weekends ( various malls). Haggling expected; brilliant for beadwork, fabrics and carved souvenirs. Opens ~9am–6pm.<br>
-        <strong>Nairobi Railway Museum</strong> – see vintage steam locomotives and the famous “Man‑eater of Tsavo” carriage. Entry KES 600 non‑resident.[reference:9]</p>
+        <strong>Maasai Market</strong> rotates locations: Tuesday (Westgate Mall), Thursday (Kijabe St), weekends (various malls). Haggling expected; brilliant for beadwork, fabrics and carved souvenirs. Opens ~9am–6pm.<br>
+        <strong>Nairobi Railway Museum</strong> – see vintage steam locomotives and the famous “Man‑eater of Tsavo” carriage. Entry KES 600 non‑resident.</p>
         <div class="price-badge" style="background:#e67e22;">local insider: combine Giraffe Centre + Sheldrick + Bomas in one day (morning elephants, noon giraffes, afternoon show)</div>
       </div>
     </div>
   </div>
 
-  <!-- Budget & practical info -->
   <section class="section">
     <div class="container">
       <div class="info-grid">
@@ -323,20 +333,31 @@
     </div>
   </section>
 
-  <!-- FAQ section -->
+  <!-- FAQ SECTION - FULLY FUNCTIONAL (same robust pattern) -->
   <section class="section-alt">
     <div class="container" style="max-width: 760px;">
       <h2 class="section-title mb-32">Frequently Asked Questions — Nairobi</h2>
       <div class="faq">
-        <div class="faq-item"><div class="faq-q">Is Nairobi National Park worth visiting? <span>▾</span></div><div class="faq-a">Absolutely. It’s the only national park on the edge of a capital city anywhere in the world. You can see lions, rhinos, giraffes and zebras with city skyscrapers as a backdrop – surreal and unforgettable.</div></div>
-        <div class="faq-item"><div class="faq-q">Can I do a day trip from Nairobi to see wildlife? <span>▾</span></div><div class="faq-a">Yes! Combine Nairobi National Park, Sheldrick Elephant Orphanage (11am-12pm), and Giraffe Centre in one day – it’s the ultimate “Nairobi wildlife safari”.</div></div>
-        <div class="faq-item"><div class="faq-q">Where can I eat authentic Kenyan food? <span>▾</span></div><div class="faq-a">Carnivore Restaurant for nyama choma, or smaller spots like Mamba Village, Habesha (Ethiopian), and roadside “kuku choma” stalls in Lang’ata or Westlands.</div></div>
-        <div class="faq-item"><div class="faq-q">Is it safe to walk around Nairobi? <span>▾</span></div><div class="faq-a">Stick to well‑populated areas during the day. Use Uber/Bolt for evening trips. The “Green City in the Sun” is welcoming but street smarts are essential – just like any major city.</div></div>
+        <div class="faq-item">
+          <div class="faq-q">Is Nairobi National Park worth visiting? <span>▾</span></div>
+          <div class="faq-a">Absolutely. It’s the only national park on the edge of a capital city anywhere in the world. You can see lions, rhinos, giraffes and zebras with city skyscrapers as a backdrop – surreal and unforgettable.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I do a day trip from Nairobi to see wildlife? <span>▾</span></div>
+          <div class="faq-a">Yes! Combine Nairobi National Park, Sheldrick Elephant Orphanage (11am-12pm), and Giraffe Centre in one day – it’s the ultimate “Nairobi wildlife safari”.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Where can I eat authentic Kenyan food? <span>▾</span></div>
+          <div class="faq-a">Carnivore Restaurant for nyama choma, or smaller spots like Mamba Village, Habesha (Ethiopian), and roadside “kuku choma” stalls in Lang’ata or Westlands.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is it safe to walk around Nairobi? <span>▾</span></div>
+          <div class="faq-a">Stick to well‑populated areas during the day. Use Uber/Bolt for evening trips. The “Green City in the Sun” is welcoming but street smarts are essential – just like any major city.</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- internal related pages -->
   <div class="container">
     <div class="links-bar">
       <p>Explore more of Kenya</p>
@@ -366,26 +387,43 @@
 
 <script src="/script.js" defer></script>
 <script>
-  // mobile nav + FAQ accordion
-  (function(){
+  // Mobile navigation toggle (robust)
+  (function() {
     const toggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
-    if(toggle && navLinks){
-      toggle.addEventListener('click', (e) => {
+    if (toggle && navLinks) {
+      toggle.addEventListener('click', function(e) {
         e.stopPropagation();
         navLinks.classList.toggle('open');
       });
-      document.addEventListener('click', (e) => {
-        if(navLinks.classList.contains('open') && !navLinks.contains(e.target) && !toggle.contains(e.target))
+      document.addEventListener('click', function(e) {
+        if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && !toggle.contains(e.target)) {
           navLinks.classList.remove('open');
+        }
       });
     }
-    document.querySelectorAll('.faq-item .faq-q').forEach(q => {
-      q.addEventListener('click', () => {
-        const item = q.closest('.faq-item');
-        if(item) item.classList.toggle('open');
+  })();
+
+  // FAQ Accordion - reliable, prevents double binding
+  (function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    if (faqItems.length) {
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-q');
+        if (question) {
+          question.removeEventListener('click', toggleHandler);
+          question.addEventListener('click', toggleHandler);
+        }
       });
-    });
+    }
+    function toggleHandler(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const item = this.closest('.faq-item');
+      if (item) {
+        item.classList.toggle('open');
+      }
+    }
   })();
 </script>
 </body>
