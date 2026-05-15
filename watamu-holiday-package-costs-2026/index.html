@@ -150,6 +150,85 @@
       color: white;
       border-color: var(--gold);
     }
+    /* Package Card - clean, responsive, no overflow */
+.package-card {
+  background: var(--card);
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+  padding: 28px;
+  position: sticky;
+  top: 88px;
+  border: 1px solid var(--border);
+}
+
+.package-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid var(--gold);
+  display: inline-block;
+  color: var(--blue-dark);
+}
+
+.package-table {
+  width: 100%;
+  margin-bottom: 24px;
+  border-collapse: collapse;
+  table-layout: fixed; /* FIX: Prevents overflow */
+}
+
+.package-table td {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  word-break: break-word; /* FIX: Breaks long words */
+}
+
+.package-table tr:last-child td {
+  border-bottom: none;
+}
+
+.package-table td:first-child {
+  font-weight: 600;
+  color: var(--text);
+  width: 55%; /* FIX: Gives first column more space */
+}
+
+.package-table td:last-child {
+  text-align: right;
+  font-weight: 700;
+  color: var(--gold);
+  width: 45%; /* FIX: Second column gets remaining space */
+  white-space: normal; /* FIX: Allows wrapping */
+}
+
+.btn-full {
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+/* Mobile adjustments for package card only */
+@media (max-width: 768px) {
+  .package-card {
+    padding: 20px;
+    position: relative;
+    top: 0;
+  }
+  .package-card h3 {
+    font-size: 1.2rem;
+  }
+  .package-table td {
+    padding: 10px 0;
+  }
+  .package-table td:first-child {
+    width: 50%;
+    font-size: 0.9rem;
+  }
+  .package-table td:last-child {
+    width: 50%;
+    font-size: 0.9rem;
+  }
+}
   </style>
 </head>
 <body>
