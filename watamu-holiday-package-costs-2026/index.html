@@ -17,346 +17,115 @@
   <meta property="og:url" content="https://watamuholidays.co.ke/watamu-holiday-package-costs-2026/" />
   <meta name="twitter:card" content="summary_large_image" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    :root {
-      --gold: #e67e22;
-      --gold-dark: #d35400;
-      --blue-dark: #1a2a3a;
-      --blue-mid: #2c3e50;
-      --text: #2c3e50;
-      --text-muted: #5a6a7a;
-      --off-white: #f8f9fa;
-      --border: #e0e7ef;
-      --card: #ffffff;
-      --shadow-sm: 0 8px 20px rgba(0,0,0,0.05);
-      --shadow-md: 0 12px 30px rgba(0,0,0,0.08);
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--text);
-      background: #fff;
-      line-height: 1.5;
-    }
-    h1, h2, h3, .nav-logo, .hero-badge {
-      font-family: 'Playfair Display', serif;
-    }
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-    /* Navigation */
-    nav {
-      background: white;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .nav-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 24px;
-      flex-wrap: wrap;
-    }
-    .nav-logo {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--blue-dark);
-      text-decoration: none;
-    }
-    .nav-logo span {
-      color: var(--gold);
-    }
-    .nav-links {
-      display: flex;
-      gap: 24px;
-      list-style: none;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .nav-links a {
-      text-decoration: none;
-      color: var(--blue-mid);
-      font-weight: 500;
-      transition: 0.2s;
-    }
-    .nav-links a:hover, .nav-links a.active {
-      color: var(--gold);
-    }
-    .btn-nav {
-      background: var(--gold);
-      color: white !important;
-      padding: 8px 20px;
-      border-radius: 40px;
-    }
-    .nav-toggle {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .nav-toggle span {
-      width: 28px;
-      height: 2px;
-      background: var(--blue-dark);
-      transition: 0.2s;
-    }
-    @media (max-width: 768px) {
-      .nav-toggle {
-        display: flex;
-      }
-      .nav-links {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        padding: 20px 0 10px;
-        gap: 16px;
-      }
-      .nav-links.show {
-        display: flex;
-      }
-      .nav-inner {
-        padding: 12px 20px;
-      }
-    }
-    /* Hero */
+    /* ===== PAGE-SPECIFIC STYLES ONLY ===== */
+    
+    /* Hero background image (overrides style.css) */
     .hero {
       background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.8)), url('https://images.pexels.com/photos/22481003/pexels-photo-22481003.jpeg?auto=compress&cs=tinysrgb&w=1600');
       background-size: cover;
       background-position: center;
-      min-height: 70vh;
-      display: flex;
-      align-items: center;
-      text-align: center;
     }
-    .hero-content {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-    .hero-badge {
-      background: rgba(230,126,34,0.9);
-      display: inline-block;
-      padding: 6px 18px;
-      border-radius: 40px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      margin-bottom: 20px;
-      color: white;
-    }
-    .hero h1 {
-      font-size: 2.8rem;
-      color: white;
-      margin-bottom: 20px;
-      line-height: 1.2;
-    }
-    .hero h1 .price {
-      color: var(--gold);
-    }
-    .hero-sub {
-      color: #f0f0f0;
-      font-size: 1.1rem;
-      margin-bottom: 32px;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 28px;
-      border-radius: 40px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.2s;
-      border: none;
-      cursor: pointer;
-    }
-    .btn-whatsapp {
-      background: #25D366;
-      color: white;
-    }
-    .btn-whatsapp:hover {
-      background: #128C7E;
-    }
-    .btn-gold {
-      background: var(--gold);
-      color: white;
-    }
-    .btn-gold:hover {
-      background: var(--gold-dark);
-    }
-    .btn-outline {
-      border: 2px solid white;
-      color: white;
-      background: transparent;
-    }
-    .hero-btns {
-      display: flex;
-      gap: 16px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    /* Sections */
-    .section {
-      padding: 60px 0;
-    }
-    .section-alt {
-      padding: 60px 0;
-      background: var(--off-white);
-    }
-    .section-title {
-      font-size: 1.8rem;
-      margin-bottom: 32px;
-      color: var(--blue-dark);
-      position: relative;
-      display: inline-block;
-    }
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: start;
-    }
-    .prose p {
-      margin-bottom: 16px;
-      line-height: 1.6;
-    }
-    .info-box {
-      background: #eef2f5;
-      padding: 20px;
-      border-radius: 20px;
-      margin-top: 24px;
-    }
-    .info-box.gold {
-      background: #fef5e8;
-      border-left: 4px solid var(--gold);
-    }
-    .card {
-      background: white;
-      border-radius: 20px;
-      padding: 24px;
-      box-shadow: var(--shadow-sm);
-      border: 1px solid var(--border);
-    }
-    /* FIXED: Package card - responsive without overflow */
+    
+    /* Package Card - clean, responsive, no overflow */
     .package-card {
-      background: white;
-      border-radius: 24px;
+      background: var(--card);
+      border-radius: 20px;
       box-shadow: var(--shadow-md);
-      padding: 24px 20px;
+      padding: 28px;
       position: sticky;
       top: 88px;
       border: 1px solid var(--border);
     }
+    
     .package-card h3 {
       font-size: 1.4rem;
       margin-bottom: 20px;
-      padding-bottom: 16px;
-      border-bottom: 2px solid var(--gold);
+      padding-bottom: 12px;
+      border-bottom: 3px solid var(--gold);
       display: inline-block;
       color: var(--blue-dark);
     }
+    
     .package-table {
       width: 100%;
       margin-bottom: 24px;
       border-collapse: collapse;
     }
+    
     .package-table td {
       padding: 14px 0;
       border-bottom: 1px solid var(--border);
     }
+    
     .package-table tr:last-child td {
       border-bottom: none;
     }
+    
     .package-table td:first-child {
       font-weight: 600;
       color: var(--text);
     }
+    
     .package-table td:last-child {
       text-align: right;
       font-weight: 700;
       color: var(--gold);
-      font-size: 1rem;
     }
-    /* For mobile, ensure no overflow */
-    @media (max-width: 640px) {
-      .package-card {
-        padding: 20px 16px;
-      }
-      .package-table td {
-        padding: 12px 0;
-      }
-      .package-table td:first-child {
-        font-size: 0.9rem;
-      }
-      .package-table td:last-child {
-        font-size: 0.95rem;
-        white-space: nowrap;
-      }
-    }
+    
     .btn-full {
       width: 100%;
       justify-content: center;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
-    .text-muted {
-      color: var(--text-muted);
-      font-size: 0.75rem;
-      text-align: center;
-      margin-top: 12px;
+    
+    /* Mobile adjustments for package card only */
+    @media (max-width: 768px) {
+      .package-card {
+        padding: 20px;
+        position: relative;
+        top: 0;
+      }
+      .package-card h3 {
+        font-size: 1.2rem;
+      }
+      .package-table td {
+        padding: 10px 0;
+      }
     }
+    
+    /* Fix for mobile tables - ensures horizontal scroll works */
     .table-wrap {
       width: 100%;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
     }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    th, td {
-      padding: 12px 16px;
-      text-align: left;
-      border-bottom: 1px solid var(--border);
-    }
-    th {
-      background: var(--off-white);
-      font-weight: 600;
-    }
-    .fw-bold {
-      font-weight: 700;
-    }
+    
+    /* Swipe hint text for mobile */
     .swipe-hint {
-      text-align: center;
       font-size: 0.7rem;
-      color: #5a6a7a;
+      color: var(--text-muted);
+      text-align: right;
       margin-top: 8px;
-      font-style: italic;
+      display: none;
     }
-    @media (min-width: 640px) {
+    
+    @media (max-width: 640px) {
       .swipe-hint {
-        display: none;
+        display: block;
       }
     }
-    .mt-24 { margin-top: 24px; }
-    .mb-32 { margin-bottom: 32px; }
-    .scroll-reveal { opacity: 1; }
-    /* extra links */
+    
+    /* Extra links section (not in global style.css) */
     .extra-links-section {
       margin: 40px 0 60px;
-      padding: 24px 20px;
+      padding: 28px 20px;
       background: var(--off-white);
-      border-radius: 24px;
+      border-radius: 20px;
       text-align: center;
     }
+    
     .extra-links {
       display: flex;
       flex-wrap: wrap;
@@ -364,6 +133,7 @@
       gap: 12px;
       margin-top: 16px;
     }
+    
     .extra-links a {
       background: white;
       border: 1px solid var(--border);
@@ -372,100 +142,13 @@
       font-size: 0.85rem;
       color: var(--blue-mid);
       text-decoration: none;
+      transition: 0.2s;
     }
+    
     .extra-links a:hover {
       background: var(--gold);
       color: white;
       border-color: var(--gold);
-    }
-    /* footer */
-    footer {
-      background: var(--blue-dark);
-      color: #ccc;
-      padding-top: 48px;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 32px;
-      margin-bottom: 32px;
-    }
-    .footer-brand {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-    .footer-brand span {
-      color: var(--gold);
-    }
-    .footer-col h4 {
-      color: white;
-      margin-bottom: 16px;
-    }
-    .footer-col ul {
-      list-style: none;
-    }
-    .footer-col li, .footer-col a {
-      color: #ccc;
-      text-decoration: none;
-      line-height: 1.8;
-    }
-    .footer-bottom {
-      border-top: 1px solid #3a4a5a;
-      padding: 20px 0;
-      text-align: center;
-      font-size: 0.8rem;
-    }
-    .wa-float {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      background: #25D366;
-      color: white;
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      z-index: 99;
-    }
-    .faq-item {
-      border-bottom: 1px solid var(--border);
-      padding: 16px 0;
-    }
-    .faq-q {
-      font-weight: 600;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-    }
-    .faq-a {
-      display: none;
-      padding-top: 12px;
-      color: #5a6a7a;
-    }
-    .faq-item.open .faq-a {
-      display: block;
-    }
-    @media (max-width: 768px) {
-      .grid-2 {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-      .hero h1 {
-        font-size: 2rem;
-      }
-      .section {
-        padding: 40px 0;
-      }
-      .package-card {
-        position: relative;
-        top: 0;
-      }
     }
   </style>
 </head>
@@ -514,7 +197,7 @@
         </div>
       </div>
 
-      <!-- FIXED: Package card - responsive, no overflow -->
+      <!-- Package Card - fully responsive, no overflow -->
       <div>
         <div class="package-card">
           <h3>Package Costs (per person)</h3>
@@ -535,13 +218,15 @@
   </div>
 </section>
 
-<!-- Comparison Table (swipe hint remains for other tables) -->
+<!-- Comparison Table -->
 <section class="section-alt">
   <div class="container">
     <h2 class="section-title">Watamu vs Diani vs Mombasa – Which Kenyan Coast Fits Your Budget?</h2>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Destination</th><th>Best For</th><th>Daily Budget (Mid‑range)</th><th>Vibe</th></tr></thead>
+        <thead>
+          <tr><th>Destination</th><th>Best For</th><th>Daily Budget (Mid‑range)</th><th>Vibe</th></tr>
+        </thead>
         <tbody>
           <tr><td class="fw-bold">Watamu</td><td>Boutique beaches & marine parks</td><td>€120–€200</td><td>Relaxed, Italian influence, snorkeling</td></tr>
           <tr><td class="fw-bold">Diani</td><td>Luxury resorts & entertainment</td><td>€180–€350</td><td>Upscale, lively, water sports</td></tr>
@@ -556,12 +241,15 @@
   </div>
 </section>
 
+<!-- Accommodation Table -->
 <section class="section">
   <div class="container">
     <h2 class="section-title">Watamu Accommodation Costs 2026 – Hotels, Villas & Lodges</h2>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Accommodation Type</th><th>Nightly (KES)</th><th>Nightly (USD)</th><th>Examples</th></tr></thead>
+        <thead>
+          <tr><th>Accommodation Type</th><th>Nightly (KES)</th><th>Nightly (USD)</th><th>Examples</th></tr>
+        </thead>
         <tbody>
           <tr><td class="fw-bold">Backpacker Hostel</td><td>1,500–3,000</td><td>$12–23</td><td>Watamu Backpackers, Distant Relatives</td></tr>
           <tr><td class="fw-bold">Budget Guesthouse</td><td>4,000–8,000</td><td>$31–62</td><td>Local B&Bs near Turtle Bay</td></tr>
@@ -575,6 +263,7 @@
   </div>
 </section>
 
+<!-- Food & Transport Tables -->
 <section class="section-alt">
   <div class="container">
     <div class="grid-2">
@@ -613,6 +302,7 @@
   </div>
 </section>
 
+<!-- Activity Cards -->
 <section class="section">
   <div class="container">
     <h2 class="section-title">Watamu Activity Prices – Marine Park, Snorkeling, Dhow & Safaris</h2>
@@ -625,6 +315,7 @@
   </div>
 </section>
 
+<!-- Hidden Costs & Best Months -->
 <section class="section-alt">
   <div class="container">
     <div class="grid-2">
@@ -634,6 +325,7 @@
   </div>
 </section>
 
+<!-- FAQ -->
 <section class="section">
   <div class="container" style="max-width:760px;">
     <h2 class="section-title mb-32">Frequently Asked Questions — Watamu Holiday Costs</h2>
@@ -646,6 +338,7 @@
   </div>
 </section>
 
+<!-- Extra Links -->
 <div class="container">
   <div class="extra-links-section">
     <h3>🌴 Explore More Watamu Experiences</h3>
@@ -672,22 +365,22 @@
 
 <a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20Watamu%20package" target="_blank" class="wa-float" title="Chat on WhatsApp">💬</a>
 
+<!-- ✅ Link to your existing external JavaScript file -->
+<script src="/script.js"></script>
+
+<!-- Small inline fallback for nav toggle (in case external script fails, but it's already handled there) -->
 <script>
-  // Mobile nav toggle
-  const toggle = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
-  if (toggle && navLinks) {
-    toggle.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
-  }
-  // FAQ accordion
-  document.querySelectorAll('.faq-item').forEach(item => {
-    const q = item.querySelector('.faq-q');
-    q.addEventListener('click', () => {
-      item.classList.toggle('open');
-    });
-  });
+  // Ensure mobile nav toggle works even if external script has issues
+  (function() {
+    const toggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (toggle && navLinks && !window.navInitialized) {
+      toggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        navLinks.classList.toggle('open');
+      });
+    }
+  })();
 </script>
 
 <script type="application/ld+json">
