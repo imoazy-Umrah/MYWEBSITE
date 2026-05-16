@@ -2,89 +2,157 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kenya Travel Costs 2026 – Complete Budget Guide | Safari & Beach Prices</title>
-  <meta name="description" content="The ultimate Kenya travel costs guide 2026. Real budgets for safaris, beach holidays, Mombasa, Diani, Watamu, Nairobi, and Masai Mara. Updated monthly. Local insider prices." />
-  <meta name="keywords" content="Kenya travel costs 2026, Kenya holiday budget, Kenya safari cost, Kenya beach holiday prices, Masai Mara safari cost, Watamu holiday package costs, Mombasa travel budget, Diani beach cost, Nairobi tourist budget, how much does a Kenya trip cost, affordable Kenya holidays, Kenya travel expenses" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>What to Do in Kenya | Complete Destination & Activity Guide 2026</title>
+  <meta name="description" content="Your complete guide to what to do in Kenya: explore Mombasa's Fort Jesus, snorkel Watamu Marine Park, safari in Tsavo East, visit baby elephants in Nairobi, and more. Local insights, 2026 updates." />
+  <meta name="keywords" content="what to do in Kenya, Kenya travel guide, Mombasa attractions, Watamu activities, Diani water sports, Nairobi safari, Tsavo East, Kenya itinerary 2026" />
   <meta name="author" content="Bwanaadi Tours – Watamu Holidays" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://watamuholidays.co.ke/kenya-travel-costs-2026/" />
+  <link rel="canonical" href="https://watamuholidays.co.ke/what-to-do-in-kenya/" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-  <meta property="og:title" content="Kenya Travel Costs 2026 – Complete Budget Guide" />
-  <meta property="og:description" content="Real Kenya travel budgets from local experts. Compare costs for safaris, beaches, cities – updated monthly." />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1516026672322-bc52d61e55d5?w=1200" />
+  <meta property="og:title" content="What to Do in Kenya | Complete Destination Guide 2026" />
+  <meta property="og:description" content="Your complete Kenya travel guide: from Mombasa's ancient forts to Watamu's coral reefs, Tsavo's red elephants, and Nairobi's wildlife. Plan your perfect Kenyan adventure." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1579005318686-5a86bbb3bf03?q=80&w=1200" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://watamuholidays.co.ke/kenya-travel-costs-2026/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <!-- External CSS & Google Fonts -->
+  <meta property="og:url" content="https://watamuholidays.co.ke/what-to-do-in-kenya/" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css" />
   <style>
-    /* Hero background – Kenyan flag with dark overlay */
+    /* Hero image – Kenyan landscape */
     .hero {
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.75)), url('https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Kenya.svg');
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1579005318686-5a86bbb3bf03?q=80&w=1600&auto=format');
       background-size: cover;
-      background-position: center;
+      background-position: center 40%;
     }
-    .hero h1, .hero-sub, .hero-badge, .hero-btns .btn {
-      color: white;
-    }
+    .hero, .hero * { color: #ffffff !important; }
+    .hero .hero-badge { background: rgba(212,160,23,0.95) !important; color: #1e2a3e !important; }
+    .hero .btn, .hero .btn-nav, .hero .btn-whatsapp, .hero .btn-outline { color: #ffffff !important; }
+    .hero .btn-whatsapp { background: var(--green-wa) !important; }
+    .hero .btn-outline { border-color: rgba(255,255,255,0.8) !important; }
 
-    /* ===== INLINE MOBILE FIXES ===== */
-    @media (max-width: 768px) {
-      .hero {
-        min-height: 85svh !important;
-        background-position: top center !important;
-        background-size: cover !important;
-      }
-      .hero h1 {
-        font-size: 2rem !important;
-      }
-      .hero-sub {
-        font-size: 1rem !important;
-        padding: 0 0.5rem !important;
-      }
+    .attraction-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 28px;
+      margin: 40px 0 20px;
     }
-    .table-wrap {
+    .destination-card {
+      background: var(--card);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.25s ease, box-shadow 0.25s;
+      border: 1px solid var(--border);
+    }
+    .destination-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 30px -12px rgba(10,61,98,0.2);
+    }
+    .destination-img {
       width: 100%;
-      overflow-x: auto !important;
-      -webkit-overflow-scrolling: touch;
+      height: 220px;
+      object-fit: cover;
+      display: block;
     }
-    @media (max-width: 640px) {
-      .table-wrap {
-        margin-bottom: 1rem;
-      }
-      th, td {
-        white-space: nowrap;
-      }
+    .destination-content {
+      padding: 22px 24px 28px;
     }
-    /* Swipe hint for mobile tables */
-    .swipe-hint {
-      text-align: center;
+    .destination-content h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--blue-dark);
+      margin-bottom: 12px;
+      font-family: 'Playfair Display', serif;
+    }
+    .price-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--blue-dark);
+      font-weight: 700;
       font-size: 0.7rem;
-      color: #5a6a7a;
-      margin-top: 8px;
-      font-style: italic;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      letter-spacing: 0.3px;
     }
-    @media (min-width: 640px) {
-      .swipe-hint {
-        display: none;
-      }
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin: 32px 0;
     }
-
-    /* ===== FIX FOR THE SEASONAL PRICE TABLE (DESKTOP) ===== */
-    .section-alt .table-wrap table {
-      width: 100%;
-      border-collapse: collapse;
+    @media (max-width: 760px) {
+      .attraction-grid { gap: 20px; }
+      .info-grid { grid-template-columns: 1fr; }
     }
-    @media (min-width: 769px) {
-      .section-alt .table-wrap table {
-        table-layout: fixed;
-      }
-      .section-alt .table-wrap th:nth-child(1) { width: 28%; }  /* Destination */
-      .section-alt .table-wrap th:nth-child(2) { width: 28%; }  /* Peak Season */
-      .section-alt .table-wrap th:nth-child(3) { width: 28%; }  /* Low Season */
-      .section-alt .table-wrap th:nth-child(4) { width: 16%; }  /* Savings */
+    .tip-card {
+      background: #fef7e0;
+      border-left: 4px solid var(--gold);
+      padding: 16px 20px;
+      border-radius: 16px;
+      margin: 28px 0;
+    }
+    
+    /* FAQ accordion styles */
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 0;
+    }
+    .faq-q {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      padding: 18px 0;
+      font-weight: 600;
+      color: var(--blue-dark);
+      font-size: 1rem;
+    }
+    .faq-q span {
+      transition: transform 0.2s ease;
+      display: inline-block;
+      font-size: 1.2rem;
+    }
+    .faq-item.open .faq-q span {
+      transform: rotate(180deg);
+    }
+    .faq-a {
+      display: none;
+      padding-bottom: 20px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .faq-item.open .faq-a {
+      display: block;
+    }
+    
+    .itinerary-day {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+    .day-header {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 16px;
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .day-number {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--gold);
+      font-family: 'Playfair Display', serif;
+    }
+    .day-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--blue-dark);
     }
   </style>
 </head>
@@ -97,7 +165,7 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="/">Home</a></li>
       <li><a href="/watamu-holiday-package-costs-2026/">Watamu Costs</a></li>
-      <li><a href="/kenya-travel-costs-2026/" class="active">Kenya Costs</a></li>
+      <li><a href="/kenya-travel-costs-2026/">Kenya Guide</a></li>
       <li><a href="/mombasa-travel-costs-2026/">Mombasa</a></li>
       <li><a href="/diani-beach-holiday-costs-2026/">Diani</a></li>
       <li><a href="/masai-mara-safari-cost-2026/">Safari</a></li>
@@ -107,280 +175,323 @@
   </div>
 </nav>
 
-<!-- Hero Section -->
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-badge">Updated Monthly – May 2026</div>
-    <h1>Kenya Travel Costs 2026<br>Complete Budget Guide</h1>
-    <p class="hero-sub">Real prices for safaris, beach holidays, city stopovers – from backpacker to luxury</p>
+    <div class="hero-badge">Kenya Travel Guide 2026</div>
+    <h1>What to Do in Kenya<br>Beaches · Safaris · Culture · Adventure</h1>
+    <p class="hero-sub">From the Indian Ocean's turquoise waters to the savannah's golden plains – discover Kenya's best experiences, curated by local experts.</p>
     <div class="hero-btns">
-      <a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20holiday" target="_blank" class="btn btn-whatsapp">Book on WhatsApp</a>
-      <a href="https://forms.zohopublic.com/infowatamuh1/form/LeadsHoliday/formperma/i-OPSgu3rEYBnnYMDYGLMvVK6vzfZYIsA2pEYKLbX1Q" target="_blank" class="btn btn-outline">Get a Custom Quote</a>
+      <a href="#destinations" class="btn btn-outline">Explore Destinations ↓</a>
+      <a href="https://wa.me/254706688115?text=I%20want%20to%20plan%20my%20Kenya%20trip" target="_blank" class="btn btn-whatsapp">Plan Your Trip</a>
     </div>
   </div>
 </section>
 
-<!-- History section -->
-<section class="section-alt">
-  <div class="container">
-    <div class="grid-2" style="gap:40px;">
-      <div>
-        <h2 class="section-title">A Legacy of Adventure – Kenya’s Tourism Story</h2>
+<main>
+  <!-- Introduction -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2">
         <div class="prose">
-          <p>Kenya has been a magnet for explorers and travellers for over a century. In the early 1900s, European aristocrats arrived by steamship and the newly built Uganda Railway to hunt big game, establishing the first safari camps. By the 1930s, writers such as Ernest Hemingway and Karen Blixen (author of <em>Out of Africa</em>) immortalised Kenya’s wild landscapes, attracting a steady flow of international visitors.</p>
-          <p>After independence in 1963, Kenya became a pioneer in sustainable wildlife tourism. Nairobi National Park – the only national park on the edge of a capital city – was already protected. In 1977, Kenya banned all hunting, shifting its focus entirely to photographic safaris and eco‑tourism. Today, Kenya welcomes over two million tourists annually, making it the leading safari destination in East Africa.</p>
-          <p>From the palm‑fringed shores of Watamu and Diani to the endless plains of the Masai Mara, Kenya’s combination of pristine beaches, diverse wildlife, and rich cultural heritage remains unmatched. Our family business, Bwanaadi Tours, has been part of this story for 20+ years – sharing Kenya’s beauty with visitors from every corner of the globe.</p>
+          <h2 class="section-title">Kenya: Africa's Most Diverse Travel Destination</h2>
+          <p>Kenya offers an extraordinary range of experiences that few countries can match. In a single trip, you can snorkel over coral reefs in the morning, watch elephants roam beneath Mount Kilimanjaro in the afternoon, and dine in a world-class restaurant in Nairobi by evening.</p>
+          <p>This guide brings together everything you need to know about Kenya's top destinations – from the historic streets of Mombasa to the wildlife-rich plains of Tsavo East, the pristine beaches of Diani and Watamu to the urban energy of Nairobi. Each section includes insider tips, local prices, and practical advice from our team at Bwanaadi Tours – a family-owned business with 20+ years of experience on the Kenyan coast.</p>
+          <p><strong>New to Kenya?</strong> Start with our <a href="#itinerary">10-day sample itinerary</a> below, then dive into the destination guides that interest you most.</p>
         </div>
-      </div>
-      <div>
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1168&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Safari jeep at sunset" style="width:100%; border-radius:12px; margin-bottom:16px;">
-          <h3>Kenya at a Glance</h3>
-          <ul style="margin-top:12px;list-style:none;">
-            <li>🇰🇪 <strong>First safari ban:</strong> 1977 (hunting replaced by photography)</li>
-            <li>📸 <strong>Visitors per year:</strong> ~2 million</li>
-            <li>🏆 <strong>World‑famous:</strong> Masai Mara Great Migration</li>
-            <li>🏖️ <strong>Beach length:</strong> Over 500 km of Indian Ocean coastline</li>
-            <li>🦁 <strong>Number of parks & reserves:</strong> 60+</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Quick Answer + Budget Table -->
-<section class="section">
-  <div class="container">
-    <div class="grid-2" style="gap:48px; align-items:start;">
-      <div>
-        <h2 class="section-title">How Much Does a Kenya Holiday Cost? (Quick Answer)</h2>
-        <div class="prose">
-          <p>A Kenya holiday costs between <strong>€50 and €600+ per day</strong> depending on your travel style. For a <strong>7‑night beach + safari combo</strong> (e.g., 4 nights Watamu + 3 nights Tsavo East), a couple should budget:</p>
+        <div class="info-box">
+          <h3>✨ Kenya at a Glance</h3>
           <ul>
-            <li><strong>Budget (camping, self‑catering):</strong> €1,500 – €2,200 total</li>
-            <li><strong>Mid‑range (3‑star hotels, local restaurants):</strong> €2,800 – €4,500 total</li>
-            <li><strong>Luxury (our all‑inclusive package):</strong> €5,000 – €9,000 total</li>
+            <li>🌊 <strong>1,420 km</strong> of Indian Ocean coastline</li>
+            <li>🦁 <strong>60+</strong> national parks and reserves</li>
+            <li>🏛️ <strong>2 UNESCO</strong> World Heritage Sites (Fort Jesus, Lamu Old Town)</li>
+            <li>🗣️ <strong>Swahili & English</strong> – both official languages</li>
+            <li>💰 <strong>Currency:</strong> Kenyan Shilling (KES) – €1 ≈ 145 KES</li>
+            <li>🔌 <strong>Plug type:</strong> G (UK 3-pin) – bring an adapter</li>
           </ul>
-          <p>Kenya is <strong>more affordable than Tanzania or Zanzibar</strong> for similar experiences, and significantly cheaper than South Africa's safari circuit.</p>
-        </div>
-        <div class="info-box gold mt-24">
-          <strong>🧠 Local insider (EEAT signal):</strong> Most online cost guides are outdated (pre‑2024). We update this page monthly using real quotes from hotels, restaurants, and tuk‑tuk drivers in Watamu, Mombasa, Diani, Nairobi, and Tsavo. Our family business has operated in Watamu for 20+ years.
         </div>
       </div>
-      <div class="card">
-        <h3 style="font-size:1.3rem;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border);">Daily Budget per Person</h3>
-        <div class="table-wrap">
-          <table style="width:100%;min-width:0;">
-            <thead><tr><th>Travel Style</th><th>KES</th><th>EUR</th><th>Ideal For</th></tr></thead>
-            <tbody>
-              <tr><td class="fw-bold">🎒 Backpacker</td><td>6,500–10,500</td><td>€50–€80</td><td>Solo travellers, hostels, street food</td></tr>
-              <tr class="highlight-row"><td class="fw-bold">🏨 Mid‑Range</td><td>15,500–28,500</td><td>€120–€220</td><td>Couples, families, 3‑star hotels, local tours</td></tr>
-              <tr><td class="fw-bold">✨ Luxury (our package)</td><td>36,000+</td><td>€279+</td><td>5‑star hotels, private transfers, all‑inclusive</td></tr>
-            </tbody>
-          </table>
+    </div>
+  </section>
+
+  <!-- DESTINATION CARDS SECTION -->
+  <section id="destinations" class="section-alt">
+    <div class="container">
+      <h2 class="section-title">Complete Destination Guides</h2>
+      <p class="section-sub">Click any guide below for detailed activities, prices, and insider tips.</p>
+      <div class="attraction-grid">
+        
+        <!-- Mombasa -->
+        <div class="destination-card">
+          <img class="destination-img" src="https://images.pexels.com/photos/28407840/pexels-photo-28407840/free-photo-of-historic-cannon-at-fort-jesus-mombasa.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Fort Jesus historic cannon in Mombasa" loading="lazy">
+          <div class="destination-content">
+            <div class="price-badge">🏰 Historic Coast</div>
+            <h3><a href="/what-to-do-in-mombasa/">What to Do in Mombasa</a></h3>
+            <p>Explore Fort Jesus (UNESCO), wander through Old Town's carved doorways, feed giraffes at Haller Park, ride camels on Nyali Beach, and taste authentic Swahili biryani at local markets.</p>
+            <a href="/what-to-do-in-mombasa/" class="card-arrow">Explore Mombasa →</a>
+          </div>
         </div>
-        <div class="swipe-hint">← Swipe to see all budgets →</div>
-        <p class="text-muted" style="font-size:0.75rem;text-align:center;margin-top:16px;">*Rates exclude international flights. Updated May 2026.</p>
+        
+        <!-- Watamu -->
+        <div class="destination-card">
+          <img class="destination-img" src="https://images.unsplash.com/photo-1645689258319-3dcb737eee5e?q=80&w=1200&auto=format" alt="Snorkeling in Watamu Marine Park" loading="lazy">
+          <div class="destination-content">
+            <div class="price-badge">🐠 Marine Paradise</div>
+            <h3><a href="/what-to-do-in-watamu/">What to Do in Watamu</a></h3>
+            <p>Snorkel coral gardens in the Marine Park, spot dolphins on morning boat trips, watch sunset from a dhow on Mida Creek, explore the mysterious Gede Ruins, and hike Marafa's sandstone canyon.</p>
+            <a href="/what-to-do-in-watamu/" class="card-arrow">Explore Watamu →</a>
+          </div>
+        </div>
+        
+        <!-- Diani -->
+        <div class="destination-card">
+          <img class="destination-img" src="https://cdn.shortpixel.ai/spai/q_lossless+w_1218+h_766+to_auto+ret_img/kiterr.com/wp-content/uploads/kitesurfing-in-diani-beach-kenya-2.jpg" alt="Kite surfing on Diani Beach" loading="lazy">
+          <div class="destination-content">
+            <div class="price-badge">🪁 Adventure Hub</div>
+            <h3><a href="/what-to-do-in-diani/">What to Do in Diani</a></h3>
+            <p>Kite surf on turquoise lagoons, tandem skydive over the Indian Ocean, swim with dolphins in Kisite Marine Park, safari in Shimba Hills, and visit the Colobus monkey conservation centre.</p>
+            <a href="/what-to-do-in-diani/" class="card-arrow">Explore Diani →</a>
+          </div>
+        </div>
+        
+        <!-- Nairobi -->
+        <div class="destination-card">
+          <img class="destination-img" src="https://images.unsplash.com/photo-1635595358293-03620e36be48?q=80&w=1170&auto=format" alt="Zebras with Nairobi skyline in background" loading="lazy">
+          <div class="destination-content">
+            <div class="price-badge">🏙️ Green City in the Sun</div>
+            <h3><a href="/what-to-do-in-nairobi/">What to Do in Nairobi</a></h3>
+            <p>See zebras with skyscrapers behind at Nairobi National Park, hand-feed giraffes, watch baby elephants at Sheldrick, explore Karen Blixen's Out of Africa home, and enjoy Nyama Choma at Carnivore.</p>
+            <a href="/what-to-do-in-nairobi/" class="card-arrow">Explore Nairobi →</a>
+          </div>
+        </div>
+        
+        <!-- Safari -->
+        <div class="destination-card">
+          <img class="destination-img" src="https://images.unsplash.com/photo-1711488480005-3dd18f3c4092?q=80&w=1200&auto=format" alt="Lion on Masai Mara savannah" loading="lazy">
+          <div class="destination-content">
+            <div class="price-badge">🦁 Ultimate Wildlife</div>
+            <h3><a href="/what-to-do-on-safari/">What to Do on Safari</a></h3>
+            <p>Track the Big Five in Masai Mara, witness the Great Migration (July–October), soar above the savannah in a hot air balloon, join walking safaris with Maasai guides, and visit traditional villages.</p>
+            <a href="/what-to-do-on-safari/" class="card-arrow">Explore Safari →</a>
+          </div>
+        </div>
+        
+        <!-- 10-Day Itinerary -->
+        <div class="destination-card">
+          <img class="destination-img" src="https://images.unsplash.com/photo-1579005318686-5a86bbb3bf03?q=80&w=1200&auto=format" alt="Beachfront pool in Mombasa" loading="lazy">
+          <div class="destination-content">
+            <div class="price-badge">🗺️ Perfect Loop</div>
+            <h3><a href="/what-to-do-in-kenya/">10-Day Kenya Itinerary</a></h3>
+            <p>The ultimate coast-safari-city route: Mombasa beach → Tsavo East red elephants → Watamu dolphin watching → Marafa sunset → Nairobi city life. Includes daily breakdown and local prices.</p>
+            <a href="#itinerary" class="card-arrow">Jump to Itinerary ↓</a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Detailed Cost Comparison: Beach vs Safari vs City -->
-<section class="section-alt">
-  <div class="container">
-    <h2 class="section-title">Kenya Travel Expenses: Beach vs Safari vs City</h2>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr><th>Expense (mid‑range, per day)</th><th>Watamu (Beach)</th><th>Tsavo East (Safari)</th><th>Nairobi (City)</th></tr>
-        </thead>
-        <tbody>
-          <tr><td class="fw-bold">Accommodation (double room)</td><td class="price-cell">€80–€150</td><td class="price-cell">€150–€300</td><td class="price-cell">€70–€120</td></tr>
-          <tr><td class="fw-bold">Local meal (restaurant)</td><td class="price-cell">€8–€15</td><td class="price-cell">included in safari</td><td class="price-cell">€10–€20</td></tr>
-          <tr><td class="fw-bold">Juice or Milkshakes (Drinks)</td><td class="price-cell">€2–€4</td><td class="price-cell">€3–€5</td><td class="price-cell">€2.50–€4.50</td></tr>
-          <tr><td class="fw-bold">Daily transport</td><td class="price-cell">€1.50–€3 (tuk‑tuk)</td><td class="price-cell">included</td><td class="price-cell">€5–€10 (Uber)</td></tr>
-          <tr><td class="fw-bold">Park/attraction fee</td><td class="price-cell">€15 (marine park)</td><td class="price-cell">€50–€100</td><td class="price-cell">€12 (Giraffe Centre)</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="swipe-hint">← Swipe to compare costs →</div>
-    <p class="text-muted mt-8"><strong>💡 Best value combo:</strong> 5 nights Watamu (mid‑range beach) + 2 nights Tsavo East (safari) – total approx. <strong>€2,200 per person</strong> including most meals and activities.</p>
-  </div>
-</section>
-
-<!-- Destination Deep Dives -->
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">Detailed Kenya Destination Costs (2026)</h2>
-    <div class="grid-3">
-      <div class="card scroll-reveal"><div style="font-size:2rem;">🏖️</div><h3><a href="/watamu-holiday-package-costs-2026/">Watamu Beach Costs</a></h3><p>Daily budget: €50–€80 (backpacker) / €120–€220 (mid‑range) / €279+ (luxury). Includes marine park, snorkeling, dhow trips.</p><a href="/watamu-holiday-package-costs-2026/" class="card-arrow">Full Watamu cost breakdown →</a></div>
-      <div class="card scroll-reveal"><div style="font-size:2rem;">⛵</div><h3><a href="/mombasa-travel-costs-2026/">Mombasa Travel Budget</a></h3><p>Daily budget: €35–€55 (backpacker) / €80–€150 (mid‑range). Fort Jesus, Old Town, ferry costs, and local cuisine prices.</p><a href="/mombasa-travel-costs-2026/" class="card-arrow">Mombasa cost guide →</a></div>
-      <div class="card scroll-reveal"><div style="font-size:2rem;">🏄</div><h3><a href="/diani-beach-holiday-costs-2026/">Diani Beach Costs</a></h3><p>Daily budget: €120–€350 (mid‑range to luxury). Kite surfing, cave restaurants, and Shimba Hills day trips.</p><a href="/diani-beach-holiday-costs-2026/" class="card-arrow">Diani price guide →</a></div>
-      <div class="card scroll-reveal"><div style="font-size:2rem;">🦁</div><h3><a href="/masai-mara-safari-cost-2026/">Tsavo East & Masai Mara Costs</a></h3><p>Safari daily rates: €150–€280 (budget camping) / €280–€500 (mid‑range lodge) / €500–€1,200+ (luxury). Park fees, vehicle hire, guides.</p><a href="/masai-mara-safari-cost-2026/" class="card-arrow">Full safari cost breakdown →</a></div>
-      <div class="card scroll-reveal"><div style="font-size:2rem;">🏙️</div><h3><a href="/nairobi-tourist-budget-2026/">Nairobi Tourist Budget</a></h3><p>Daily budget: €40–€60 (backpacker) / €80–€140 (mid‑range). Uber fares, Giraffe Centre, Elephant Orphanage, hotel recommendations.</p><a href="/nairobi-tourist-budget-2026/" class="card-arrow">Nairobi cost guide →</a></div>
-      <div class="card scroll-reveal"><div style="font-size:2rem;">📅</div><h3>Best Time to Visit Kenya</h3><p>Beach: Dec–Mar & Jun–Oct. Safari: Jul–Oct (Great Migration), year‑round Tsavo. Cheapest: Apr–May (long rains). See seasonal price differences below.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- Seasonal Price Table (FIXED) -->
-<section class="section-alt">
-  <div class="container">
-    <h2 class="section-title">Cheapest vs Most Expensive Months – Kenya Travel</h2>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr><th>Destination</th><th>Peak Season (Dec–Mar / Jul–Oct)</th><th>Low Season (Apr–May / Nov)</th><th>Savings</th></tr>
-        </thead>
-        <tbody>
-          <tr><td class="fw-bold">Watamu Beach Hotel (mid‑range)</td><td class="price-cell">€150–€220/night</td><td class="price-cell">€90–€130/night</td><td class="price-cell">30‑40% off</td></tr>
-          <tr class="highlight-row"><td class="fw-bold">Tsavo East Safari Lodge</td><td class="price-cell">€280–€450/night</td><td class="price-cell">€180–€280/night</td><td class="price-cell">35‑45% off</td></tr>
-          <tr><td class="fw-bold">Masai Mara Tented Camp</td><td class="price-cell">€400–€1,200/night</td><td class="price-cell">€250–€500/night</td><td class="price-cell">40‑50% off</td></tr>
-          <tr><td class="fw-bold">Nairobi 4‑star Hotel</td><td class="price-cell">€100–€170/night</td><td class="price-cell">€70–€110/night</td><td class="price-cell">25‑35% off</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="swipe-hint">← Swipe to see seasonal prices →</div>
-    <div class="info-box gold mt-16">
-      <strong>💰 Pro tip:</strong> The long rains (April–May) offer the lowest prices on the coast, but many safari lodges close. For a balance of good weather and lower costs, travel in <strong>June or November</strong> – shoulder seasons with moderate crowds and up to 30% savings.
-    </div>
-  </div>
-</section>
-
-<!-- Hidden Costs & Money‑Saving Tips -->
-<section class="section">
-  <div class="container">
-    <div class="grid-2">
-      <div class="info-box"><h3>💸 Hidden Costs Tourists Often Miss</h3><ul><li>Marine park fees – often excluded from boat trip quotes (add €15–€20)</li><li>Card surcharges – 3‑5% at many hotels; carry shillings or cash (Euros/USD)</li><li>ATM withdrawal fees – 500 KES + 5% forex</li><li>“Beach boy” markups – bargain to 40‑50% of the first price</li><li>Park entry fees for non‑residents – Tsavo: €52/day, Masai Mara: €80/day</li></ul></div>
-      <div class="info-box"><h3>💰 How to Save on Kenya Travel</h3><ul><li>Use local SIM (Safaricom) – 1GB for €1.50 (200 KES)</li><li>Eat at local “hoteli” – chapati + beans = €2–€3</li><li>Book safaris directly with local operators (not international agents) – save 20‑30%</li><li>Take the SGR train from Nairobi to Mombasa (economy €8, first class €23) rather than flying</li><li>Tuk‑tuk instead of taxi – 80% cheaper for short trips</li></ul></div>
-    </div>
-  </div>
-</section>
-
-<!-- Sample Itinerary -->
-<section class="section-alt">
-  <div class="container">
-    <h2 class="section-title">Sample 10‑Day Kenya Itinerary (Mid‑Range) – Real Costs</h2>
-    <div class="itinerary">
-      <div class="itinerary-day"><div class="day-label">Day 1</div><div class="day-content"><h4>Arrival Nairobi</h4><p>Transfer from JKIA to 3‑star hotel in Westlands. Dinner at local restaurant. <strong>Cost: €150 total for two.</strong></p></div></div>
-      <div class="itinerary-day"><div class="day-label">Days 2–6</div><div class="day-content"><h4>Watamu Beach (5 nights)</h4><p>Fly Nairobi → Malindi (€180 pp return). 5‑night mid‑range beach hotel (€110/night). Marine park snorkeling (€60 pp). Meals and local transport. <strong>Total: €1,450 for two.</strong></p></div></div>
-      <div class="itinerary-day"><div class="day-label">Days 7–9</div><div class="day-content"><h4>Tsavo East Safari (3 nights)</h4><p>Private transfer from Watamu (€120 one way). 3‑night safari lodge (€200/night full board, park fees included). Game drives. <strong>Total: €1,140 for two.</strong></p></div></div>
-      <div class="itinerary-day"><div class="day-label">Day 10</div><div class="day-content"><h4>Departure</h4><p>Transfer to Mombasa airport (€70) and flight home. <strong>Total trip cost (excluding international flights): ~€3,800 for two people.</strong></p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ Section -->
-<section class="section">
-  <div class="container" style="max-width:760px;">
-    <h2 class="section-title mb-32">Frequently Asked Questions – Kenya Travel Costs</h2>
-    <div class="faq">
-      <div class="faq-item"><div class="faq-q">Is Kenya expensive for tourists? <i class="chevron">▾</i></div><div class="faq-a">No – mid‑range travellers spend €120–€220 per day, cheaper than Zanzibar or South Africa. Backpackers manage on €50/day. Our luxury packages start at €279/day all‑inclusive.</div></div>
-      <div class="faq-item"><div class="faq-q">How much does a Kenya safari cost per person? <i class="chevron">▾</i></div><div class="faq-a">Tsavo East: €150–€280 (budget camping) / €280–€500 (mid‑range lodge) / €500+ (luxury). Masai Mara is 30‑50% higher, especially during the Great Migration (July–October).</div></div>
-      <div class="faq-item"><div class="faq-q">How much is a meal in Kenya? <i class="chevron">▾</i></div><div class="faq-a">Local meal (kibanda): €2–€4. Casual restaurant: €8–€15. Fine dining: €20–€40.</div></div>
-      <div class="faq-item"><div class="faq-q">Is Kenya cheaper than Zanzibar? <i class="chevron">▾</i></div><div class="faq-a">Yes – about 30% cheaper.</div></div>
-      <div class="faq-item"><div class="faq-q">What is the cheapest month to visit Kenya? <i class="chevron">▾</i></div><div class="faq-a">May and June (long rains) – 40‑50% discounts. June is better for safaris.</div></div>
-      <div class="faq-item"><div class="faq-q">How much spending money for 1 week in Kenya? <i class="chevron">▾</i></div><div class="faq-a">Mid‑range independent (excl. accommodation): €300–€600. Our packages are all‑inclusive.</div></div>
-      <div class="faq-item"><div class="faq-q">Do I need a visa for Kenya? <i class="chevron">▾</i></div><div class="faq-a">Most nationalities need an eTA. Apply at etakenya.go.ke. Fee $32.50.</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- Trust & Methodology -->
-<section class="section-alt">
-  <div class="container">
-    <div class="trust-box scroll-reveal" style="max-width:800px; margin:0 auto;">
-      <strong>📌 How We Calculate Kenya Travel Costs (EEAT)</strong><br>
-      All prices updated May 2026 from local hotels, restaurants, tuk‑tuk drivers, and tour operators in Watamu, Mombasa, Diani, Nairobi, and Tsavo East. We are a Kenyan family‑owned business (Bwanaadi Tours) with 20+ years of experience, and a growing TikTok community at @watamu.holidays. Unlike generic travel blogs, we update this page monthly with real local rates – no aggregator markups.
-    </div>
-  </div>
-</section>
-
-<!-- Final CTA -->
-<section>
-  <div class="container">
-    <div class="cta-block">
-      <h2>Ready to Book Your Kenya Holiday?</h2>
-      <p>Get a custom itinerary from our local experts – no obligation, no hidden fees.</p>
-      <div class="cta-btns">
-        <a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20Kenya%20holiday" target="_blank" class="btn btn-whatsapp">Chat on WhatsApp</a>
-        <a href="https://forms.zohopublic.com/infowatamuh1/form/LeadsHoliday/formperma/i-OPSgu3rEYBnnYMDYGLMvVK6vzfZYIsA2pEYKLbX1Q" target="_blank" class="btn btn-gold">Get a Custom Quote (Zoho)</a>
+  <!-- SAMPLE 10-DAY ITINERARY -->
+  <section id="itinerary" class="section">
+    <div class="container">
+      <h2 class="section-title">Sample 10-Day Kenya Itinerary</h2>
+      <p class="section-sub">The perfect beach-safari-city loop, tried and tested by hundreds of travellers.</p>
+      
+      <div class="itinerary-day">
+        <div class="day-header">
+          <span class="day-number">Day 1-2</span>
+          <span class="day-title">Mombasa – Beach & History</span>
+        </div>
+        <p>Arrive at Moi International Airport. Transfer to a beachfront hotel on Nyali or Diani Beach. Visit Fort Jesus, wander through Old Town, and enjoy sunset at Mama Ngina Drive. <strong>Budget: €80–€150/day mid‑range.</strong></p>
+      </div>
+      
+      <div class="itinerary-day">
+        <div class="day-header">
+          <span class="day-number">Day 3-4</span>
+          <span class="day-title">Tsavo East Safari – Red Elephants</span>
+        </div>
+        <p>Drive 2.5 hours to Tsavo East National Park (entry $80). Morning and evening game drives to spot red elephants, lions, giraffes. Visit Mudanda Rock and Lugard Falls. <strong>Budget: €280–€450/night all inclusive lodge.</strong></p>
+      </div>
+      
+      <div class="itinerary-day">
+        <div class="day-header">
+          <span class="day-number">Day 5-7</span>
+          <span class="day-title">Watamu – Marine Park & Dolphin Watching</span>
+        </div>
+        <p>Return to the coast for pure relaxation. Snorkel in Watamu Marine Park (entry $20). Join a sunset dolphin cruise. Explore Gede Ruins and Marafa Depression. <strong>Budget: €120–€220/day mid‑range.</strong></p>
+      </div>
+      
+      <div class="itinerary-day">
+        <div class="day-header">
+          <span class="day-number">Day 8-9</span>
+          <span class="day-title">Nairobi – City & Wildlife</span>
+        </div>
+        <p>Fly from Malindi to Nairobi (€120–180). Visit Giraffe Centre, Sheldrick Elephant Orphanage (11am only), Karen Blixen Museum, and enjoy dinner at Carnivore Restaurant. <strong>Budget: €80–€140/day.</strong></p>
+      </div>
+      
+      <div class="itinerary-day">
+        <div class="day-header">
+          <span class="day-number">Day 10</span>
+          <span class="day-title">Departure – Nairobi National Park or Fly Home</span>
+        </div>
+        <p>Optional early morning game drive at Nairobi National Park ($80) before transferring to Jomo Kenyatta International Airport for your flight home. <strong>Total trip (mid‑range, excluding flights): ~€3,800 for two people.</strong></p>
+      </div>
+      
+      <div class="tip-card" style="background: #eef3fc; margin-top: 20px;">
+        <strong>✏️ Customize This Itinerary</strong><br>
+        Add 2 more days for Masai Mara (July–October for Great Migration), swap Mombasa for Diani Beach, or add a hot air balloon safari in Tsavo (€450+). Contact us for a personalized quote.
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Internal Links Hub -->
-<section class="section-alt">
+  <!-- QUICK REFERENCE CARDS -->
+  <section class="section-alt">
+    <div class="container">
+      <h2 class="section-title">Quick Reference – Essential Info</h2>
+      <div class="info-grid">
+        <div class="card">
+          <div style="font-size:2rem;">💰</div>
+          <h3>Daily Budgets 2026</h3>
+          <p>Backpacker: €50–€80<br>Mid‑range: €120–€220<br>Luxury: €279+/day</p>
+        </div>
+        <div class="card">
+          <div style="font-size:2rem;">📅</div>
+          <h3>Best Time to Visit</h3>
+          <p>Beach: Dec–Mar & Jun–Oct<br>Safari: Jul–Oct (Great Migration)<br>Cheapest: Apr–May (long rains)</p>
+        </div>
+        <div class="card">
+          <div style="font-size:2rem;">🚗</div>
+          <h3>Getting Around</h3>
+          <p>Domestic flights: €120–180<br>SGR train: €8–23 (economy)<br>Uber/Bolt in cities: €5–15</p>
+        </div>
+        <div class="card">
+          <div style="font-size:2rem;">🎒</div>
+          <h3>Packing Essentials</h3>
+          <p>Neutral safari clothes<br>Reef-safe sunscreen<br>DEET repellent, power bank</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="section">
+    <div class="container" style="max-width: 760px;">
+      <h2 class="section-title mb-32">Frequently Asked Questions — Kenya Travel</h2>
+      <div class="faq">
+        <div class="faq-item">
+          <div class="faq-q">Do I need a visa for Kenya? <span>▾</span></div>
+          <div class="faq-a">Yes – most nationalities require an electronic Travel Authorisation (eTA). Apply online at etakenya.go.ke. Fee: $32.50. Processing takes 1-3 business days.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is Kenya safe for tourists? <span>▾</span></div>
+          <div class="faq-a">Yes – tourist areas like Watamu, Diani, Mombasa, Nairobi, and the national parks are generally safe. Use common sense: avoid walking alone at night, keep valuables hidden, and use registered taxis or Uber.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What's the currency and can I use cards? <span>▾</span></div>
+          <div class="faq-a">Kenyan Shilling (KES). €1 ≈ 145 KES, $1 ≈ 135 KES. Cards accepted at hotels and upscale restaurants, but expect 3-5% surcharges. Cash is king for markets, tuk-tuks, and small eateries.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do I need vaccinations? <span>▾</span></div>
+          <div class="faq-a">Yellow fever vaccination is required if travelling from an endemic country. Recommended: Typhoid, Hepatitis A & B, and malaria prophylaxis. Consult a travel clinic 4-6 weeks before departure.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What language do they speak? <span>▾</span></div>
+          <div class="faq-a">Swahili (Kiswahili) is the national language, but English is widely spoken in tourist areas, hotels, and restaurants.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I drink tap water? <span>▾</span></div>
+          <div class="faq-a">No – stick to bottled or filtered water. Most hotels provide complimentary bottled water. Avoid ice cubes at street stalls.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA & TRUST SECTION -->
+  <div class="container">
+    <div class="tip-card" style="background: #eef3fc; margin-bottom: 40px;">
+      <h3 style="color: var(--blue-dark); margin-bottom: 12px;">📌 Local Expertise – Why Trust Us</h3>
+      <p><strong>Bwanaadi Tours</strong> has been operating in Watamu for over 20 years. We're a family-owned Kenyan business with deep local knowledge and a growing community on TikTok (@watamu.holidays). Unlike generic travel blogs, we update our prices monthly using real quotes from hotels, restaurants, and tour operators. Every recommendation on this page has been tested by our team or trusted guests.</p>
+    </div>
+  </div>
+
   <div class="container">
     <div class="links-bar">
-      <p>🗺️ Explore all Kenya destination guides</p>
+      <p>Plan your complete Kenya adventure</p>
       <div class="links-bar-items">
-        <a href="/watamu-holiday-package-costs-2026/">Watamu Costs</a>
+        <a href="/kenya-travel-costs-2026/">Kenya Travel Costs</a>
+        <a href="/watamu-holiday-package-costs-2026/">Watamu Packages</a>
         <a href="/mombasa-travel-costs-2026/">Mombasa Budget</a>
-        <a href="/diani-beach-holiday-costs-2026/">Diani Beach Costs</a>
-        <a href="/masai-mara-safari-cost-2026/">Tsavo East & Mara Safari</a>
-        <a href="/nairobi-tourist-budget-2026/">Nairobi Guide</a>
-        <a href="/">Homepage</a>
+        <a href="/diani-beach-holiday-costs-2026/">Diani Costs</a>
+        <a href="/masai-mara-safari-cost-2026/">Safari Guide</a>
+        <a href="/nairobi-tourist-budget-2026/">Nairobi Info</a>
       </div>
     </div>
   </div>
-</section>
+</main>
 
 <footer>
   <div class="container">
     <div class="footer-grid">
       <div><div class="footer-brand"><span>Watamu</span> Holidays Kenya</div><p class="footer-desc">Your trusted local expert for luxury Kenyan beach and safari experiences. Operated by Bwanaadi Tours (20+ years).</p></div>
-      <div class="footer-col"><h4>Destinations</h4><ul><li><a href="/watamu-holiday-package-costs-2026/">Watamu Beach</a></li><li><a href="/mombasa-travel-costs-2026/">Mombasa</a></li><li><a href="/diani-beach-holiday-costs-2026/">Diani Beach</a></li><li><a href="/masai-mara-safari-cost-2026/">Safari Guide</a></li><li><a href="/nairobi-tourist-budget-2026/">Nairobi</a></li></ul></div>
+      <div class="footer-col"><h4>Destinations</h4><ul><li><a href="/watamu-holiday-package-costs-2026/">Watamu Beach</a></li><li><a href="/mombasa-travel-costs-2026/">Mombasa</a></li><li><a href="/diani-beach-holiday-costs-2026/">Diani Beach</a></li><li><a href="/masai-mara-safari-cost-2026/">Safari (Tsavo / Mara)</a></li><li><a href="/nairobi-tourist-budget-2026/">Nairobi</a></li></ul></div>
       <div class="footer-col"><h4>Contact</h4><ul><li>Watamu, Kilifi County, Kenya</li><li>+254 706 688 115</li><li>info@watamuholidays.co.ke</li><li><a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20holiday" target="_blank">WhatsApp Us</a></li><li><a href="https://forms.zohopublic.com/infowatamuh1/form/LeadsHoliday/formperma/i-OPSgu3rEYBnnYMDYGLMvVK6vzfZYIsA2pEYKLbX1Q" target="_blank">Get a Quote (Zoho)</a></li></ul></div>
     </div>
   </div>
   <div class="footer-bottom"><div class="container">&copy; 2026 Watamu Holidays Kenya – Bwanaadi Tours. All rights reserved. | <a href="/kenya-travel-costs-2026/">Kenya Travel Cost Hub</a></div></div>
 </footer>
 
-<a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20Kenya%20holiday" target="_blank" class="wa-float" title="Chat on WhatsApp">💬</a>
+<a href="https://wa.me/254706688115?text=I%20need%20help%20planning%20my%20Kenya%20trip" target="_blank" class="wa-float" title="Chat on WhatsApp">💬</a>
 
 <script src="/script.js" defer></script>
+<script>
+  // Mobile navigation toggle
+  (function() {
+    const toggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (toggle && navLinks) {
+      toggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        navLinks.classList.toggle('open');
+      });
+      document.addEventListener('click', function(e) {
+        if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && !toggle.contains(e.target)) {
+          navLinks.classList.remove('open');
+        }
+      });
+    }
+  })();
 
-<!-- Structured Data -->
-<script type="application/ld+json">{
+  // FAQ Accordion - robust
+  (function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    if (faqItems.length) {
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-q');
+        if (question) {
+          question.removeEventListener('click', toggleHandler);
+          question.addEventListener('click', toggleHandler);
+        }
+      });
+    }
+    function toggleHandler(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const item = this.closest('.faq-item');
+      if (item) {
+        item.classList.toggle('open');
+      }
+    }
+  })();
+</script>
+
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@type": "TravelAgency",
   "name": "Watamu Holidays Kenya",
   "alternateName": "Bwanaadi Tours",
-  "description": "Complete Kenya travel cost guide 2026. Real budgets for safaris, beach holidays, and city stays. Operated by local experts.",
-  "url": "https://watamuholidays.co.ke/kenya-travel-costs-2026/",
+  "description": "Complete guide to what to do in Kenya: beaches, safaris, culture, and city experiences with local prices and insider tips.",
+  "url": "https://watamuholidays.co.ke/what-to-do-in-kenya/",
   "telephone": "+254706688115",
-  "email": "info@watamuholidays.co.ke",
-  "priceRange": "€50–€600 per day",
-  "sameAs": ["https://wa.me/254706688115", "https://www.tiktok.com/@watamu.holidays"]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type":"Question","name":"Is Kenya expensive for tourists?","acceptedAnswer":{"@type":"Answer","text":"No – mid‑range travellers spend €120–€220 per day, cheaper than Zanzibar or South Africa."}},
-    {"@type":"Question","name":"How much does a Kenya safari cost per person?","acceptedAnswer":{"@type":"Answer","text":"Tsavo East: €150–€280 (budget camping) / €280–€500 (mid‑range lodge) / €500+ (luxury). Masai Mara is 30‑50% higher."}},
-    {"@type":"Question","name":"How much is a meal in Kenya?","acceptedAnswer":{"@type":"Answer","text":"Local meal: €2–€4. Casual restaurant: €8–€15. Fine dining: €20–€40."}},
-    {"@type":"Question","name":"Is Kenya cheaper than Zanzibar?","acceptedAnswer":{"@type":"Answer","text":"Yes – about 30% cheaper."}},
-    {"@type":"Question","name":"What is the cheapest month to visit Kenya?","acceptedAnswer":{"@type":"Answer","text":"May and June (long rains) – 40‑50% discounts. June is better for safaris."}},
-    {"@type":"Question","name":"How much spending money for 1 week in Kenya?","acceptedAnswer":{"@type":"Answer","text":"Mid‑range independent (excl. accommodation): €300–€600. Our packages are all‑inclusive."}},
-    {"@type":"Question","name":"Do I need a visa for Kenya?","acceptedAnswer":{"@type":"Answer","text":"Most nationalities need an eTA. Apply at etakenya.go.ke. Fee $32.50."}}
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://watamuholidays.co.ke/"},
-    {"@type":"ListItem","position":2,"name":"Kenya Travel Costs 2026","item":"https://watamuholidays.co.ke/kenya-travel-costs-2026/"}
-  ]
+  "email": "info@watamuholidays.co.ke"
 }
 </script>
 </body>
