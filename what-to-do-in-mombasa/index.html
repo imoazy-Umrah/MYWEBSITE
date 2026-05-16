@@ -109,37 +109,35 @@
       .local-flavor img { width: 100%; max-width: 280px; }
     }
     
-    /* === FIXED FAQ ACCORDION STYLES === */
-    .faq-item {
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 0;
+    /* SIMPLE FAQ STYLES - NO DROPDOWN, JUST CLEAN Q&A */
+    .faq-simple {
+      margin: 32px 0;
     }
-    .faq-q {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-      padding: 18px 0;
-      font-weight: 600;
+    .faq-item-simple {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-bottom: 16px;
+    }
+    .faq-question {
+      font-size: 1.1rem;
+      font-weight: 700;
       color: var(--blue-dark);
-      font-size: 1rem;
+      margin-bottom: 10px;
+      font-family: 'Playfair Display', serif;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-    .faq-q span {
-      transition: transform 0.2s ease;
-      display: inline-block;
-      font-size: 1.2rem;
+    .faq-question span {
+      font-size: 1.3rem;
     }
-    .faq-item.open .faq-q span {
-      transform: rotate(180deg);
-    }
-    .faq-a {
-      display: none;
-      padding-bottom: 20px;
+    .faq-answer {
       color: var(--text-muted);
       line-height: 1.6;
-    }
-    .faq-item.open .faq-a {
-      display: block;
+      padding-left: 30px;
+      border-left: 3px solid var(--gold);
     }
   </style>
 </head>
@@ -313,19 +311,53 @@
         </div>
       </div>
       
-      <!-- FAQ SECTION - NOW FULLY FUNCTIONAL -->
-      <div class="faq" style="margin-top: 48px;">
-        <div class="faq-item">
-          <div class="faq-q">Is Mombasa safe for tourists? <span>▾</span></div>
-          <div class="faq-a">Yes – tourist areas like Nyali, Diani and the city centre are generally safe. Use common sense, avoid dark alleys at night, and always use registered taxis. Stick with a local guide for Old Town walking tours.</div>
+      <!-- SIMPLE FAQ - NO DROPDOWN, NO JAVASCRIPT, ALWAYS VISIBLE -->
+      <div class="faq-simple" style="margin-top: 48px;">
+        <h2 class="section-title mb-32">Frequently Asked Questions — Mombasa</h2>
+        
+        <div class="faq-item-simple">
+          <div class="faq-question">
+            <span>❓</span> Is Mombasa safe for tourists?
+          </div>
+          <div class="faq-answer">
+            Yes – tourist areas like Nyali, Diani and the city centre are generally safe. Use common sense, avoid dark alleys at night, and always use registered taxis. Stick with a local guide for Old Town walking tours.
+          </div>
         </div>
-        <div class="faq-item">
-          <div class="faq-q">How many days do I need in Mombasa? <span>▾</span></div>
-          <div class="faq-a">2-3 days are ideal: one day for Fort Jesus + Old Town + markets, one day for Haller Park and Nyali Beach, and an extra day to explore marine park. Many travellers combine Mombasa with Watamu or Tsavo safari.</div>
+        
+        <div class="faq-item-simple">
+          <div class="faq-question">
+            <span>❓</span> How many days do I need in Mombasa?
+          </div>
+          <div class="faq-answer">
+            2-3 days are ideal: one day for Fort Jesus + Old Town + markets, one day for Haller Park and Nyali Beach, and an extra day to explore marine park. Many travellers combine Mombasa with Watamu or Tsavo safari.
+          </div>
         </div>
-        <div class="faq-item">
-          <div class="faq-q">Can I do a day safari from Mombasa? <span>▾</span></div>
-          <div class="faq-a">Absolutely. Tsavo East National Park is 2.5 hours from Mombasa – full day safaris or overnight trips are easily arranged. Also Shimba Hills Reserve (elephants & waterfalls) is just 1 hour away.</div>
+        
+        <div class="faq-item-simple">
+          <div class="faq-question">
+            <span>❓</span> Can I do a day safari from Mombasa?
+          </div>
+          <div class="faq-answer">
+            Absolutely. Tsavo East National Park is 2.5 hours from Mombasa – full day safaris or overnight trips are easily arranged. Also Shimba Hills Reserve (elephants & waterfalls) is just 1 hour away.
+          </div>
+        </div>
+        
+        <div class="faq-item-simple">
+          <div class="faq-question">
+            <span>❓</span> What is the best time to visit Mombasa?
+          </div>
+          <div class="faq-answer">
+            The best time is January–March and July–October (dry season). Avoid April–May when heavy rains can disrupt beach activities and game viewing.
+          </div>
+        </div>
+        
+        <div class="faq-item-simple">
+          <div class="faq-question">
+            <span>❓</span> How much does it cost to visit Fort Jesus?
+          </div>
+          <div class="faq-answer">
+            Entry for non-residents is KSH 1,200 (~€8). Guided tours are available for an additional fee. Open daily 9am–6pm.
+          </div>
         </div>
       </div>
     </div>
@@ -360,7 +392,7 @@
 
 <script src="/script.js" defer></script>
 <script>
-  // Mobile nav toggle
+  // Only mobile nav toggle - no FAQ JavaScript needed
   (function() {
     const toggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
@@ -374,29 +406,6 @@
           navLinks.classList.remove('open');
         }
       });
-    }
-  })();
-
-  // FAQ Accordion - robust and reliable
-  (function() {
-    const faqItems = document.querySelectorAll('.faq-item');
-    if (faqItems.length) {
-      faqItems.forEach(item => {
-        const question = item.querySelector('.faq-q');
-        if (question) {
-          // Remove any existing click listeners to avoid double binding
-          question.removeEventListener('click', toggleHandler);
-          question.addEventListener('click', toggleHandler);
-        }
-      });
-    }
-    function toggleHandler(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      const item = this.closest('.faq-item');
-      if (item) {
-        item.classList.toggle('open');
-      }
     }
   })();
 </script>
