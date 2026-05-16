@@ -18,7 +18,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css" />
   <style>
-    /* Hero with Watamu beach image */
     .hero {
       background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1579005318686-5a86bbb3bf03?q=80&w=1600&auto=format');
       background-size: cover;
@@ -30,7 +29,6 @@
     .hero .btn-whatsapp { background: var(--green-wa) !important; }
     .hero .btn-outline { border-color: rgba(255,255,255,0.8) !important; }
 
-    /* attraction cards grid */
     .attraction-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -94,37 +92,35 @@
       margin: 28px 0;
     }
     
-    /* ===== FIXED FAQ ACCORDION STYLES (robust) ===== */
-    .faq-item {
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 0;
+    /* SIMPLE FAQ STYLES - NO DROPDOWN, JUST CLEAN Q&A */
+    .faq-simple {
+      margin: 32px 0;
     }
-    .faq-q {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-      padding: 18px 0;
-      font-weight: 600;
+    .faq-item-simple {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-bottom: 16px;
+    }
+    .faq-question {
+      font-size: 1.1rem;
+      font-weight: 700;
       color: var(--blue-dark);
-      font-size: 1rem;
+      margin-bottom: 10px;
+      font-family: 'Playfair Display', serif;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-    .faq-q span {
-      transition: transform 0.2s ease;
-      display: inline-block;
-      font-size: 1.2rem;
+    .faq-question span {
+      font-size: 1.3rem;
     }
-    .faq-item.open .faq-q span {
-      transform: rotate(180deg);
-    }
-    .faq-a {
-      display: none;
-      padding-bottom: 20px;
+    .faq-answer {
       color: var(--text-muted);
       line-height: 1.6;
-    }
-    .faq-item.open .faq-a {
-      display: block;
+      padding-left: 30px;
+      border-left: 3px solid var(--gold);
     }
   </style>
 </head>
@@ -182,7 +178,6 @@
     </div>
   </section>
 
-  <!-- MAIN ATTRACTIONS CARDS -->
   <section id="attractions" class="section-alt">
     <div class="container">
       <h2 class="section-title">Top things to do in Watamu</h2>
@@ -299,30 +294,64 @@
     </div>
   </div>
 
-  <!-- FAQ SECTION - FULLY FUNCTIONAL (robust) -->
+  <!-- SIMPLE FAQ - NO DROPDOWN, NO JAVASCRIPT, ALWAYS VISIBLE -->
   <section class="section-alt">
-    <div class="container" style="max-width: 760px;">
-      <h2 class="section-title mb-32">Frequently Asked Questions — Watamu Activities</h2>
-      <div class="faq">
-        <div class="faq-item">
-          <div class="faq-q">Is Watamu good for snorkeling? <span>▾</span></div>
-          <div class="faq-a">Absolutely! Watamu Marine National Park is one of the best snorkeling spots in Kenya. The coral gardens are only 100–300 metres from shore, with calm, shallow waters perfect for beginners. You’ll see parrotfish, angelfish, butterflyfish, and often sea turtles.</div>
+    <div class="container" style="max-width: 800px;">
+      <div class="faq-simple">
+        <h2 class="section-title mb-32">Frequently Asked Questions — Watamu Activities</h2>
+        
+        <div class="faq-item-simple">
+          <div class="faq-question">
+            <span>❓</span> Is Watamu good for snorkeling?
+          </div>
+          <div class="faq-answer">
+            Absolutely! Watamu Marine National Park is one of the best snorkeling spots in Kenya. The coral gardens are only 100–300 metres from shore, with calm, shallow waters perfect for beginners. You'll see parrotfish, angelfish, butterflyfish, and often sea turtles.
+          </div>
         </div>
-        <div class="faq-item">
-          <div class="faq-q">Can I see dolphins in Watamu? <span>▾</span></div>
-          <div class="faq-a">Yes – Watamu is a prime dolphin watching destination. Bottlenose and spinner dolphins are frequently spotted, especially on morning boat trips (7–10am). Sightings are over 90% during dry season (July–September).</div>
+        
+        <div class="faq-item-simple">
+          <div class="faq-question">
+            <span>❓</span> Can I see dolphins in Watamu?
+          </div>
+          <div class="faq-answer">
+            Yes – Watamu is a prime dolphin watching destination. Bottlenose and spinner dolphins are frequently spotted, especially on morning boat trips (7–10am). Sightings are over 90% during dry season (July–September).
+          </div>
         </div>
-        <div class="faq-item">
-          <div class="faq-q">How far is Tsavo East from Watamu? <span>▾</span></div>
-          <div class="faq-a">Tsavo East is approximately 2.5–3 hours by private transfer from Watamu (about 150 km). It’s the closest major safari park to the coast – perfect for a 2‑night safari without long travel days.</div>
+        
+        <div class="faq-item-simple">
+          <div class="faq-question">
+            <span>❓</span> How far is Tsavo East from Watamu?
+          </div>
+          <div class="faq-answer">
+            Tsavo East is approximately 2.5–3 hours by private transfer from Watamu (about 150 km). It's the closest major safari park to the coast – perfect for a 2‑night safari without long travel days.
+          </div>
         </div>
-        <div class="faq-item">
-          <div class="faq-q">What’s the best time for sunset at Marafa? <span>▾</span></div>
-          <div class="faq-a">The best time is between 4:30pm and 6:30pm. This is when the low sun hits the sandstone canyon walls, turning them into brilliant shades of orange, red, and gold. Avoid midday – it’s extremely hot and the colours are flat.</div>
+        
+        <div class="faq-item-simple">
+          <div class="faq-question">
+            <span>❓</span> What's the best time for sunset at Marafa?
+          </div>
+          <div class="faq-answer">
+            The best time is between 4:30pm and 6:30pm. This is when the low sun hits the sandstone canyon walls, turning them into brilliant shades of orange, red, and gold. Avoid midday – it's extremely hot and the colours are flat.
+          </div>
         </div>
-        <div class="faq-item">
-          <div class="faq-q">Are Gede Ruins worth visiting? <span>▾</span></div>
-          <div class="faq-a">Definitely. Gede is one of the most complete and mysterious Swahili town ruins on the East African coast. The site is beautifully preserved within a sacred forest of baobabs – a guide brings the history to life. Allow 1.5–2 hours.</div>
+        
+        <div class="faq-item-simple">
+          <div class="faq-question">
+            <span>❓</span> Are Gede Ruins worth visiting?
+          </div>
+          <div class="faq-answer">
+            Definitely. Gede is one of the most complete and mysterious Swahili town ruins on the East African coast. The site is beautifully preserved within a sacred forest of baobabs – a guide brings the history to life. Allow 1.5–2 hours.
+          </div>
+        </div>
+        
+        <div class="faq-item-simple">
+          <div class="faq-question">
+            <span>❓</span> What is the best time of year to visit Watamu?
+          </div>
+          <div class="faq-answer">
+            The best time is June–October (dry season) when the seas are calm and visibility for snorkeling is excellent. Dolphin sightings peak July–September. Avoid April–May (long rains) when some boat tours may be cancelled.
+          </div>
         </div>
       </div>
     </div>
@@ -357,7 +386,7 @@
 
 <script src="/script.js" defer></script>
 <script>
-  // Mobile navigation toggle (robust)
+  // Only mobile nav toggle - no FAQ JavaScript needed
   (function() {
     const toggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
@@ -371,28 +400,6 @@
           navLinks.classList.remove('open');
         }
       });
-    }
-  })();
-
-  // FAQ Accordion - reliable, prevents double binding
-  (function() {
-    const faqItems = document.querySelectorAll('.faq-item');
-    if (faqItems.length) {
-      faqItems.forEach(item => {
-        const question = item.querySelector('.faq-q');
-        if (question) {
-          question.removeEventListener('click', toggleHandler);
-          question.addEventListener('click', toggleHandler);
-        }
-      });
-    }
-    function toggleHandler(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      const item = this.closest('.faq-item');
-      if (item) {
-        item.classList.toggle('open');
-      }
     }
   })();
 </script>
