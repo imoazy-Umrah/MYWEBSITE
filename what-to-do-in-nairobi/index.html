@@ -18,7 +18,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css" />
   <style>
-    /* Hero image – Nairobi skyline */
     .hero {
       background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1635595358293-03620e36be48?q=80&w=1600&auto=format');
       background-size: cover;
@@ -30,7 +29,6 @@
     .hero .btn-whatsapp { background: var(--green-wa) !important; }
     .hero .btn-outline { border-color: rgba(255,255,255,0.8) !important; }
 
-    /* Attraction cards grid */
     .attraction-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -115,37 +113,35 @@
       .local-flavor img { width: 100%; max-width: 280px; }
     }
     
-    /* ===== FIXED FAQ ACCORDION STYLES (robust) ===== */
-    .faq-item {
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 0;
+    /* SIMPLE FAQ STYLES - NO DROPDOWN, JUST CLEAN Q&A */
+    .faq-simple {
+      margin: 32px 0;
     }
-    .faq-q {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-      padding: 18px 0;
-      font-weight: 600;
+    .faq-item-simple {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-bottom: 16px;
+    }
+    .faq-question {
+      font-size: 1.1rem;
+      font-weight: 700;
       color: var(--blue-dark);
-      font-size: 1rem;
+      margin-bottom: 10px;
+      font-family: 'Playfair Display', serif;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-    .faq-q span {
-      transition: transform 0.2s ease;
-      display: inline-block;
-      font-size: 1.2rem;
+    .faq-question span {
+      font-size: 1.3rem;
     }
-    .faq-item.open .faq-q span {
-      transform: rotate(180deg);
-    }
-    .faq-a {
-      display: none;
-      padding-bottom: 20px;
+    .faq-answer {
       color: var(--text-muted);
       line-height: 1.6;
-    }
-    .faq-item.open .faq-a {
-      display: block;
+      padding-left: 30px;
+      border-left: 3px solid var(--gold);
     }
   </style>
 </head>
@@ -333,26 +329,64 @@
     </div>
   </section>
 
-  <!-- FAQ SECTION - FULLY FUNCTIONAL (same robust pattern) -->
+  <!-- SIMPLE FAQ - NO DROPDOWN, NO JAVASCRIPT, ALWAYS VISIBLE -->
   <section class="section-alt">
-    <div class="container" style="max-width: 760px;">
-      <h2 class="section-title mb-32">Frequently Asked Questions — Nairobi</h2>
-      <div class="faq">
-        <div class="faq-item">
-          <div class="faq-q">Is Nairobi National Park worth visiting? <span>▾</span></div>
-          <div class="faq-a">Absolutely. It’s the only national park on the edge of a capital city anywhere in the world. You can see lions, rhinos, giraffes and zebras with city skyscrapers as a backdrop – surreal and unforgettable.</div>
+    <div class="container" style="max-width: 800px;">
+      <div class="faq-simple">
+        <h2 class="section-title mb-32">Frequently Asked Questions — Nairobi</h2>
+        
+        <div class="faq-item-simple">
+          <div class="faq-question">
+            <span>❓</span> Is Nairobi National Park worth visiting?
+          </div>
+          <div class="faq-answer">
+            Absolutely. It’s the only national park on the edge of a capital city anywhere in the world. You can see lions, rhinos, giraffes and zebras with city skyscrapers as a backdrop – surreal and unforgettable.
+          </div>
         </div>
-        <div class="faq-item">
-          <div class="faq-q">Can I do a day trip from Nairobi to see wildlife? <span>▾</span></div>
-          <div class="faq-a">Yes! Combine Nairobi National Park, Sheldrick Elephant Orphanage (11am-12pm), and Giraffe Centre in one day – it’s the ultimate “Nairobi wildlife safari”.</div>
+        
+        <div class="faq-item-simple">
+          <div class="faq-question">
+            <span>❓</span> Can I do a day trip from Nairobi to see wildlife?
+          </div>
+          <div class="faq-answer">
+            Yes! Combine Nairobi National Park, Sheldrick Elephant Orphanage (11am-12pm), and Giraffe Centre in one day – it’s the ultimate “Nairobi wildlife safari”.
+          </div>
         </div>
-        <div class="faq-item">
-          <div class="faq-q">Where can I eat authentic Kenyan food? <span>▾</span></div>
-          <div class="faq-a">Carnivore Restaurant for nyama choma, or smaller spots like Mamba Village, Habesha (Ethiopian), and roadside “kuku choma” stalls in Lang’ata or Westlands.</div>
+        
+        <div class="faq-item-simple">
+          <div class="faq-question">
+            <span>❓</span> Where can I eat authentic Kenyan food?
+          </div>
+          <div class="faq-answer">
+            Carnivore Restaurant for nyama choma, or smaller spots like Mamba Village, Habesha (Ethiopian), and roadside “kuku choma” stalls in Lang’ata or Westlands.
+          </div>
         </div>
-        <div class="faq-item">
-          <div class="faq-q">Is it safe to walk around Nairobi? <span>▾</span></div>
-          <div class="faq-a">Stick to well‑populated areas during the day. Use Uber/Bolt for evening trips. The “Green City in the Sun” is welcoming but street smarts are essential – just like any major city.</div>
+        
+        <div class="faq-item-simple">
+          <div class="faq-question">
+            <span>❓</span> Is it safe to walk around Nairobi?
+          </div>
+          <div class="faq-answer">
+            Stick to well‑populated areas during the day. Use Uber/Bolt for evening trips. The “Green City in the Sun” is welcoming but street smarts are essential – just like any major city.
+          </div>
+        </div>
+        
+        <div class="faq-item-simple">
+          <div class="faq-question">
+            <span>❓</span> What is the best time to visit Nairobi?
+          </div>
+          <div class="faq-answer">
+            The best time is June–September and January–February (dry season). These months offer the clearest skies and best wildlife viewing in Nairobi National Park.
+          </div>
+        </div>
+        
+        <div class="faq-item-simple">
+          <div class="faq-question">
+            <span>❓</span> How much does it cost to feed giraffes at Giraffe Centre?
+          </div>
+          <div class="faq-answer">
+            Entry for non-residents is KES 1,500 (~€11). Food pellets are included with admission. Open daily 9am–5pm, cashless payment only.
+          </div>
         </div>
       </div>
     </div>
@@ -387,7 +421,7 @@
 
 <script src="/script.js" defer></script>
 <script>
-  // Mobile navigation toggle (robust)
+  // Only mobile nav toggle - no FAQ JavaScript needed
   (function() {
     const toggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
@@ -401,28 +435,6 @@
           navLinks.classList.remove('open');
         }
       });
-    }
-  })();
-
-  // FAQ Accordion - reliable, prevents double binding
-  (function() {
-    const faqItems = document.querySelectorAll('.faq-item');
-    if (faqItems.length) {
-      faqItems.forEach(item => {
-        const question = item.querySelector('.faq-q');
-        if (question) {
-          question.removeEventListener('click', toggleHandler);
-          question.addEventListener('click', toggleHandler);
-        }
-      });
-    }
-    function toggleHandler(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      const item = this.closest('.faq-item');
-      if (item) {
-        item.classList.toggle('open');
-      }
     }
   })();
 </script>
