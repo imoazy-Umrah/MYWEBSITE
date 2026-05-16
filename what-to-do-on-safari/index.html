@@ -92,36 +92,35 @@
       margin: 28px 0;
     }
     
-    .faq-item {
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 0;
+    /* SIMPLE FAQ STYLES - NO DROPDOWN, JUST CLEAN Q&A */
+    .faq-simple {
+      margin: 32px 0;
     }
-    .faq-q {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-      padding: 18px 0;
-      font-weight: 600;
+    .faq-item-simple {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-bottom: 16px;
+    }
+    .faq-question {
+      font-size: 1.1rem;
+      font-weight: 700;
       color: var(--blue-dark);
-      font-size: 1rem;
+      margin-bottom: 10px;
+      font-family: 'Playfair Display', serif;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-    .faq-q span {
-      transition: transform 0.2s ease;
-      display: inline-block;
-      font-size: 1.2rem;
+    .faq-question span {
+      font-size: 1.3rem;
     }
-    .faq-item.open .faq-q span {
-      transform: rotate(180deg);
-    }
-    .faq-a {
-      display: none;
-      padding-bottom: 20px;
+    .faq-answer {
       color: var(--text-muted);
       line-height: 1.6;
-    }
-    .faq-item.open .faq-a {
-      display: block;
+      padding-left: 30px;
+      border-left: 3px solid var(--gold);
     }
   </style>
 </head>
@@ -184,7 +183,6 @@
       <h2 class="section-title">Kenya's Premier Safari Destinations</h2>
       <div class="attraction-grid">
         
-        <!-- Masai Mara -->
         <div class="attraction-card">
           <img class="attraction-img" src="https://i.pinimg.com/736x/91/23/f0/9123f0b39508e04122642a3c48b925dc.jpg" alt="Lion resting on savannah plains in Masai Mara" loading="lazy">
           <div class="attraction-content">
@@ -197,7 +195,6 @@
           </div>
         </div>
         
-        <!-- Amboseli -->
         <div class="attraction-card">
           <img class="attraction-img" src="https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?q=80&w=1167&auto=format&fit=crop" alt="Elephants in Amboseli with Mount Kilimanjaro backdrop" loading="lazy">
           <div class="attraction-content">
@@ -210,7 +207,6 @@
           </div>
         </div>
         
-        <!-- Tsavo -->
         <div class="attraction-card">
           <img class="attraction-img" src="https://images.unsplash.com/photo-1536937275673-8a12b3812e8e?q=80&w=762&auto=format&fit=crop" alt="Red elephant walking on Tsavo soil" loading="lazy">
           <div class="attraction-content">
@@ -231,7 +227,6 @@
       <h2 class="section-title">Safari Activities: Beyond the Game Drive</h2>
       <div class="attraction-grid">
         
-        <!-- Game Drives -->
         <div class="attraction-card">
           <img class="attraction-img" src="https://plus.unsplash.com/premium_photo-1697729856847-ae499843242f?q=80&w=1170&auto=format&fit=crop" alt="Open safari vehicle on early morning game drive" loading="lazy">
           <div class="attraction-content">
@@ -244,7 +239,6 @@
           </div>
         </div>
         
-        <!-- Hot Air Balloon -->
         <div class="attraction-card">
           <img class="attraction-img" src="https://images.unsplash.com/photo-1707410436272-1bcc71ecafb3?q=80&w=1272&auto=format&fit=crop" alt="Hot air balloon floating over savannah at sunrise" loading="lazy">
           <div class="attraction-content">
@@ -257,7 +251,6 @@
           </div>
         </div>
         
-        <!-- Walking Safari -->
         <div class="attraction-card">
           <img class="attraction-img" src="https://images.unsplash.com/photo-1759132567733-88a0837375c3?q=80&w=655&auto=format&fit=crop" alt="Guided walking safari through African bush" loading="lazy">
           <div class="attraction-content">
@@ -270,7 +263,6 @@
           </div>
         </div>
         
-        <!-- Maasai Cultural Visit -->
         <div class="attraction-card">
           <img class="attraction-img" src="https://images.unsplash.com/photo-1580394640019-00d34094ae13?q=80&w=687&auto=format&fit=crop" alt="Maasai people performing traditional jumping dance" loading="lazy">
           <div class="attraction-content">
@@ -342,29 +334,64 @@
     </div>
   </div>
 
+  <!-- SIMPLE FAQ - NO DROPDOWN, NO JAVASCRIPT, ALWAYS VISIBLE -->
   <section class="section-alt">
-    <div class="container" style="max-width: 760px;">
-      <h2 class="section-title mb-32">Frequently Asked Questions — Kenya Safari</h2>
-      <div class="faq">
-        <div class="faq-item">
-          <div class="faq-q">What is the Big Five, and where can I see them in Kenya? <span>▾</span></div>
-          <div class="faq-a">The Big Five – lion, leopard, elephant, rhino, and buffalo – can all be seen in Masai Mara (especially lions and leopards). Black and white rhinos are found in Ol Pejeta Conservancy and Lake Nakuru National Park. Elephants are abundant in Amboseli and Tsavo.</div>
+    <div class="container" style="max-width: 800px;">
+      <div class="faq-simple">
+        <h2 class="section-title mb-32">Frequently Asked Questions — Kenya Safari</h2>
+        
+        <div class="faq-item-simple">
+          <div class="faq-question">
+            <span>❓</span> What is the Big Five, and where can I see them in Kenya?
+          </div>
+          <div class="faq-answer">
+            The Big Five – lion, leopard, elephant, rhino, and buffalo – can all be seen in Masai Mara (especially lions and leopards). Black and white rhinos are found in Ol Pejeta Conservancy and Lake Nakuru National Park. Elephants are abundant in Amboseli and Tsavo.
+          </div>
         </div>
-        <div class="faq-item">
-          <div class="faq-q">When is the best time to see the Great Migration in Masai Mara? <span>▾</span></div>
-          <div class="faq-a">The migration typically arrives in Masai Mara from July through October. The most dramatic Mara River crossings usually happen between August and September. Book well in advance for these months – safari lodges fill up 6–12 months ahead.</div>
+        
+        <div class="faq-item-simple">
+          <div class="faq-question">
+            <span>❓</span> When is the best time to see the Great Migration in Masai Mara?
+          </div>
+          <div class="faq-answer">
+            The migration typically arrives in Masai Mara from July through October. The most dramatic Mara River crossings usually happen between August and September. Book well in advance for these months – safari lodges fill up 6–12 months ahead.
+          </div>
         </div>
-        <div class="faq-item">
-          <div class="faq-q">How long should my Kenya safari be? <span>▾</span></div>
-          <div class="faq-a">For a first-time safari, 5–7 days is ideal. A classic circuit: 3 nights Masai Mara + 2 nights Amboseli. Add Lake Nakuru for flamingos or Tsavo for a coast-and-safari combination. Budget at least 2 nights per park to maximize game viewing.</div>
+        
+        <div class="faq-item-simple">
+          <div class="faq-question">
+            <span>❓</span> How long should my Kenya safari be?
+          </div>
+          <div class="faq-answer">
+            For a first-time safari, 5–7 days is ideal. A classic circuit: 3 nights Masai Mara + 2 nights Amboseli. Add Lake Nakuru for flamingos or Tsavo for a coast-and-safari combination. Budget at least 2 nights per park to maximize game viewing.
+          </div>
         </div>
-        <div class="faq-item">
-          <div class="faq-q">Is a hot air balloon safari worth the cost? <span>▾</span></div>
-          <div class="faq-a">Yes – for most travellers, it's the highlight of their safari. The bird's-eye view of the savannah at sunrise, the silence as you float above wildlife, and the champagne bush breakfast make it a once-in-a-lifetime experience. Book at least 2–3 months ahead.</div>
+        
+        <div class="faq-item-simple">
+          <div class="faq-question">
+            <span>❓</span> Is a hot air balloon safari worth the cost?
+          </div>
+          <div class="faq-answer">
+            Yes – for most travellers, it's the highlight of their safari. The bird's-eye view of the savannah at sunrise, the silence as you float above wildlife, and the champagne bush breakfast make it a once-in-a-lifetime experience. Book at least 2–3 months ahead.
+          </div>
         </div>
-        <div class="faq-item">
-          <div class="faq-q">What's the difference between a national reserve and a conservancy? <span>▾</span></div>
-          <div class="faq-a">National reserves (e.g., Masai Mara) are government-managed with standard game drives. Private conservancies (e.g., Mara North, Olare Motorogi) limit vehicle numbers, allow walking safaris and night drives, and offer a more exclusive, less crowded experience – at a higher price point (30–60% premium).</div>
+        
+        <div class="faq-item-simple">
+          <div class="faq-question">
+            <span>❓</span> What's the difference between a national reserve and a conservancy?
+          </div>
+          <div class="faq-answer">
+            National reserves (e.g., Masai Mara) are government-managed with standard game drives. Private conservancies (e.g., Mara North, Olare Motorogi) limit vehicle numbers, allow walking safaris and night drives, and offer a more exclusive, less crowded experience – at a higher price point (30–60% premium).
+          </div>
+        </div>
+        
+        <div class="faq-item-simple">
+          <div class="faq-question">
+            <span>❓</span> Do I need malaria medication for a Kenya safari?
+          </div>
+          <div class="faq-answer">
+            Yes – malaria is present in Kenya, especially in low-lying safari areas. Consult your doctor for appropriate prophylaxis (usually Malarone or Doxycycline). Use DEET repellent, wear long sleeves at dawn/dusk, and sleep under mosquito nets provided by lodges.
+          </div>
         </div>
       </div>
     </div>
@@ -399,6 +426,7 @@
 
 <script src="/script.js" defer></script>
 <script>
+  // Only mobile nav toggle - no FAQ JavaScript needed
   (function() {
     const toggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
@@ -412,27 +440,6 @@
           navLinks.classList.remove('open');
         }
       });
-    }
-  })();
-
-  (function() {
-    const faqItems = document.querySelectorAll('.faq-item');
-    if (faqItems.length) {
-      faqItems.forEach(item => {
-        const question = item.querySelector('.faq-q');
-        if (question) {
-          question.removeEventListener('click', toggleHandler);
-          question.addEventListener('click', toggleHandler);
-        }
-      });
-    }
-    function toggleHandler(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      const item = this.closest('.faq-item');
-      if (item) {
-        item.classList.toggle('open');
-      }
     }
   })();
 </script>
