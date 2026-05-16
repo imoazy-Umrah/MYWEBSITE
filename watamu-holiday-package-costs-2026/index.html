@@ -27,7 +27,7 @@
       background-position: center;
     }
     
-    /* Package Card - responsive, no overflow */
+    /* Package Card - FLEXBOX LAYOUT (NO TABLE OVERFLOW) */
     .package-card {
       background: var(--card);
       border-radius: 20px;
@@ -36,7 +36,6 @@
       position: sticky;
       top: 88px;
       border: 1px solid var(--border);
-      overflow-x: auto; /* safe fallback */
     }
     
     .package-card h3 {
@@ -48,38 +47,37 @@
       color: var(--blue-dark);
     }
     
-    .package-table {
-      width: 100%;
+    /* FLEXIBLE ROW LAYOUT - PERFECT ON MOBILE */
+    .package-list {
+      display: flex;
+      flex-direction: column;
       margin-bottom: 24px;
-      border-collapse: collapse;
-      table-layout: fixed;
     }
     
-    .package-table td {
-      padding: 14px 0;
+    .package-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 12px 0;
       border-bottom: 1px solid var(--border);
-      word-break: break-word;
     }
     
-    .package-table tr:last-child td {
+    .package-row:last-child {
       border-bottom: none;
     }
     
-    .package-table td:first-child {
+    .package-label {
       font-weight: 600;
       color: var(--text);
-      width: 55%;
+      font-size: 1rem;
     }
     
-    .package-table td:last-child {
-      text-align: right;
+    .package-price {
       font-weight: 700;
       color: var(--gold);
-      width: 45%;
-      white-space: normal;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-      font-size: 0.9rem;
+      font-size: 1rem;
+      text-align: right;
+      white-space: nowrap;
     }
     
     .btn-full {
@@ -88,42 +86,39 @@
       margin-bottom: 12px;
     }
     
-    /* Mobile fixes for package card - strict containment */
+    /* Mobile adjustments */
     @media (max-width: 768px) {
       .package-card {
-        padding: 16px;
+        padding: 20px;
         position: relative;
         top: 0;
       }
       .package-card h3 {
         font-size: 1.2rem;
       }
-      .package-table td {
-        padding: 10px 4px;
-      }
-      .package-table td:first-child {
-        width: 50%;
+      .package-label {
         font-size: 0.85rem;
       }
-      .package-table td:last-child {
-        font-size: 0.8rem;
-        word-break: break-all;
-        padding-right: 4px;
-        width: 50%;
+      .package-price {
+        font-size: 0.85rem;
+      }
+      .package-row {
+        padding: 10px 0;
       }
     }
     
     @media (max-width: 480px) {
-      .package-table td:last-child {
-        font-size: 0.75rem;
-        white-space: pre-wrap;
+      .package-label {
+        font-size: 0.8rem;
       }
-      .package-table {
-        font-size: 0.7rem;
+      .package-price {
+        font-size: 0.75rem;
+        white-space: normal;
+        word-break: keep-all;
       }
     }
     
-    /* Table wrapper for horizontal scroll */
+    /* Table wrapper for horizontal scroll (other tables only) */
     .table-wrap {
       width: 100%;
       overflow-x: auto;
@@ -223,18 +218,28 @@
         </div>
       </div>
 
-      <!-- Package Card - fully responsive, no overflow -->
+      <!-- PACKAGE CARD - FLEXBOX, NO TABLE OVERFLOW -->
       <div>
         <div class="package-card">
           <h3>Package Costs (per person)</h3>
-          <table class="package-table">
-            <tbody>
-              <tr><td>Daily Rate</td><td>€279 / day</td></tr>
-              <tr><td>5 Nights (minimum)</td><td>From €1,395</td></tr>
-              <tr><td>7 Nights (recommended)</td><td>From €1,953</td></tr>
-              <tr><td>10 Nights (beach + safari)</td><td>From €2,790</td></tr>
-            </tbody>
-          </table>
+          <div class="package-list">
+            <div class="package-row">
+              <span class="package-label">Daily Rate</span>
+              <span class="package-price">€279 / day</span>
+            </div>
+            <div class="package-row">
+              <span class="package-label">5 Nights (minimum)</span>
+              <span class="package-price">From €1,395</span>
+            </div>
+            <div class="package-row">
+              <span class="package-label">7 Nights (recommended)</span>
+              <span class="package-price">From €1,953</span>
+            </div>
+            <div class="package-row">
+              <span class="package-label">10 Nights (beach + safari)</span>
+              <span class="package-price">From €2,790</span>
+            </div>
+          </div>
           <a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20Watamu%20package" target="_blank" class="btn btn-whatsapp btn-full">Book on WhatsApp</a>
           <a href="https://forms.zohopublic.com/infowatamuh1/form/LeadsHoliday/formperma/i-OPSgu3rEYBnnYMDYGLMvVK6vzfZYIsA2pEYKLbX1Q" target="_blank" class="btn btn-gold btn-full">Get a Custom Quote</a>
           <p class="text-muted">No hidden fees. Flights not included.</p>
@@ -351,7 +356,7 @@
   </div>
 </section>
 
-<!-- FAQ -->
+<!-- FAQ (UNCHANGED) -->
 <section class="section">
   <div class="container" style="max-width:760px;">
     <h2 class="section-title mb-32">Frequently Asked Questions — Watamu Holiday Costs</h2>
