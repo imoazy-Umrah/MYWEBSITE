@@ -139,6 +139,14 @@
       padding-left: 30px;
       border-left: 3px solid var(--gold);
     }
+    
+    /* Ensure hero buttons are centered (fallback in case global style doesn't cover) */
+    .hero-btns {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
   </style>
 </head>
 <body>
@@ -390,24 +398,7 @@
 
 <a href="https://wa.me/254706688115?text=I%20need%20help%20planning%20Mombasa%20activities" target="_blank" class="wa-float" title="Chat with Us">💬</a>
 
+<!-- External script handles all navigation and interactive features -->
 <script src="/script.js" defer></script>
-<script>
-  // Only mobile nav toggle - no FAQ JavaScript needed
-  (function() {
-    const toggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
-    if (toggle && navLinks) {
-      toggle.addEventListener('click', function(e) {
-        e.stopPropagation();
-        navLinks.classList.toggle('open');
-      });
-      document.addEventListener('click', function(e) {
-        if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && !toggle.contains(e.target)) {
-          navLinks.classList.remove('open');
-        }
-      });
-    }
-  })();
-</script>
 </body>
 </html>
