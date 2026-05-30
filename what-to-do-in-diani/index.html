@@ -16,7 +16,11 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://watamuholidays.co.ke/what-to-do-in-diani/" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- External CSS (handles global styles, mobile navigation, etc.) -->
   <link rel="stylesheet" href="/style.css" />
+  
+  <!-- Page-specific styles (only what's not in the global CSS) -->
   <style>
     .hero {
       background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.75)), url('https://cdn.shortpixel.ai/spai/q_lossless+w_1218+h_766+to_auto+ret_img/kiterr.com/wp-content/uploads/kitesurfing-in-diani-beach-kenya-2.jpg');
@@ -122,6 +126,14 @@
       padding-left: 30px;
       border-left: 3px solid var(--gold);
     }
+    
+    /* Ensure hero buttons are centered (global style.css should handle, but just in case) */
+    .hero-btns {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
   </style>
 </head>
 <body>
@@ -138,7 +150,7 @@
       <li><a href="/diani-beach-holiday-costs-2026/" class="active">Diani</a></li>
       <li><a href="/masai-mara-safari-cost-2026/">Safari</a></li>
       <li><a href="/nairobi-tourist-budget-2026/">Nairobi</a></li>
-      <li><a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20holiday" target="_blank" class="btn-nav">Chat with Us</a></li>
+      <li><a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20holiday" target="_blank" class="btn-nav">Chat with Us</a>
     </ul>
   </div>
 </nav>
@@ -178,7 +190,6 @@
     </div>
   </section>
 
-  <!-- ATTRACTIONS CARDS -->
   <section id="attractions" class="section-alt">
     <div class="container">
       <h2 class="section-title">Top things to do in Diani</h2>
@@ -247,7 +258,6 @@
     </div>
   </section>
 
-  <!-- Budget & practical info -->
   <section class="section">
     <div class="container">
       <div class="info-grid">
@@ -274,7 +284,6 @@
     </div>
   </section>
 
-  <!-- Insider tips -->
   <div class="container">
     <div class="tip-card" style="background: #eef3fc; margin-bottom: 40px;">
       <h3 style="color: var(--blue-dark); margin-bottom: 12px;">🧠 Local secrets – Diani off the beaten path</h3>
@@ -287,7 +296,6 @@
     </div>
   </div>
 
-  <!-- SIMPLE FAQ - NO DROPDOWN, NO JAVASCRIPT -->
   <section class="section-alt">
     <div class="container" style="max-width: 800px;">
       <h2 class="section-title mb-32">Frequently Asked Questions — Diani Beach</h2>
@@ -342,7 +350,6 @@
     </div>
   </section>
 
-  <!-- internal related pages -->
   <div class="container">
     <div class="links-bar">
       <p>Explore more of Kenya's coast</p>
@@ -370,23 +377,7 @@
 
 <a href="https://wa.me/254706688115?text=I%20need%20help%20planning%20Diani%20activities" target="_blank" class="wa-float" title="Chat with Us">💬</a>
 
+<!-- External script handles all navigation and interactive features -->
 <script src="/script.js" defer></script>
-<script>
-  // Only mobile nav toggle remains - no FAQ JavaScript
-  (function(){
-    const toggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
-    if(toggle && navLinks){
-      toggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        navLinks.classList.toggle('open');
-      });
-      document.addEventListener('click', (e) => {
-        if(navLinks.classList.contains('open') && !navLinks.contains(e.target) && !toggle.contains(e.target))
-          navLinks.classList.remove('open');
-      });
-    }
-  })();
-</script>
 </body>
 </html>
