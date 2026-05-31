@@ -31,9 +31,6 @@
     .hero .btn {
       color: white !important;
     }
-    .hero .price {
-      color: #f4b942 !important;
-    }
     .btn-eta {
       background: transparent !important;
       border: 2px solid #f4b942 !important;
@@ -66,7 +63,6 @@
         display: none;
       }
     }
-    /* Floating chat button - WhatsApp logo remains */
     .float-chat {
       position: fixed;
       bottom: 24px;
@@ -90,6 +86,66 @@
       transform: scale(1.1);
       box-shadow: 0 6px 28px rgba(0,0,0,0.3);
       color: white;
+    }
+    .hotel-partners {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px 0;
+    }
+    .hotel-partners a {
+      display: inline-block;
+      background: white;
+      padding: 8px 20px;
+      border-radius: 40px;
+      font-weight: 500;
+      color: var(--blue-dark);
+      text-decoration: none;
+      border: 1px solid var(--gold);
+      transition: 0.2s;
+    }
+    .hotel-partners a:hover {
+      background: var(--gold);
+      color: white;
+    }
+    .customer-experience {
+      background: #f8f3e5;
+      border-radius: 20px;
+      padding: 32px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .customer-experience h3 {
+      font-size: 1.4rem;
+      color: var(--blue-dark);
+      margin-bottom: 16px;
+    }
+    .trustpilot-link {
+      display: inline-block;
+      background: var(--gold);
+      color: #1e2a3e;
+      padding: 10px 24px;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 12px;
+    }
+    .trustpilot-link:hover {
+      background: #c49010;
+      color: white;
+    }
+    .partners-section {
+      background: var(--off-white);
+      border-radius: 20px;
+      padding: 32px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .partners-section h3 {
+      font-size: 1.4rem;
+      color: var(--blue-dark);
+      margin-bottom: 16px;
     }
   </style>
 </head>
@@ -116,9 +172,9 @@
 
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-badge">Kenya's Premier Beach Holiday Specialists – Operated by Bwanaadi Tours (20+ years)</div>
-    <h1>Watamu Luxury Holidays<br>from <span class="price">279 EUR</span> per Day</h1>
-    <p class="hero-sub">Minimum 5-night stay · 5-star beachfront hotels · All transfers included · Marine park & Tsavo East Safari</p>
+    <div class="hero-badge">Kenya's Premier Beach & Safari Holiday Specialists – Operated by Bwanaadi Tours (20+ years)</div>
+    <h1>Watamu Holidays<br>Luxury Beach & Safari Experiences</h1>
+    <p class="hero-sub">5-star beachfront hotels · Private transfers · Marine park excursions · Tsavo East Safari</p>
     <div class="hero-btns">
       <a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20holiday" target="_blank" class="btn btn-whatsapp">Chat with Us</a>
       <a href="/watamu-holiday-package-costs-2026/" class="btn btn-outline">View Packages →</a>
@@ -130,7 +186,7 @@
 <section class="section">
   <div class="container">
     <div class="section-header center">
-      <h2 class="section-title">Experience the Magic of Watamu</h2>
+      <h2 class="section-title">Experience the Magic of Watamu Holidays</h2>
       <p class="section-sub">UNESCO Biosphere Reserve · Pristine coral reefs · Year‑round sunshine</p>
     </div>
     <div class="video-wrap">
@@ -150,7 +206,7 @@
           <li>Private chauffeur service</li>
           <li>Marine park tours & snorkeling</li>
           <li>Safari trips (Tsavo, Masai Mara)</li>
-          <li>5-star beachfront hotel partnerships</li>
+          <li>Luxury beachfront hotel partnerships</li>
           <li>Dolphin watching excursions</li>
           <li>Car rental services</li>
           <li>Custom tailor-made itineraries</li>
@@ -185,6 +241,22 @@
     </div>
   </div>
 </section>
+
+<!-- ==================== INNER LINKS TO ALL REQUESTED PAGES ==================== -->
+<div class="container">
+  <div class="links-bar" style="margin-bottom: 20px;">
+    <p>🐘 Plan Your Safari & Activities</p>
+    <div class="links-bar-items">
+      <a href="/tsavo-east-cost-2026/">Tsavo East Safari – Red Elephants</a>
+      <a href="/what-to-do-in-watamu/">What to Do in Watamu – Full Guide</a>
+      <a href="/watamu-marine-park-cost-2026/">Watamu Marine Park Snorkeling</a>
+      <a href="/mida-creek-cost-2026/">Mida Creek Sunset Dhow</a>
+      <a href="/gede-ruins-cost-2026/">Gede Ruins – Ancient Swahili Town</a>
+      <a href="/marafa-sunset-trip-cost-2026/">Marafa Hell's Kitchen Sunset</a>
+      <a href="/watamu-holiday-package-costs-2026/">Watamu Package Costs</a>
+    </div>
+  </div>
+</div>
 
 <section class="pricing-banner">
   <h2>The Premium Watamu Experience</h2>
@@ -243,6 +315,28 @@
   </div>
 </section>
 
+<!-- ==================== PARTNER HOTELS SECTION (Near Bottom) ==================== -->
+<div class="container">
+  <div class="partners-section">
+    <h3>🏨 Our Trusted Hotel Partners & Villa Portfolio</h3>
+    <p>For over 20 years, we have managed luxury apartments and private villas across Watamu. We are proud to partner with Garoda Hotel, Kobe Suit Resort, and Hemingways Watamu – three of the finest 5-star establishments on the coast. Through these partnerships, we guarantee our guests the best rates, priority service, and seamless check‑in experiences. Whether you prefer a beachfront suite, a secluded villa, or a family‑friendly resort, we have the perfect accommodation for your Kenya holiday.</p>
+    <div class="hotel-partners">
+      <a href="https://garoda.com/" target="_blank" rel="noopener noreferrer">🏨 Garoda Hotel (5-star)</a>
+      <a href="https://www.kobesuitresort.com/" target="_blank" rel="noopener noreferrer">🏨 Kobe Suit Resort (5-star)</a>
+      <a href="https://www.hemingways-collection.com/kenya/watamu/" target="_blank" rel="noopener noreferrer">🏨 Hemingways Watamu</a>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== CUSTOMER EXPERIENCE SECTION (Trustpilot) ==================== -->
+<div class="container">
+  <div class="customer-experience">
+    <h3>⭐ What Our Guests Say</h3>
+    <p>We've helped hundreds of travellers from around the world create unforgettable Kenya holidays. Our guests consistently praise our local expertise, seamless arrangements, and personalised service.</p>
+    <a href="https://www.trustpilot.com/review/bwanaaditours.ifmosa.com" target="_blank" class="trustpilot-link">Read genuine reviews on Trustpilot →</a>
+  </div>
+</div>
+
 <!-- FAQ Section -->
 <section class="section">
   <div class="container" style="max-width:760px;">
@@ -266,7 +360,7 @@
     </div>
 
     <div class="faq">
-      <div class="faq-item"><div class="faq-q">What does 279 EUR per day include? <i class="chevron">▾</i></div><div class="faq-a">Beachfront 5-star hotel (Garoda or Kobe Suit Resort), airport transfers, daily breakfast, marine park access, dedicated driver, and 1 night safari.</div></div>
+      <div class="faq-item"><div class="faq-q">What does the package include? <i class="chevron">▾</i></div><div class="faq-a">Beachfront 5-star hotel (Garoda or Kobe Suit Resort), airport transfers, daily breakfast, marine park access, dedicated driver, and 1 night safari.</div></div>
       <div class="faq-item"><div class="faq-q">What is the minimum stay? <i class="chevron">▾</i></div><div class="faq-a">5 nights, from 1,395 EUR per person. 7–10 nights recommended for the best beach + safari combo.</div></div>
       <div class="faq-item"><div class="faq-q">Which airport should I fly into? <i class="chevron">▾</i></div><div class="faq-a">Malindi Airport (20 min) or Mombasa Airport (1.5 hours). Transfers included.</div></div>
       <div class="faq-item"><div class="faq-q">Can I add extra days of safari? <i class="chevron">▾</i></div><div class="faq-a">Yes – Tsavo East National Park is 2–3 hours away. 2-3 night extensions available. <a href="/tsavo-east-cost-2026/">See Tsavo East costs →</a></div></div>
@@ -286,7 +380,7 @@
   <div class="footer-bottom"><div class="container">&copy; 2026 Watamu Holidays Kenya – Bwanaadi Tours. All rights reserved. | <a href="/kenya-travel-costs-2026/">Kenya Travel Cost Hub</a></div></div>
 </footer>
 
-<!-- Floating chat button (WhatsApp logo remains, text on hover says "Chat with Us") -->
+<!-- Floating chat button -->
 <a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20holiday" target="_blank" class="float-chat" title="Chat with Us">💬</a>
 
 <script src="/script.js" defer></script>
