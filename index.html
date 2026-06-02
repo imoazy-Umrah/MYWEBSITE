@@ -147,6 +147,84 @@
       color: var(--blue-dark);
       margin-bottom: 16px;
     }
+    /* Story section (moved lower) */
+    .story-section {
+      background: linear-gradient(135deg, #ffffff 0%, #faf8f0 100%);
+      border-radius: 28px;
+      padding: 48px 32px;
+      margin: 40px 0;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+    .story-section h2 {
+      font-size: 2rem;
+      margin-bottom: 24px;
+      font-family: 'Playfair Display', serif;
+      color: var(--blue-dark);
+    }
+    .story-section .founder-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .story-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      align-items: center;
+    }
+    .story-text {
+      flex: 2;
+    }
+    .story-text p {
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+    .story-quote {
+      flex: 1;
+      background: var(--off-white);
+      padding: 24px;
+      border-radius: 20px;
+      text-align: center;
+      font-style: italic;
+      border-left: 4px solid var(--gold);
+    }
+    .combo-cta {
+      background: linear-gradient(135deg, #1e3a1e 0%, #2c5f2d 100%);
+      border-radius: 28px;
+      padding: 40px 32px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .combo-cta h2 {
+      color: white;
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+    }
+    .combo-cta p {
+      color: rgba(255,255,255,0.9);
+      max-width: 600px;
+      margin: 0 auto 24px;
+    }
+    .btn-combo {
+      background: var(--gold);
+      color: #1e2a3e;
+      padding: 14px 32px;
+      border-radius: 40px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.2s;
+    }
+    .btn-combo:hover {
+      background: #e6b422;
+      transform: scale(1.02);
+    }
+    @media (max-width: 760px) {
+      .story-grid { flex-direction: column; }
+      .story-section { padding: 32px 20px; }
+    }
   </style>
 </head>
 <body>
@@ -242,7 +320,7 @@
   </div>
 </section>
 
-<!-- ==================== INNER LINKS TO ALL REQUESTED PAGES ==================== -->
+<!-- Inner links to safari & activities -->
 <div class="container">
   <div class="links-bar" style="margin-bottom: 20px;">
     <p>🐘 Plan Your Safari & Activities</p>
@@ -273,6 +351,35 @@
     <a href="https://forms.zohopublic.com/infowatamuh1/form/LeadsHoliday/formperma/i-OPSgu3rEYBnnYMDYGLMvVK6vzfZYIsA2pEYKLbX1Q" target="_blank" class="btn btn-gold">Get a Custom Quote</a>
   </div>
 </section>
+
+<!-- ==================== SAID BWANAADI'S STORY (MOVED LOWER) ==================== -->
+<div class="container">
+  <div class="story-section">
+    <div class="story-grid">
+      <div class="story-text">
+        <h2>The Story Behind Watamu Holidays</h2>
+        <div class="founder-name">Said Bwanaadi – Founder, Bwanaadi Tours</div>
+        <p>More than twenty years ago, I started with a single vehicle and a simple dream: to help travellers discover the real Kenya. What began as airport transfers for a handful of Italian tourists grew into something much bigger. Word spread – my guests loved the personal touch, the local knowledge, and the genuine care. Within a few years, Bwanaadi Tours became a trusted DMC (Destination Management Company) for the Italian market, handling everything from luxury beach stays to custom safaris.</p>
+        <p>But Kenya is for everyone, not just one market. That’s why we’ve embraced digitalisation – to open our doors to travellers from around the world. Now, families from the UK, groups from Germany, and adventurers from everywhere can book directly with us, skipping the middlemen. We still offer the same personalised service, the same insider rates at 5‑star hotels like Garoda and Kobe Suit, and the same commitment to showing you the Kenya we love.</p>
+        <p><strong>We don’t just sell holidays. We share our home.</strong> Whether you want to snorkel in Watamu Marine Park, watch the red elephants of Tsavo, or simply relax on the beach – we’ll be there, every step of the way.</p>
+      </div>
+      <div class="story-quote">
+        <div style="font-size: 3rem; margin-bottom: 12px;">🌊</div>
+        <p>"I wanted travellers to feel like family, not tourists. Twenty years later, that’s still our promise."</p>
+        <strong>— Said Bwanaadi</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== KENYA SAFARI & BEACH HOLIDAY CTA (MOVED LOWER) ==================== -->
+<div class="container">
+  <div class="combo-cta">
+    <h2>🐘🏖️ The Ultimate Kenya Safari & Beach Holiday</h2>
+    <p>Combine the thrill of Tsavo East's red elephants with the serenity of Watamu's marine park – all in one relaxed, no‑rush itinerary. Our signature combo is what travellers are searching for.</p>
+    <a href="/kenya-safari-and-beach-holiday" class="btn-combo">Discover the Safari & Beach Combo →</a>
+  </div>
+</div>
 
 <div class="container">
   <div class="trust-box scroll-reveal">
@@ -315,7 +422,7 @@
   </div>
 </section>
 
-<!-- ==================== PARTNER HOTELS SECTION (Near Bottom) ==================== -->
+<!-- Partner Hotels Section -->
 <div class="container">
   <div class="partners-section">
     <h3>🏨 Our Trusted Hotel Partners & Villa Portfolio</h3>
@@ -328,7 +435,7 @@
   </div>
 </div>
 
-<!-- ==================== CUSTOMER EXPERIENCE SECTION (Trustpilot) ==================== -->
+<!-- Customer Experience Section -->
 <div class="container">
   <div class="customer-experience">
     <h3>⭐ What Our Guests Say</h3>
@@ -380,7 +487,6 @@
   <div class="footer-bottom"><div class="container">&copy; 2026 Watamu Holidays Kenya – Bwanaadi Tours. All rights reserved. | <a href="/kenya-travel-costs-2026/">Kenya Travel Cost Hub</a></div></div>
 </footer>
 
-<!-- Floating chat button -->
 <a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20holiday" target="_blank" class="float-chat" title="Chat with Us">💬</a>
 
 <script src="/script.js" defer></script>
