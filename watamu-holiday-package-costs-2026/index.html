@@ -171,6 +171,53 @@
       color: white;
       border-color: var(--gold);
     }
+    
+    /* Family CTA Section (near bottom) */
+    .family-cta-section {
+      margin: 40px auto;
+      background: linear-gradient(135deg, #2c5f2d 0%, #1e3a1e 100%);
+      border-radius: 28px;
+      padding: 48px 32px;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+    }
+    .family-cta-section h2 {
+      color: white;
+      font-size: 2rem;
+      margin-bottom: 16px;
+      font-family: 'Playfair Display', serif;
+    }
+    .family-cta-section p {
+      color: rgba(255,255,255,0.9);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 24px auto;
+    }
+    .btn-family {
+      background: var(--gold);
+      color: #1e2a3e !important;
+      padding: 14px 32px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: transform 0.2s, background 0.2s;
+      text-decoration: none;
+    }
+    .btn-family:hover {
+      background: #e6b422;
+      transform: scale(1.02);
+    }
+    @media (max-width: 640px) {
+      .family-cta-section {
+        padding: 32px 20px;
+      }
+      .family-cta-section h2 {
+        font-size: 1.6rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -368,6 +415,16 @@
     </div>
   </div>
 </section>
+
+<!-- ==================== FAMILY HOLIDAY IN KENYA SECTION (NEAR BOTTOM) ==================== -->
+<div class="container">
+  <div class="family-cta-section">
+    <h2>👨‍👩‍👧‍👦 Coming with your family to Kenya?</h2>
+    <p>Discover our expert guide to the most kid‑friendly destinations, family resorts, and child‑safe activities across Kenya – from safari adventures to beach getaways.</p>
+    <a href="/family-holiday-in-kenya" class="btn-family">View Full Family Guide →</a>
+  </div>
+</div>
+<!-- ==================== END FAMILY SECTION ==================== -->
 
 <!-- Extra Links -->
 <div class="container">
