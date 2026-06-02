@@ -151,6 +151,53 @@
       border-color: var(--gold);
     }
     
+    /* Family CTA Section */
+    .family-cta-section {
+      margin: 40px auto;
+      background: linear-gradient(135deg, #2c5f2d 0%, #1e3a1e 100%);
+      border-radius: 28px;
+      padding: 48px 32px;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+    }
+    .family-cta-section h2 {
+      color: white;
+      font-size: 2rem;
+      margin-bottom: 16px;
+      font-family: 'Playfair Display', serif;
+    }
+    .family-cta-section p {
+      color: rgba(255,255,255,0.9);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 24px auto;
+    }
+    .btn-family {
+      background: var(--gold);
+      color: #1e2a3e !important;
+      padding: 14px 32px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: transform 0.2s, background 0.2s;
+      text-decoration: none;
+    }
+    .btn-family:hover {
+      background: #e6b422;
+      transform: scale(1.02);
+    }
+    @media (max-width: 640px) {
+      .family-cta-section {
+        padding: 32px 20px;
+      }
+      .family-cta-section h2 {
+        font-size: 1.6rem;
+      }
+    }
+    
     /* Fix for hero buttons centering */
     .hero-btns {
       display: flex;
@@ -172,7 +219,7 @@
 </head>
 <body>
 
-<!-- ==================== NAVIGATION (relies on external style.css and script.js) ==================== -->
+<!-- ==================== NAVIGATION ==================== -->
 <nav>
   <div class="container nav-inner">
     <a href="/" class="nav-logo"><span>Watamu</span> Holidays</a>
@@ -315,8 +362,8 @@
         <table>
           <thead><tr><th>Period</th><th>Non‑Resident Adult (per 24h)</th><th>Non‑Resident Child</th></tr></thead>
           <tbody>
-            <tr class="highlight-row"><td class="fw-bold">Peak Season (July – December)</td><td class="price-cell">USD 200</td><td>USD 50</td></tr>
-            <tr><td class="fw-bold">Low Season (January – June)</td><td class="price-cell">USD 100</td><td>USD 25</td></tr>
+            <tr class="highlight-row"><td class="fw-bold">Peak Season (July – December)</td><td class="price-cell">USD 200</td><td class="price-cell">USD 50</td></tr>
+            <tr><td class="fw-bold">Low Season (January – June)</td><td class="price-cell">USD 100</td><td class="price-cell">USD 25</td></tr>
           </tbody>
         </table>
       </div>
@@ -459,7 +506,17 @@
     </div>
   </section>
 
-  <!-- ==================== CTA BLOCK ==================== -->
+  <!-- ==================== FAMILY HOLIDAY IN KENYA SECTION (MOVED TO BOTTOM) ==================== -->
+  <div class="container">
+    <div class="family-cta-section">
+      <h2>👨‍👩‍👧‍👦 Coming with your family to Kenya?</h2>
+      <p>Discover our expert guide to the most kid‑friendly destinations, family resorts, and child‑safe activities across Kenya – from safari adventures to beach getaways.</p>
+      <a href="/family-holiday-in-kenya" class="btn-family">View Full Family Guide →</a>
+    </div>
+  </div>
+  <!-- ==================== END FAMILY SECTION ==================== -->
+
+  <!-- ==================== MAIN CTA BLOCK ==================== -->
   <section class="section">
     <div class="container">
       <div class="cta-block">
@@ -510,13 +567,12 @@
   <div class="footer-bottom"><div class="container">&copy; 2026 Watamu Holidays Kenya – Bwanaadi Tours. All rights reserved. | <a href="/kenya-travel-costs-2026/">Kenya Travel Cost Hub</a></div></div>
 </footer>
 
-<!-- Floating WhatsApp button (consistent with your other pages) -->
+<!-- Floating WhatsApp button -->
 <a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20Masai%20Mara%20safari" target="_blank" class="wa-float" title="Chat with Us">💬</a>
 
-<!-- ==================== EXTERNAL SCRIPT ==================== -->
 <script src="/script.js" defer></script>
 
-<!-- Structured Data (kept for SEO) -->
+<!-- Structured Data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
