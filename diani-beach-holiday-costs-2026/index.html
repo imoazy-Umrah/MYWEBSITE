@@ -16,11 +16,43 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://watamuholidays.co.ke/diani-beach-holiday-costs-2026/" />
   <meta name="twitter:card" content="summary_large_image" />
-  <!-- Google Fonts & External CSS -->
+  
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css">
+  
+  <!-- Brevo form required fonts & styles (must be in head) -->
   <style>
-    /* Hero background – beautiful sunset beach (reliable Unsplash) */
+    @font-face {
+      font-display: block;
+      font-family: Roboto;
+      src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
+    }
+    @font-face {
+      font-display: fallback;
+      font-family: Roboto;
+      font-weight: 600;
+      src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
+    }
+    @font-face {
+      font-display: fallback;
+      font-family: Roboto;
+      font-weight: 700;
+      src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
+    }
+    :where(.sib-form-message-panel) { display: none; }
+    :where(.sib-form-message-panel .sib-notification__icon) { width: 20px; height: 20px; }
+    #sib-container input:-ms-input-placeholder { font-family: Helvetica, sans-serif; text-align: left; color: #c0ccda; }
+    #sib-container input::placeholder { font-family: Helvetica, sans-serif; text-align: left; color: #c0ccda; }
+    #sib-container textarea::placeholder { font-family: Helvetica, sans-serif; text-align: left; color: #c0ccda; }
+    #sib-container a { text-decoration: underline; color: #2BB2FC; }
+  </style>
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+  
+  <!-- External global CSS -->
+  <link rel="stylesheet" href="/style.css">
+  
+  <style>
+    /* Hero background – beautiful sunset beach */
     .hero {
       background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1691161510065-298039a5b51b?w=1600&auto=format&q=85');
       background-size: cover;
@@ -59,7 +91,6 @@
     .hero-btns .btn {
       margin: 0.5rem;
     }
-    /* Fix contrast for Watamu highlight box */
     .compare-box.highlight {
       background: #0b3b2a;
       border-color: #f4b942;
@@ -78,7 +109,6 @@
       text-decoration: underline;
     }
 
-    /* ===== INLINE MOBILE FIXES ===== */
     @media (max-width: 768px) {
       .hero {
         min-height: 85svh !important;
@@ -107,8 +137,6 @@
         white-space: nowrap;
       }
     }
-
-    /* Contact form section */
     .contact-section {
       padding: 40px 0;
       background: var(--off-white);
@@ -127,6 +155,7 @@
 </head>
 <body>
 
+<!-- Navigation -->
 <nav>
   <div class="container nav-inner">
     <a href="/" class="nav-logo"><span>Watamu</span> Holidays</a>
@@ -144,7 +173,7 @@
   </div>
 </nav>
 
-<!-- Hero Section with sunset beach background -->
+<!-- Hero Section -->
 <section class="hero">
   <div class="hero-content">
     <div class="hero-badge">Cost Guide 2026</div>
@@ -176,7 +205,7 @@
   </div>
 </section>
 
-<!-- Diani vs Watamu (no bars, no nightlife) -->
+<!-- Diani vs Watamu -->
 <section class="section-alt">
   <div class="container">
     <h2 class="section-title mb-24">Diani vs. Watamu — Which Should You Choose?</h2>
@@ -409,6 +438,7 @@
   </div>
 </section>
 
+<!-- Footer -->
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -441,6 +471,7 @@
   <div class="footer-bottom"><div class="container">© 2026 Watamu Holidays Kenya – Bwanaadi Tours. All rights reserved. | <a href="/kenya-travel-costs-2026/">Kenya Travel Cost Hub</a></div></div>
 </footer>
 
+<!-- Floating WhatsApp -->
 <a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20Diani%20holiday" target="_blank" class="wa-float" title="Chat with Us">💬</a>
 
 <script src="/script.js" defer></script>
@@ -464,7 +495,7 @@
 }
 </script>
 
-<!-- Brevo required scripts -->
+<!-- Brevo required scripts (must be at bottom) -->
 <script>
   window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
   window.LOCALE = 'en';
@@ -485,5 +516,6 @@
   var AUTOHIDE = Boolean(0);
 </script>
 <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+
 </body>
 </html>
