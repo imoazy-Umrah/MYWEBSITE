@@ -12,7 +12,7 @@
   <!-- COST & BUDGET GUIDES -->
   <url>
     <loc>https://watamuholidays.co.ke/watamu-holiday-package-costs-2026/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -24,7 +24,7 @@
   </url>
   <url>
     <loc>https://watamuholidays.co.ke/mombasa-travel-costs-2026/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -56,37 +56,37 @@
   <!-- "WHAT TO DO" DESTINATION GUIDES -->
   <url>
     <loc>https://watamuholidays.co.ke/what-to-do-in-kenya/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://watamuholidays.co.ke/what-to-do-in-mombasa/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://watamuholidays.co.ke/what-to-do-in-watamu/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://watamuholidays.co.ke/what-to-do-in-diani/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://watamuholidays.co.ke/what-to-do-in-nairobi/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://watamuholidays.co.ke/what-to-do-on-safari/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -94,19 +94,19 @@
   <!-- WATAMU EXPERIENCE PAGES -->
   <url>
     <loc>https://watamuholidays.co.ke/tsavo-east-cost-2026/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://watamuholidays.co.ke/watamu-marine-park-cost-2026/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://watamuholidays.co.ke/mida-creek-cost-2026/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -163,12 +163,34 @@
     <priority>0.8</priority>
   </url>
   
-  <!-- ========== NEW KENYA SAFARI & BEACH COMBO PAGE ========== -->
+  <!-- ========== KENYA SAFARI & BEACH COMBO PAGE ========== -->
   <url>
     <loc>https://watamuholidays.co.ke/kenya-safari-and-beach-holiday/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
+  </url>
+  
+  <!-- ========== NEW RENTAL PAGES ========== -->
+  <url>
+    <loc>https://watamuholidays.co.ke/rent-a-car-watamu/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://watamuholidays.co.ke/rent-boat-watamu/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- ========== ADDITIONAL MISSING PAGES ========== -->
+  <url>
+    <loc>https://watamuholidays.co.ke/tsavo-east-safari-cost/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   
 </urlset>
