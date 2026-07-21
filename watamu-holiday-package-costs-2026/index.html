@@ -325,6 +325,55 @@
     .contact-section #sib-container {
       margin: 0 auto;
     }
+
+    /* Rent a Car Card */
+    .rental-card-link {
+      display: block;
+      text-decoration: none;
+    }
+    .rental-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.25s ease, box-shadow 0.25s;
+      border: 1px solid var(--border);
+      text-align: center;
+      padding: 24px 20px;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+    .rental-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px -8px rgba(0,0,0,0.15);
+    }
+    .rental-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+    .rental-card h4 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--blue-dark);
+      margin-bottom: 6px;
+      font-family: 'Playfair Display', serif;
+    }
+    .rental-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .rental-card .card-arrow {
+      display: inline-block;
+      color: var(--gold);
+      font-weight: 600;
+    }
+    .rental-card .card-arrow:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -547,10 +596,21 @@
 </div>
 <!-- ==================== END FAMILY SECTION ==================== -->
 
-<!-- Extra Links -->
+<!-- Extra Links (UPDATED: Added Rent a Car Card) -->
 <div class="container">
   <div class="extra-links-section">
     <h3>🌴 Explore More Watamu Experiences</h3>
+    
+    <!-- Rent a Car Card -->
+    <a href="/rent-a-car-watamu" class="rental-card-link">
+      <div class="rental-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgPnbG_utlJe5AKvTPqsLTIFdmIS3MYJs4uwa4NY-7-w9GERa_QV-Rw36d&s=10" alt="Rent a car in Watamu">
+        <h4>🚗 Rent a Car in Watamu</h4>
+        <p>Explore Kenya at your own pace. 4x4 pickups, sedans & compact cars available.</p>
+        <span class="card-arrow">Book a car →</span>
+      </div>
+    </a>
+    
     <div class="extra-links">
       <a href="/tsavo-east-cost-2026/">🐘 Tsavo East Safari</a>
       <a href="/watamu-marine-park-cost-2026/">🐠 Watamu Marine Park</a>
