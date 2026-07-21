@@ -15,8 +15,27 @@
   <meta property="og:image" content="https://images.unsplash.com/photo-1680346087980-1dbc57f7ba56?q=80&w=1200" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://watamuholidays.co.ke/what-to-do-in-mombasa/" />
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Brevo form required fonts & styles -->
+  <style>
+    @font-face { font-display: block; font-family: Roboto; src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff") }
+    @font-face { font-display: fallback; font-family: Roboto; font-weight: 600; src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff") }
+    @font-face { font-display: fallback; font-family: Roboto; font-weight: 700; src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff") }
+    :where(.sib-form-message-panel) { display: none; }
+    :where(.sib-form-message-panel .sib-notification__icon) { width: 20px; height: 20px; }
+    #sib-container input:-ms-input-placeholder { font-family: Helvetica, sans-serif; text-align: left; color: #c0ccda; }
+    #sib-container input::placeholder { font-family: Helvetica, sans-serif; text-align: left; color: #c0ccda; }
+    #sib-container textarea::placeholder { font-family: Helvetica, sans-serif; text-align: left; color: #c0ccda; }
+    #sib-container a { text-decoration: underline; color: #2BB2FC; }
+  </style>
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+
+  <!-- External global CSS -->
   <link rel="stylesheet" href="/style.css" />
+
   <style>
     .hero {
       background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1680346087980-1dbc57f7ba56?q=80&w=1600&auto=format');
@@ -109,10 +128,7 @@
       .local-flavor img { width: 100%; max-width: 280px; }
     }
     
-    /* SIMPLE FAQ STYLES - NO DROPDOWN, JUST CLEAN Q&A */
-    .faq-simple {
-      margin: 32px 0;
-    }
+    .faq-simple { margin: 32px 0; }
     .faq-item-simple {
       background: var(--card);
       border: 1px solid var(--border);
@@ -130,9 +146,7 @@
       align-items: center;
       gap: 10px;
     }
-    .faq-question span {
-      font-size: 1.3rem;
-    }
+    .faq-question span { font-size: 1.3rem; }
     .faq-answer {
       color: var(--text-muted);
       line-height: 1.6;
@@ -140,13 +154,72 @@
       border-left: 3px solid var(--gold);
     }
     
-    /* Ensure hero buttons are centered (fallback in case global style doesn't cover) */
     .hero-btns {
       display: flex;
       justify-content: center;
       gap: 12px;
       flex-wrap: wrap;
     }
+
+    .trustpilot-section {
+      background: #f8f3e5;
+      border-radius: 28px;
+      padding: 40px 32px;
+      margin: 40px 0;
+      text-align: center;
+    }
+    .trustpilot-section h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--blue-dark); margin-bottom: 8px; }
+    .trustpilot-section .subhead { color: var(--text-muted); margin-bottom: 24px; font-size: 1rem; }
+    .trustpilot-card-single {
+      background: white;
+      border-radius: 20px;
+      padding: 28px 32px;
+      box-shadow: var(--shadow);
+      max-width: 600px;
+      margin: 0 auto;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    .trustpilot-card-single .stars { color: #f4b942; font-size: 1.4rem; letter-spacing: 3px; margin-bottom: 10px; }
+    .trustpilot-card-single .review-text { font-size: 1.15rem; line-height: 1.7; color: var(--text); margin-bottom: 12px; font-style: italic; }
+    .trustpilot-card-single .review-author { font-weight: 700; color: var(--blue-dark); font-size: 1rem; }
+    .trustpilot-card-single .review-meta { font-size: 0.85rem; color: var(--text-muted); }
+    .trustpilot-link-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #1e2a3e;
+      padding: 10px 24px;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: 0.2s;
+    }
+    .trustpilot-link-btn:hover { background: #c49010; color: white; }
+    @media (max-width: 640px) {
+      .trustpilot-section { padding: 24px 16px; }
+      .trustpilot-card-single { padding: 20px; }
+      .trustpilot-card-single .review-text { font-size: 1rem; }
+    }
+
+    .contact-section { padding: 40px 0; background: var(--off-white); }
+    .contact-section h2 { text-align: center; margin-bottom: 24px; }
+    .contact-section .sib-form { background: transparent !important; }
+    .contact-section #sib-container { margin: 0 auto; }
+
+    .family-cta-section {
+      margin: 40px auto;
+      background: linear-gradient(135deg, #2c5f2d 0%, #1e3a1e 100%);
+      border-radius: 28px;
+      padding: 48px 32px;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+    }
+    .family-cta-section h2 { color: white; font-size: 2rem; margin-bottom: 16px; font-family: 'Playfair Display', serif; }
+    .family-cta-section p { color: rgba(255,255,255,0.9); font-size: 1.1rem; max-width: 600px; margin: 0 auto 24px auto; }
+    .btn-family { background: var(--gold); color: #1e2a3e !important; padding: 14px 32px; border-radius: 40px; font-weight: 700; font-size: 1rem; display: inline-flex; align-items: center; gap: 10px; transition: transform 0.2s, background 0.2s; text-decoration: none; }
+    .btn-family:hover { background: #e6b422; transform: scale(1.02); }
+    @media (max-width: 640px) { .family-cta-section { padding: 32px 20px; } .family-cta-section h2 { font-size: 1.6rem; } }
   </style>
 </head>
 <body>
@@ -175,7 +248,7 @@
     <p class="hero-sub">UNESCO Fort Jesus · Lively Old Town · White‑sand beaches · Haller Park · Spice markets & authentic coastal cuisine</p>
     <div class="hero-btns">
       <a href="#attractions" class="btn btn-outline">Explore Attractions ↓</a>
-      <a href="https://wa.me/254706688115?text=I%20need%20a%20Mombasa%20trip%20guide" target="_blank" class="btn btn-whatsapp">Ask a Local Expert</a>
+      <a href="#contact-form" class="btn btn-whatsapp">Ask a Local Expert</a>
     </div>
   </div>
 </section>
@@ -186,7 +259,7 @@
       <div class="grid-2">
         <div class="prose">
           <h2 class="section-title">Mombasa: Where the Indian Ocean whispers Swahili tales</h2>
-          <p>Kenya’s second-largest city is not just a transit hub for beach lovers—it’s a living, breathing mosaic of Swahili, Arab, Portuguese and British influences. The scent of cardamom, cloves and grilled seafood drifts through coral-stone alleyways, while dhows still sail the Old Port as they have for centuries. Whether you’re a history buff, beach addict, wildlife enthusiast or foodie, Mombasa delivers an authentic coastal adventure that stays with you long after you’ve left.</p>
+          <p>Kenya's second-largest city is not just a transit hub for beach lovers—it's a living, breathing mosaic of Swahili, Arab, Portuguese and British influences. The scent of cardamom, cloves and grilled seafood drifts through coral-stone alleyways, while dhows still sail the Old Port as they have for centuries. Whether you're a history buff, beach addict, wildlife enthusiast or foodie, Mombasa delivers an authentic coastal adventure that stays with you long after you've left.</p>
           <p><strong>Best time to visit:</strong> Dry seasons (January–March & July–October) offer sunny skies and calm seas. March is especially good for diving.</p>
         </div>
         <div class="info-box">
@@ -212,7 +285,7 @@
           <div class="attraction-content">
             <div class="price-badge">UNESCO World Heritage</div>
             <h3>Fort Jesus Museum</h3>
-            <p>Built by the Portuguese between 1593–1596, this star‑shaped fort is Mombasa’s crown jewel. Walk through prison cells, see shipwreck artifacts and climb the ramparts for stunning Indian Ocean views. Entry: non‑residents KSH 1,200 (~€8).</p>
+            <p>Built by the Portuguese between 1593–1596, this star‑shaped fort is Mombasa's crown jewel. Walk through prison cells, see shipwreck artifacts and climb the ramparts for stunning Indian Ocean views. Entry: non‑residents KSH 1,200 (~€8).</p>
           </div>
         </div>
         
@@ -260,7 +333,7 @@
       <img src="https://images.unsplash.com/photo-1775679886812-5ff151b5cb84?q=80&w=687&auto=format&fit=crop" alt="Fresh custard apple (stafeli) at Marikiti Market, Mombasa" loading="lazy">
       <div>
         <h3>🍛 Taste the real Mombasa – Marikiti Market & Swahili flavours</h3>
-        <p>Don't leave without diving into <strong>Marikiti Market</strong>, the city’s largest fresh produce and spice bazaar. Try <strong>custard apple</strong> (stafeli), tamarind juice, and freshly fried samosas. For dinner, hunt down biryani at Shehnai Restaurant or fresh lobster at Tamarind Mombasa – the Indian Ocean seafood is legendary.</p>
+        <p>Don't leave without diving into <strong>Marikiti Market</strong>, the city's largest fresh produce and spice bazaar. Try <strong>custard apple</strong> (stafeli), tamarind juice, and freshly fried samosas. For dinner, hunt down biryani at Shehnai Restaurant or fresh lobster at Tamarind Mombasa – the Indian Ocean seafood is legendary.</p>
         <div class="price-badge" style="background:#e67e22;">local secret: try "Mishkaki" grilled skewers from street stalls.</div>
       </div>
     </div>
@@ -297,15 +370,15 @@
       <img src="https://images.unsplash.com/flagged/photo-1557828823-b5bb7f45d726?q=80&w=1170&auto=format&fit=crop" alt="Local children playing and diving on Mombasa beach sand" loading="lazy">
       <div>
         <h3>🌊 Beach life & Swahili warmth</h3>
-        <p>Mombasa’s coastline is more than turquoise water – it’s a stage of everyday joy. Watch local kids diving into the surf, fishermen hauling their nets, and families enjoying evening walks. The genuine warmth of coastal people is the heart of any visit. Take time to sit at a beachfront café, sip fresh coconut water, and absorb the rhythm of the Indian Ocean.</p>
-        <a href="https://wa.me/254706688115?text=I%20would%20like%20to%20book%20a%20Mombasa%20beach%20experience" target="_blank" class="btn btn-whatsapp" style="margin-top: 8px;">Chat with Us →</a>
+        <p>Mombasa's coastline is more than turquoise water – it's a stage of everyday joy. Watch local kids diving into the surf, fishermen hauling their nets, and families enjoying evening walks. The genuine warmth of coastal people is the heart of any visit. Take time to sit at a beachfront café, sip fresh coconut water, and absorb the rhythm of the Indian Ocean.</p>
+        <a href="#contact-form" class="btn btn-whatsapp" style="margin-top: 8px;">Chat with Us →</a>
       </div>
     </div>
   </div>
 
   <section class="section-alt">
     <div class="container">
-      <h2 class="section-title">Insider’s corner – Off the beaten path</h2>
+      <h2 class="section-title">Insider's corner – Off the beaten path</h2>
       <div class="grid-2">
         <div class="card">
           <div style="font-size:2rem;">🕊️</div>
@@ -319,57 +392,64 @@
         </div>
       </div>
       
-      <!-- SIMPLE FAQ - NO DROPDOWN, NO JAVASCRIPT, ALWAYS VISIBLE -->
       <div class="faq-simple" style="margin-top: 48px;">
         <h2 class="section-title mb-32">Frequently Asked Questions — Mombasa</h2>
         
         <div class="faq-item-simple">
-          <div class="faq-question">
-            <span>❓</span> Is Mombasa safe for tourists?
-          </div>
-          <div class="faq-answer">
-            Yes – tourist areas like Nyali, Diani and the city centre are generally safe. Use common sense, avoid dark alleys at night, and always use registered taxis. Stick with a local guide for Old Town walking tours.
-          </div>
+          <div class="faq-question"><span>❓</span> Is Mombasa safe for tourists?</div>
+          <div class="faq-answer">Yes – tourist areas like Nyali, Diani and the city centre are generally safe. Use common sense, avoid dark alleys at night, and always use registered taxis. Stick with a local guide for Old Town walking tours.</div>
         </div>
         
         <div class="faq-item-simple">
-          <div class="faq-question">
-            <span>❓</span> How many days do I need in Mombasa?
-          </div>
-          <div class="faq-answer">
-            2-3 days are ideal: one day for Fort Jesus + Old Town + markets, one day for Haller Park and Nyali Beach, and an extra day to explore marine park. Many travellers combine Mombasa with Watamu or Tsavo safari.
-          </div>
+          <div class="faq-question"><span>❓</span> How many days do I need in Mombasa?</div>
+          <div class="faq-answer">2-3 days are ideal: one day for Fort Jesus + Old Town + markets, one day for Haller Park and Nyali Beach, and an extra day to explore marine park. Many travellers combine Mombasa with Watamu or Tsavo safari.</div>
         </div>
         
         <div class="faq-item-simple">
-          <div class="faq-question">
-            <span>❓</span> Can I do a day safari from Mombasa?
-          </div>
-          <div class="faq-answer">
-            Absolutely. Tsavo East National Park is 2.5 hours from Mombasa – full day safaris or overnight trips are easily arranged. Also Shimba Hills Reserve (elephants & waterfalls) is just 1 hour away.
-          </div>
+          <div class="faq-question"><span>❓</span> Can I do a day safari from Mombasa?</div>
+          <div class="faq-answer">Absolutely. Tsavo East National Park is 2.5 hours from Mombasa – full day safaris or overnight trips are easily arranged. Also Shimba Hills Reserve (elephants & waterfalls) is just 1 hour away.</div>
         </div>
         
         <div class="faq-item-simple">
-          <div class="faq-question">
-            <span>❓</span> What is the best time to visit Mombasa?
-          </div>
-          <div class="faq-answer">
-            The best time is January–March and July–October (dry season). Avoid April–May when heavy rains can disrupt beach activities and game viewing.
-          </div>
+          <div class="faq-question"><span>❓</span> What is the best time to visit Mombasa?</div>
+          <div class="faq-answer">The best time is January–March and July–October (dry season). Avoid April–May when heavy rains can disrupt beach activities and game viewing.</div>
         </div>
         
         <div class="faq-item-simple">
-          <div class="faq-question">
-            <span>❓</span> How much does it cost to visit Fort Jesus?
-          </div>
-          <div class="faq-answer">
-            Entry for non-residents is KSH 1,200 (~€8). Guided tours are available for an additional fee. Open daily 9am–6pm.
-          </div>
+          <div class="faq-question"><span>❓</span> How much does it cost to visit Fort Jesus?</div>
+          <div class="faq-answer">Entry for non-residents is KSH 1,200 (~€8). Guided tours are available for an additional fee. Open daily 9am–6pm.</div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- ==================== TRUSTPILOT SECTION ==================== -->
+  <div class="container">
+    <div class="trustpilot-section">
+      <h2>⭐ What Our Guests Say</h2>
+      <p class="subhead">Real reviews from travellers who booked with us</p>
+      
+      <div class="trustpilot-card-single">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="review-text">"I am from the UK & I would highly recommend anyone to use the services at Bwanaadi Tours & Excavation. Very trustworthy & amazing service."</p>
+        <div class="review-author">Nuradin Kayse</div>
+        <div class="review-meta">GB • March 17, 2025 • Trustpilot</div>
+      </div>
+      
+      <a href="https://www.trustpilot.com/review/bwanaaditours.ifmosa.com" target="_blank" rel="noopener noreferrer" class="trustpilot-link-btn">
+        ⭐ Read all reviews on Trustpilot →
+      </a>
+    </div>
+  </div>
+
+  <!-- ==================== FAMILY HOLIDAY SECTION ==================== -->
+  <div class="container">
+    <div class="family-cta-section">
+      <h2>👨‍👩‍👧‍👦 Coming with your family to Kenya?</h2>
+      <p>Discover our expert guide to the most kid‑friendly destinations, family resorts, and child‑safe activities across Kenya – from safari adventures to beach getaways.</p>
+      <a href="/family-holiday-in-kenya" class="btn-family">View Full Family Guide →</a>
+    </div>
+  </div>
 
   <div class="container">
     <div class="links-bar">
@@ -383,6 +463,119 @@
       </div>
     </div>
   </div>
+
+  <!-- ==================== CONTACT FORM SECTION (Brevo) ==================== -->
+  <section id="contact-form" class="contact-section">
+    <div class="container">
+      <h2 class="section-title">Get a Custom Mombasa Activity Quote – We'll Respond Within 2 Hours</h2>
+      <p style="text-align:center; max-width:600px; margin:0 auto 24px;">Tell us what you'd like to do in Mombasa, your group size, and preferred dates. We'll craft a personalised itinerary for you.</p>
+
+      <!-- Brevo Form Embed -->
+      <div class="sib-form" style="text-align: center; background-color: transparent;">
+        <div id="sib-form-container" class="sib-form-container">
+          <div id="error-message" class="sib-form-message-panel" style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#661d1d; background-color:#ffeded; border-color:#ff4949; border-radius:3px; max-width:540px;">
+            <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+              <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                <path d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
+              </svg>
+              <span class="sib-form-message-panel__inner-text">Your submission could not be saved. Please try again.</span>
+            </div>
+          </div>
+          <div></div>
+          <div id="success-message" class="sib-form-message-panel" style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#085229; background-color:#e7faf0; border-color:#13ce66; border-radius:3px; max-width:540px;">
+            <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+              <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
+              </svg>
+              <span class="sib-form-message-panel__inner-text">Your submission has been successful. We'll be in touch shortly.</span>
+            </div>
+          </div>
+          <div></div>
+          <div id="sib-container" class="sib-container--large sib-container--vertical" style="max-width:540px; text-align:center; background-color:rgba(255,255,255,1); border-width:1px; border-style:solid; border-color:#C0CCD9; border-radius:3px; direction:ltr">
+            <form id="sib-form" method="POST" action="https://36c00b33.sibforms.com/serve/MUIFAFkaTgsiUEKZHrTn-5poIDXCiGJrQqckZp1s4BaCJ6bp7coO0Mv-Qly1OsaocRVE4Q2O0RB-FbYaNgUvenzUgyvHxN9PZ8ThcZLX8k1ZQ0CCj0GQszTHodpVAUNWLONttpOPnzCoWrCnWO1Uju7RRY34RBPKXmLwtB2Ptljj_0jf7-nNP_ipYLj-6PhmcJCrYIg2iwCw1MlREg==" data-type="subscription">
+              <div style="padding: 8px 0;">
+                <div class="sib-form-block" style="font-family:Helvetica, sans-serif; font-size:32px; font-weight:700; text-align:center; color:#3C4858; background-color:transparent; text-align:center">
+                  <p>Contact Us</p>
+                </div>
+              </div>
+              <div style="padding: 8px 0;">
+                <div class="sib-input sib-form-block">
+                  <div class="form__entry entry_block">
+                    <div class="form__label-row ">
+                      <label class="entry__label" style="font-weight: 700; text-align: left; font-family:Helvetica, sans-serif; font-size:16px; font-weight:700; text-align:left; color:#3c4858;" for="LASTNAME" data-required="*">Enter your name</label>
+                      <div class="entry__field">
+                        <input class="input " maxlength="200" type="text" id="LASTNAME" name="LASTNAME" autocomplete="off" placeholder="Name" data-required="true" required />
+                      </div>
+                    </div>
+                    <label class="entry__error entry__error--primary" style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#661d1d; background-color:#ffeded; border-color:#ff4949; border-radius:3px;"></label>
+                  </div>
+                </div>
+              </div>
+              <div style="padding: 8px 0;">
+                <div class="sib-input sib-form-block">
+                  <div class="form__entry entry_block">
+                    <div class="form__label-row ">
+                      <label class="entry__label" style="font-weight: 700; text-align: left; font-family:Helvetica, sans-serif; font-size:16px; font-weight:700; text-align:left; color:#3c4858;" for="EMAIL" data-required="*">Enter your email address</label>
+                      <div class="entry__field">
+                        <input class="input " type="text" id="EMAIL" name="EMAIL" autocomplete="off" value="" placeholder="EMAIL" data-required="true" required />
+                      </div>
+                    </div>
+                    <label class="entry__error entry__error--primary" style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#661d1d; background-color:#ffeded; border-color:#ff4949; border-radius:3px;"></label>
+                    <label class="entry__specification" style="font-family:Helvetica, sans-serif; font-size:12px; text-align:left; color:#8390A4; text-align: left ">
+                      Provide your email address to subscribe. For e.g abc@xyz.com
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div style="padding: 8px 0;">
+                <div class="sib-checkbox-group sib-form-block" data-required="true">
+                  <div class="form__entry entry_mcq">
+                    <div class="form__label-row ">
+                      <label class="entry__label" style="font-weight: 700; text-align: left; font-family:Helvetica, sans-serif; font-size:16px; font-weight:700; text-align:left; color:#3c4858;" data-required="*">Get a quote today</label>
+                      <div style="">
+                        <div class="entry__choice">
+                          <label class="checkbox__label">
+                            <input type="checkbox" class="input_replaced" name="lists_25[]" data-value="Looking to book a family holiday" value="8" data-required="true" />
+                            <span class="checkbox checkbox_tick_positive" style="margin-left:"></span><span style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#3C4858; background-color:transparent;">Looking to book a family holiday</span>
+                          </label>
+                        </div>
+                        <div class="entry__choice">
+                          <label class="checkbox__label">
+                            <input type="checkbox" class="input_replaced" name="lists_25[]" data-value="Looking to book a group holiday (4+)" value="9" data-required="true" />
+                            <span class="checkbox checkbox_tick_positive" style="margin-left:"></span><span style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#3C4858; background-color:transparent;">Looking to book a group holiday (4+)</span>
+                          </label>
+                        </div>
+                        <div class="entry__choice">
+                          <label class="checkbox__label">
+                            <input type="checkbox" class="input_replaced" name="lists_25[]" data-value="Looking to book for 1-3 people" value="10" data-required="true" />
+                            <span class="checkbox checkbox_tick_positive" style="margin-left:"></span><span style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#3C4858; background-color:transparent;">Looking to book for 1-3 people</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <label class="entry__error entry__error--primary" style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#661d1d; background-color:#ffeded; border-color:#ff4949; border-radius:3px;"></label>
+                  </div>
+                </div>
+              </div>
+              <div style="padding: 8px 0;">
+                <div class="sib-form-block" style="text-align: center">
+                  <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-family:Helvetica, sans-serif; font-size:16px; font-weight:700; text-align:center; color:#FFFFFF; background-color:#3E4857; border-width:0px; border-radius:3px;" form="sib-form" type="submit">
+                    <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
+                      <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                    </svg>
+                    SUBMIT
+                  </button>
+                </div>
+              </div>
+              <input type="text" name="email_address_check" value="" class="input--hidden">
+              <input type="hidden" name="locale" value="en">
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- End Brevo Form -->
+    </div>
+  </section>
 </main>
 
 <footer>
@@ -390,7 +583,7 @@
     <div class="footer-grid">
       <div><div class="footer-brand"><span>Watamu</span> Holidays Kenya</div><p class="footer-desc">Your trusted local expert for luxury Kenyan beach and safari experiences. Operated by Bwanaadi Tours (20+ years).</p></div>
       <div class="footer-col"><h4>Destinations</h4><ul><li><a href="/watamu-holiday-package-costs-2026/">Watamu Beach</a></li><li><a href="/mombasa-travel-costs-2026/">Mombasa</a></li><li><a href="/diani-beach-holiday-costs-2026/">Diani Beach</a></li><li><a href="/masai-mara-safari-cost-2026/">Safari (Tsavo / Mara)</a></li><li><a href="/nairobi-tourist-budget-2026/">Nairobi</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul><li>Watamu, Kilifi County, Kenya</li><li>+254 706 688 115</li><li>info@watamuholidays.co.ke</li><li><a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20holiday" target="_blank">Chat with Us</a></li><li><a href="https://forms.zohopublic.com/infowatamuh1/form/LeadsHoliday/formperma/i-OPSgu3rEYBnnYMDYGLMvVK6vzfZYIsA2pEYKLbX1Q" target="_blank">Get a Quote (Zoho)</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li>Watamu, Kilifi County, Kenya</li><li>+254 706 688 115</li><li>info@watamuholidays.co.ke</li><li><a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20holiday" target="_blank">Chat with Us</a></li><li><a href="#contact-form">Get a Custom Quote</a></li></ul></div>
     </div>
   </div>
   <div class="footer-bottom"><div class="container">&copy; 2026 Watamu Holidays Kenya – Bwanaadi Tours. All rights reserved. | <a href="/kenya-travel-costs-2026/">Kenya Travel Cost Hub</a></div></div>
@@ -398,7 +591,28 @@
 
 <a href="https://wa.me/254706688115?text=I%20need%20help%20planning%20Mombasa%20activities" target="_blank" class="wa-float" title="Chat with Us">💬</a>
 
-<!-- External script handles all navigation and interactive features -->
+<!-- Brevo required scripts -->
+<script>
+  window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+  window.LOCALE = 'en';
+  window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+  window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
+  window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+  window.INVALID_NUMBER = "The information provided is invalid. Please review the field format and try again.";
+  window.INVALID_DATE = "Please enter a valid date";
+  window.REQUIRED_MULTISELECT_MESSAGE = 'Please select at least 1 option';
+  window.translation = {
+    common: {
+      selectedList: '{quantity} list selected',
+      selectedLists: '{quantity} lists selected',
+      selectedOption: '{quantity} selected',
+      selectedOptions: '{quantity} selected',
+    }
+  };
+  var AUTOHIDE = Boolean(0);
+</script>
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+
 <script src="/script.js" defer></script>
 </body>
 </html>
