@@ -114,6 +114,16 @@
     .btn-family { background: var(--gold); color: #1e2a3e !important; padding: 14px 32px; border-radius: 40px; font-weight: 700; font-size: 1rem; display: inline-flex; align-items: center; gap: 10px; transition: transform 0.2s, background 0.2s; text-decoration: none; }
     .btn-family:hover { background: #e6b422; transform: scale(1.02); }
     @media (max-width: 640px) { .family-cta-section { padding: 32px 20px; } .family-cta-section h2 { font-size: 1.6rem; } }
+
+    .itinerary-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 20px; }
+    .itinerary-card { background: white; border-radius: 20px; padding: 24px; box-shadow: var(--shadow); border: 1px solid var(--border); display: flex; flex-direction: column; }
+    .itinerary-card h3 { font-size: 1.2rem; margin-bottom: 8px; color: var(--blue-dark); }
+    .itinerary-card .price { font-size: 1.5rem; font-weight: 800; color: var(--gold); margin: 12px 0; }
+    .itinerary-card ul { margin: 12px 0; padding-left: 20px; }
+    .itinerary-card ul li { margin-bottom: 6px; font-size: 0.95rem; color: var(--text-muted); }
+    .itinerary-card .btn { margin-top: auto; align-self: flex-start; }
+    @media (max-width: 1024px) { .itinerary-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 640px) { .itinerary-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -138,9 +148,9 @@
 
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-badge">Tsavo East – Premium Safari Guide 2026</div>
-    <h1>Tsavo East Luxury Safari<br>Red Elephants · Endless Savannah</h1>
-    <p class="hero-sub">Exclusive lodges · Private 4x4 safaris · The ultimate beach & bush combo</p>
+    <div class="hero-badge">Tsavo East – Ultra‑Luxury Safari 2026</div>
+    <h1>Tsavo East Private Safari<br>Red Elephants · Endless Savannah</h1>
+    <p class="hero-sub">Exclusive lodges · Private 4x4 game drives · The ultimate beach & bush combo</p>
     <div class="hero-btns">
       <a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20Tsavo%20East%20safari" target="_blank" class="btn btn-whatsapp">Chat with Us</a>
       <a href="#contact-form" class="btn btn-outline">Get a Custom Quote</a>
@@ -180,17 +190,18 @@
   <div class="container">
     <div class="grid-2" style="gap:48px; align-items:start;">
       <div>
-        <h2 class="section-title">Premium Tsavo East Safari Costs (2026)</h2>
+        <h2 class="section-title">Ultra‑Luxury Tsavo East Safari Costs (2026)</h2>
         <div class="prose">
-          <p>Our Tsavo East safari packages are designed for travellers who expect the finest experiences. From exclusive lodges to private 4x4 game drives, every detail is curated for comfort and authenticity.</p>
+          <p>Our Tsavo East safari packages are designed for travellers who expect the finest experiences. From exclusive lodges to private 4x4 game drives, every detail is curated for comfort and authenticity. All prices are per person per night sharing, unless otherwise noted.</p>
           <ul>
-            <li><strong>Mid‑Range Lodge Safari (recommended):</strong> €380–€550 per night – full board, private game drives, park fees included</li>
-            <li><strong>Luxury Tented Camp:</strong> €580–€850 per night – all inclusive, private vehicle, gourmet dining, spa access</li>
-            <li><strong>Ultimate Private Safari:</strong> €900–€1,500+ per night – exclusive lodge buyout, private chef, custom itineraries</li>
-            <li><strong>Park entry fee (non‑resident):</strong> $52 USD per day (handled by us – no extra charges)</li>
-            <li><strong>Private 4x4 safari jeep (per day):</strong> €250–€350 – exclusive vehicle with professional guide</li>
+            <li><strong>Premium Safari Lodge:</strong> from €650–€950 per night – full board, private game drives, park fees included</li>
+            <li><strong>Luxury Tented Camp:</strong> from €950–€1,400 per night – all inclusive, private vehicle, gourmet dining, spa access</li>
+            <li><strong>Ultra‑Luxury Private Safari:</strong> from €1,500–€3,500+ per night – exclusive lodge buyout, private chef, custom itineraries</li>
+            <li><strong>Park entry fee:</strong> included in all our packages – no hidden charges</li>
+            <li><strong>Private 4x4 Safari Jeep:</strong> €800–€1,200 per person (minimum 2 guests) – exclusive vehicle with professional guide</li>
           </ul>
-          <p><strong>Our signature package for Watamu guests:</strong> 3‑night luxury lodge safari – includes private transfers from Watamu, full board, exclusive game drives, and all park fees for €1,600–€2,400 per person.</p>
+          <p><strong>Our signature package for Watamu guests:</strong> 3‑night luxury lodge safari – includes private transfers from Watamu, full board, exclusive game drives, and all park fees from €1,950 per person sharing.</p>
+          <p style="font-size:0.9rem; color:var(--text-muted); margin-top:8px;">* All prices are indicative and subject to seasonality. We'll provide a firm quote based on your exact dates and preferences.</p>
         </div>
       </div>
       <div class="card">
@@ -198,11 +209,11 @@
         <div class="table-wrap">
           <table style="width:100%;min-width:0;">
             <tbody>
-              <tr><td style="padding:10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">Mid‑Range Lodge (per night)</td><td style="padding:10px 0;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">€380–€550</td></tr>
-              <tr><td style="padding:10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">Luxury Tented Camp (per night)</td><td style="padding:10px 0;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">€580–€850</td></tr>
-              <tr><td style="padding:10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">Ultimate Private Safari (per night)</td><td style="padding:10px 0;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">€900–€1,500+</td></tr>
-              <tr><td style="padding:10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">Park Entry Fee (per day, non‑resident)</td><td style="padding:10px 0;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">$52 USD (included in our packages)</td></tr>
-              <tr><td style="padding:10px 0;color:var(--text-muted);">Private 4x4 Safari Jeep (per day)</td><td style="padding:10px 0;font-weight:700;text-align:right;">€250–€350 (private vehicle & guide)</td></tr>
+              <tr><td style="padding:10px 8px 10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">Premium Safari Lodge (per night)</td><td style="padding:10px 0 10px 8px;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">€650–€950</td></tr>
+              <tr><td style="padding:10px 8px 10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">Luxury Tented Camp (per night)</td><td style="padding:10px 0 10px 8px;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">€950–€1,400</td></tr>
+              <tr><td style="padding:10px 8px 10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">Ultra‑Luxury Private Safari (per night)</td><td style="padding:10px 0 10px 8px;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">€1,500–€3,500+</td></tr>
+              <tr><td style="padding:10px 8px 10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">Park Entry Fee (per day, non‑resident)</td><td style="padding:10px 0 10px 8px;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">Included</td></tr>
+              <tr><td style="padding:10px 8px 10px 0;color:var(--text-muted);">Private 4x4 Safari Jeep (per person, min 2)</td><td style="padding:10px 0 10px 8px;font-weight:700;text-align:right;">€800–€1,200</td></tr>
             </tbody>
           </table>
         </div>
@@ -266,27 +277,57 @@
   </div>
 </section>
 
-<!-- Sample Premium Itineraries -->
+<!-- ==================== NEW ITINERARY CARDS ==================== -->
 <section class="section">
   <div class="container">
     <h2 class="section-title">Premium Tsavo East Itineraries from Watamu</h2>
-    <div class="grid-2">
-      <div class="card">
-        <h3>2‑Night Luxury Safari</h3>
-        <p><strong>Day 1:</strong> Depart Watamu 8am in a private 4x4. Arrive Tsavo East, afternoon game drive. Overnight at a premium lodge or tented camp.<br>
-        <strong>Day 2:</strong> Full day game drives (dawn and late afternoon). Visit Aruba Dam – witness hundreds of elephants.<br>
-        <strong>Day 3:</strong> Morning game drive, return to Watamu by lunchtime.<br>
-        <strong>Cost:</strong> €1,100–€1,600 per person sharing (incl. private transfers, luxury lodge, all meals, exclusive game drives, park fees).</p>
-        <a href="#contact-form" class="btn btn-primary mt-16">Request a Quote →</a>
+    <div class="itinerary-grid">
+      <!-- Card 1: 2-Night -->
+      <div class="itinerary-card">
+        <h3>2‑Night Private Luxury Safari</h3>
+        <div class="price">€1,950–€2,950 <span style="font-size:0.9rem; font-weight:400; color:var(--text-muted);">pp sharing</span></div>
+        <ul>
+          <li>Private 4x4 safari jeep</li>
+          <li>Personal safari guide</li>
+          <li>Luxury lodge accommodation</li>
+          <li>All meals & selected drinks</li>
+          <li>Private transfers from Watamu</li>
+          <li>Park fees included</li>
+          <li>Sundowner in the bush</li>
+        </ul>
+        <a href="#contact-form" class="btn btn-primary">Request a Quote →</a>
       </div>
-      <div class="card">
-        <h3>3‑Night Ultimate Safari</h3>
-        <p><strong>Day 1:</strong> Depart Watamu 8am. Afternoon game drive. Overnight at a luxury camp.<br>
-        <strong>Day 2:</strong> Full day game drives (dawn and late afternoon).<br>
-        <strong>Day 3:</strong> Full day exploring remote sections of the park with bush picnic.<br>
-        <strong>Day 4:</strong> Morning game drive, return to Watamu by midday.<br>
-        <strong>Cost:</strong> €1,800–€2,800 per person sharing.</p>
-        <a href="#contact-form" class="btn btn-primary mt-16">Request a Quote →</a>
+
+      <!-- Card 2: 3-Night -->
+      <div class="itinerary-card">
+        <h3>3‑Night Ultimate Tsavo Experience</h3>
+        <div class="price">€3,200–€4,800 <span style="font-size:0.9rem; font-weight:400; color:var(--text-muted);">pp sharing</span></div>
+        <ul>
+          <li>Extended game drives (dawn & dusk)</li>
+          <li>Bush picnic & sundowner</li>
+          <li>Private 4x4 with expert guide</li>
+          <li>Premium lodge or tented camp</li>
+          <li>All meals & premium drinks</li>
+          <li>Transfers & park fees included</li>
+          <li>Optional night game drive</li>
+        </ul>
+        <a href="#contact-form" class="btn btn-primary">Request a Quote →</a>
+      </div>
+
+      <!-- Card 3: Signature -->
+      <div class="itinerary-card">
+        <h3>Signature Private Tsavo Experience</h3>
+        <div class="price">€5,500+ <span style="font-size:0.9rem; font-weight:400; color:var(--text-muted);">per couple</span></div>
+        <ul>
+          <li>Exclusive lodge buyout (if available)</li>
+          <li>Private chef & butler service</li>
+          <li>Customised game drives</li>
+          <li>Helicopter scenic flight (optional)</li>
+          <li>Private transfers from Watamu</li>
+          <li>All park fees & conservation levies</li>
+          <li>Fully personalised itinerary</li>
+        </ul>
+        <a href="#contact-form" class="btn btn-primary">Request a Quote →</a>
       </div>
     </div>
   </div>
@@ -319,12 +360,22 @@
 </section>
 
 <!-- ==================== TRUSTPILOT SECTION ==================== -->
-<div class="trustpilot-card-single">
-  <div class="stars">⭐⭐⭐⭐⭐</div>
-  <p class="review-text">"Best holiday destination for families, friendly staff a once in a lifetime trip."</p>
-  <div class="review-author">Azalia</div>
-  <div class="review-meta">FR • March 17, 2025 • Trustpilot</div>
+<div class="container">
+  <div class="trustpilot-section">
+    <h2>⭐ What Our Guests Say</h2>
+    <p class="subhead">Real reviews from travellers who booked with us</p>
+    <div class="trustpilot-card-single">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p class="review-text">"Best holiday destination for families, friendly staff a once in a lifetime trip."</p>
+      <div class="review-author">Azalia</div>
+      <div class="review-meta">FR • March 17, 2025 • Trustpilot</div>
+    </div>
+    <a href="https://www.trustpilot.com/review/bwanaaditours.ifmosa.com" target="_blank" rel="noopener noreferrer" class="trustpilot-link-btn">
+      ⭐ Read all reviews on Trustpilot →
+    </a>
+  </div>
 </div>
+
 <!-- ==================== FAMILY HOLIDAY SECTION ==================== -->
 <div class="container">
   <div class="family-cta-section">
