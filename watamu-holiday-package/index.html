@@ -377,6 +377,32 @@
     .faq-a.open {
       display: block;
     }
+
+    /* WhatsApp floating button - restored */
+    .wa-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+      background: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+      font-size: 1.8rem;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+    .wa-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 28px rgba(0,0,0,0.3);
+      color: white;
+    }
   </style>
 </head>
 <body>
@@ -707,8 +733,8 @@
   <div class="footer-bottom"><div class="container">&copy; 2026 Watamu Holidays Kenya – Bwanaadi Tours. All rights reserved. | <a href="/kenya-travel-guide/">Kenya Travel Guide</a></div></div>
 </footer>
 
-<!-- Floating "Book Today" button (scrolls to form) -->
-<a href="#contact-form" class="wa-float btn-scroll" title="Book Today">📅</a>
+<!-- Floating WhatsApp button -->
+<a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20Watamu%20holiday%20package" target="_blank" class="wa-float" title="Chat with Us">💬</a>
 
 <!-- Brevo required scripts -->
 <script>
