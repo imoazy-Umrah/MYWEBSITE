@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tsavo East Luxury Safari 2026 – Red Elephants & Premium Lodges | Watamu Holidays</title>
-  <meta name="description" content="Premium Tsavo East safari experiences from Watamu, Mombasa & Diani. Luxury lodges, private 4x4 safaris, and the iconic red elephants. The ultimate beach & bush combo." />
-  <meta name="keywords" content="Tsavo East luxury safari, Tsavo East from Watamu, Tsavo East premium lodges, Tsavo East red elephants, Tsavo East private safari, Kenya luxury safari" />
+  <title>Tsavo East Safari Guide – Red Elephants & Private Luxury Safaris | Watamu Holidays</title>
+  <meta name="description" content="Explore Tsavo East National Park – Kenya's largest wilderness. Private safaris, red elephants, and the perfect beach & bush experience from Watamu, Mombasa & Diani." />
+  <meta name="keywords" content="Tsavo East safari guide, Tsavo East from Watamu, Tsavo East red elephants, Tsavo East private safari, Kenya luxury safari, Tsavo East experiences" />
   <meta name="author" content="Bwanaadi Tours – Watamu Holidays" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://watamuholidays.co.ke/tsavo-east-cost-2026/" />
+  <link rel="canonical" href="https://watamuholidays.co.ke/tsavo-east-safari-guide/" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-  <meta property="og:title" content="Tsavo East Luxury Safari 2026 – Red Elephants & Premium Lodges" />
-  <meta property="og:description" content="Premium Tsavo East safari experiences from the Kenya coast. Luxury lodges, private 4x4 safaris, and the iconic red elephants. Transform your beach holiday into an unforgettable adventure." />
+  <meta property="og:title" content="Tsavo East Safari Guide – Red Elephants & Private Luxury Safaris" />
+  <meta property="og:description" content="Discover Tsavo East's iconic red elephants, vast savannah, and exclusive safari experiences. The ultimate beach & bush combo from the Kenya coast." />
   <meta property="og:image" content="https://images.unsplash.com/photo-1658926342182-512ff6dcc08e?w=1200&auto=format" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://watamuholidays.co.ke/tsavo-east-cost-2026/" />
+  <meta property="og:url" content="https://watamuholidays.co.ke/tsavo-east-safari-guide/" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Google Fonts -->
@@ -51,8 +51,6 @@
     }
     .inline-img { border-radius: 20px; margin: 30px 0; width: 100%; box-shadow: var(--shadow); }
     .img-caption { font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 8px; }
-    .swipe-hint { text-align: center; font-size: 0.7rem; color: #5a6a7a; margin-top: 8px; font-style: italic; }
-    @media (min-width: 640px) { .swipe-hint { display: none !important; } }
     .distance-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 30px 0; }
     .distance-card { background: #eef2e9; border-radius: 16px; padding: 20px; text-align: center; }
     .distance-card h4 { font-size: 1.2rem; color: #0b3b2a; margin-bottom: 8px; }
@@ -118,12 +116,42 @@
     .itinerary-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 20px; }
     .itinerary-card { background: white; border-radius: 20px; padding: 24px; box-shadow: var(--shadow); border: 1px solid var(--border); display: flex; flex-direction: column; }
     .itinerary-card h3 { font-size: 1.2rem; margin-bottom: 8px; color: var(--blue-dark); }
-    .itinerary-card .price { font-size: 1.5rem; font-weight: 800; color: var(--gold); margin: 12px 0; }
     .itinerary-card ul { margin: 12px 0; padding-left: 20px; }
     .itinerary-card ul li { margin-bottom: 6px; font-size: 0.95rem; color: var(--text-muted); }
     .itinerary-card .btn { margin-top: auto; align-self: flex-start; }
     @media (max-width: 1024px) { .itinerary-grid { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 640px) { .itinerary-grid { grid-template-columns: 1fr; } }
+
+    .btn-scroll { cursor: pointer; }
+    .wa-float { display: none !important; }
+
+    .faq-item {
+      background: var(--card);
+      border-radius: 20px;
+      padding: 20px 24px;
+      margin-bottom: 16px;
+      border: 1px solid var(--border);
+    }
+    .faq-q {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--blue-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    .faq-q .chevron {
+      transition: transform 0.2s;
+    }
+    .faq-q.active .chevron { transform: rotate(180deg); }
+    .faq-a {
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-top: 12px;
+      display: none;
+    }
+    .faq-a.open { display: block; }
   </style>
 </head>
 <body>
@@ -134,26 +162,25 @@
     <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="navLinks">
       <li><a href="/">Home</a></li>
-      <li><a href="/watamu-holiday-package-costs-2026/">Watamu Costs</a></li>
-      <li><a href="/kenya-travel-costs-2026/">Kenya Costs</a></li>
-      <li><a href="/mombasa-travel-costs-2026/">Mombasa</a></li>
-      <li><a href="/diani-beach-holiday-costs-2026/">Diani</a></li>
-      <li><a href="/masai-mara-safari-cost-2026/">Safari</a></li>
-      <li><a href="/tsavo-east-cost-2026/" class="active">Tsavo East</a></li>
-      <li><a href="/nairobi-tourist-budget-2026/">Nairobi</a></li>
-      <li><a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20Tsavo%20East%20safari" target="_blank" class="btn-nav">Chat with Us</a></li>
+      <li><a href="/watamu-holiday-package/">Watamu Packages</a></li>
+      <li><a href="/mombasa-holiday-guide/">Mombasa</a></li>
+      <li><a href="/diani-beach-guide/">Diani</a></li>
+      <li><a href="/masai-mara-safari/">Safari</a></li>
+      <li><a href="/tsavo-east-safari-guide/" class="active">Tsavo East</a></li>
+      <li><a href="/nairobi-city-guide/">Nairobi</a></li>
+      <li><a href="#contact-form" class="btn-nav btn-scroll">Book Today</a></li>
     </ul>
   </div>
 </nav>
 
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-badge">Tsavo East – Ultra‑Luxury Safari 2026</div>
+    <div class="hero-badge">Tsavo East – Kenya's Wild Heart</div>
     <h1>Tsavo East Private Safari<br>Red Elephants · Endless Savannah</h1>
-    <p class="hero-sub">Exclusive lodges · Private 4x4 game drives · The ultimate beach & bush combo</p>
+    <p class="hero-sub">Exclusive game drives · Private 4x4 vehicles · The ultimate beach & bush experience</p>
     <div class="hero-btns">
-      <a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20Tsavo%20East%20safari" target="_blank" class="btn btn-whatsapp">Chat with Us</a>
-      <a href="#contact-form" class="btn btn-outline">Get a Custom Quote</a>
+      <a href="#contact-form" class="btn btn-whatsapp btn-scroll">Book Today</a>
+      <a href="#itineraries" class="btn btn-outline">View Itineraries ↓</a>
     </div>
   </div>
 </section>
@@ -185,60 +212,16 @@
   </div>
 </section>
 
-<!-- Premium Cost Breakdown -->
-<section class="section-alt">
-  <div class="container">
-    <div class="grid-2" style="gap:48px; align-items:start;">
-      <div>
-        <h2 class="section-title">Ultra‑Luxury Tsavo East Safari Costs (2026)</h2>
-        <div class="prose">
-          <p>Our Tsavo East safari packages are designed for travellers who expect the finest experiences. From exclusive lodges to private 4x4 game drives, every detail is curated for comfort and authenticity. All prices are per person per night sharing, unless otherwise noted.</p>
-          <ul>
-            <li><strong>Premium Safari Lodge:</strong> from €650–€950 per night – full board, private game drives, park fees included</li>
-            <li><strong>Luxury Tented Camp:</strong> from €950–€1,400 per night – all inclusive, private vehicle, gourmet dining, spa access</li>
-            <li><strong>Ultra‑Luxury Private Safari:</strong> from €1,500–€3,500+ per night – exclusive lodge buyout, private chef, custom itineraries</li>
-            <li><strong>Park entry fee:</strong> included in all our packages – no hidden charges</li>
-            <li><strong>Private 4x4 Safari Jeep:</strong> €800–€1,200 per person (minimum 2 guests) – exclusive vehicle with professional guide</li>
-          </ul>
-          <p><strong>Our signature package for Watamu guests:</strong> 3‑night luxury lodge safari – includes private transfers from Watamu, full board, exclusive game drives, and all park fees from €1,950 per person sharing.</p>
-          <p style="font-size:0.9rem; color:var(--text-muted); margin-top:8px;">* All prices are indicative and subject to seasonality. We'll provide a firm quote based on your exact dates and preferences.</p>
-        </div>
-      </div>
-      <div class="card">
-        <h3 style="font-size:1.3rem;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border);">Premium Tsavo East Rates (per person sharing)</h3>
-        <div class="table-wrap">
-          <table style="width:100%;min-width:0;">
-            <tbody>
-              <tr><td style="padding:10px 8px 10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">Premium Safari Lodge (per night)</td><td style="padding:10px 0 10px 8px;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">€650–€950</td></tr>
-              <tr><td style="padding:10px 8px 10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">Luxury Tented Camp (per night)</td><td style="padding:10px 0 10px 8px;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">€950–€1,400</td></tr>
-              <tr><td style="padding:10px 8px 10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">Ultra‑Luxury Private Safari (per night)</td><td style="padding:10px 0 10px 8px;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">€1,500–€3,500+</td></tr>
-              <tr><td style="padding:10px 8px 10px 0;color:var(--text-muted);border-bottom:1px solid var(--border);">Park Entry Fee (per day, non‑resident)</td><td style="padding:10px 0 10px 8px;font-weight:700;text-align:right;border-bottom:1px solid var(--border);">Included</td></tr>
-              <tr><td style="padding:10px 8px 10px 0;color:var(--text-muted);">Private 4x4 Safari Jeep (per person, min 2)</td><td style="padding:10px 0 10px 8px;font-weight:700;text-align:right;">€800–€1,200</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="swipe-hint">← Swipe to see all rates →</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Elephant Herd Image -->
-<div class="container">
-  <img src="https://images.unsplash.com/photo-1732548314474-2aff3b4e8e55?w=1200&auto=format" alt="Herd of red elephants in Tsavo East National Park" class="inline-img" loading="lazy">
-  <div class="img-caption">Tsavo's famous red elephants – dusted in volcanic soil, found nowhere else on earth.</div>
-</div>
-
 <!-- Why Tsavo East is Special -->
-<section class="section">
+<section class="section-alt">
   <div class="container">
     <div class="grid-2" style="gap:40px;">
       <div>
-        <h2 class="section-title">Why Tsavo East is a Bucket‑List Safari</h2>
+        <h2 class="section-title">The Tsavo East Safari Experience</h2>
         <div class="prose">
-          <p>Tsavo East is Kenya's largest national park – over 13,700 km² of raw, untamed wilderness. Unlike the crowded Masai Mara, Tsavo offers a sense of solitude and genuine discovery. The park is famous for its <strong>"red elephants"</strong> – elephants that dust‑bathe in the park's volcanic soil, giving their skin a striking reddish‑brown hue.</p>
-          <p>You'll also see lions (including the famous maneless males of Tsavo), leopards, cheetahs, buffalo, giraffes, zebras, hippos, crocodiles, and over 500 bird species. The Galana River and Aruba Dam attract huge herds of elephants and buffalo, especially during the dry season (June–October).</p>
-          <p>For history buffs, Tsavo East is where the legendary <strong>"Man‑eaters of Tsavo"</strong> terrorised railway workers in 1898 – a story immortalised in books and films. The park's wild, untamed atmosphere hasn't changed since.</p>
+          <p>Tsavo East is Kenya's largest national park – over 13,700 km² of raw, untamed wilderness. Unlike the crowded Masai Mara, Tsavo offers a sense of solitude and genuine discovery. The park is famous for its <strong>"red elephants"</strong> – elephants that dust‑bathe in the park's volcanic soil, giving their skin a striking reddish‑brown hue found nowhere else on earth.</p>
+          <p>Your private safari takes you into the heart of this vast wilderness. The Galana River and Aruba Dam attract huge herds of elephants and buffalo, especially during the dry season (June–October). Lions (including the legendary maneless males of Tsavo), leopards, cheetahs, and over 500 bird species call this park home.</p>
+          <p>For history enthusiasts, Tsavo East is where the legendary <strong>"Man‑eaters of Tsavo"</strong> terrorised railway workers in 1898 – a story immortalised in books and films. The park's wild, untamed atmosphere hasn't changed since.</p>
         </div>
       </div>
       <div>
@@ -255,6 +238,12 @@
     </div>
   </div>
 </section>
+
+<!-- Elephant Herd Image -->
+<div class="container">
+  <img src="https://images.unsplash.com/photo-1732548314474-2aff3b4e8e55?w=1200&auto=format" alt="Herd of red elephants in Tsavo East National Park" class="inline-img" loading="lazy">
+  <div class="img-caption">Tsavo's famous red elephants – dusted in volcanic soil, found nowhere else on earth.</div>
+</div>
 
 <!-- Lioness Image -->
 <div class="container">
@@ -277,15 +266,14 @@
   </div>
 </section>
 
-<!-- ==================== NEW ITINERARY CARDS ==================== -->
-<section class="section">
+<!-- ==================== ITINERARY CARDS (NO PRICES) ==================== -->
+<section id="itineraries" class="section">
   <div class="container">
-    <h2 class="section-title">Premium Tsavo East Itineraries from Watamu</h2>
+    <h2 class="section-title">Curated Tsavo East Itineraries from Watamu</h2>
     <div class="itinerary-grid">
       <!-- Card 1: 2-Night -->
       <div class="itinerary-card">
         <h3>2‑Night Private Luxury Safari</h3>
-        <div class="price">€1,950–€2,950 <span style="font-size:0.9rem; font-weight:400; color:var(--text-muted);">pp sharing</span></div>
         <ul>
           <li>Private 4x4 safari jeep</li>
           <li>Personal safari guide</li>
@@ -295,13 +283,12 @@
           <li>Park fees included</li>
           <li>Sundowner in the bush</li>
         </ul>
-        <a href="#contact-form" class="btn btn-primary">Request a Quote →</a>
+        <a href="#contact-form" class="btn btn-primary btn-scroll">Enquire Now →</a>
       </div>
 
       <!-- Card 2: 3-Night -->
       <div class="itinerary-card">
         <h3>3‑Night Ultimate Tsavo Experience</h3>
-        <div class="price">€3,200–€4,800 <span style="font-size:0.9rem; font-weight:400; color:var(--text-muted);">pp sharing</span></div>
         <ul>
           <li>Extended game drives (dawn & dusk)</li>
           <li>Bush picnic & sundowner</li>
@@ -311,13 +298,12 @@
           <li>Transfers & park fees included</li>
           <li>Optional night game drive</li>
         </ul>
-        <a href="#contact-form" class="btn btn-primary">Request a Quote →</a>
+        <a href="#contact-form" class="btn btn-primary btn-scroll">Enquire Now →</a>
       </div>
 
       <!-- Card 3: Signature -->
       <div class="itinerary-card">
         <h3>Signature Private Tsavo Experience</h3>
-        <div class="price">€5,500+ <span style="font-size:0.9rem; font-weight:400; color:var(--text-muted);">per couple</span></div>
         <ul>
           <li>Exclusive lodge buyout (if available)</li>
           <li>Private chef & butler service</li>
@@ -327,7 +313,7 @@
           <li>All park fees & conservation levies</li>
           <li>Fully personalised itinerary</li>
         </ul>
-        <a href="#contact-form" class="btn btn-primary">Request a Quote →</a>
+        <a href="#contact-form" class="btn btn-primary btn-scroll">Enquire Now →</a>
       </div>
     </div>
   </div>
@@ -341,7 +327,7 @@
         <h3>📅 Best Time to Visit Tsavo East</h3>
         <ul>
           <li><strong>Dry season (June–October):</strong> Best wildlife viewing – animals gather at water sources.</li>
-          <li><strong>Green season (November–May):</strong> Lush landscapes, excellent bird watching, lower rates.</li>
+          <li><strong>Green season (November–May):</strong> Lush landscapes, excellent bird watching.</li>
           <li><strong>Avoid:</strong> April–May (long rains – some roads become impassable).</li>
         </ul>
       </div>
@@ -388,13 +374,28 @@
 <!-- FAQ Section -->
 <section class="section">
   <div class="container" style="max-width:760px;">
-    <h2 class="section-title mb-32">Frequently Asked Questions – Tsavo East Luxury Safari</h2>
+    <h2 class="section-title mb-32">Frequently Asked Questions – Tsavo East Safari</h2>
     <div class="faq">
-      <div class="faq-item"><div class="faq-q">Is Tsavo East worth it if I'm based in Watamu? <i class="chevron">▾</i></div><div class="faq-a">Absolutely. It's the closest major safari park to the coast and transforms a beach holiday into a complete Kenya experience. Most of our discerning guests say the safari was the highlight of their trip.</div></div>
-      <div class="faq-item"><div class="faq-q">Can I do a day trip from Watamu? <i class="chevron">▾</i></div><div class="faq-a">Yes, but we strongly recommend at least 2 nights for a premium experience. A day trip means 5 hours of driving and only 4‑5 hours in the park – you'll miss the best game viewing times (early morning and late afternoon) and the luxury lodge experience.</div></div>
-      <div class="faq-item"><div class="faq-q">What's the difference between Tsavo East and Tsavo West? <i class="chevron">▾</i></div><div class="faq-a">Tsavo East is vast, open savannah – famous for red elephants, lions, and large herds. Tsavo West is more varied (volcanic landscapes, Mzima Springs, rhino sanctuary). We recommend East for first‑timers and those from the coast; West is better combined with a longer safari.</div></div>
-      <div class="faq-item"><div class="faq-q">Will I see the Big Five? <i class="chevron">▾</i></div><div class="faq-a">Lions, leopards, elephants, and buffalo are common. Rhinos are rare in Tsavo East (they're more often seen in Tsavo West). You'll see plenty of other incredible wildlife.</div></div>
-      <div class="faq-item"><div class="faq-q">How do I book a Tsavo East safari from Watamu? <i class="chevron">▾</i></div><div class="faq-a">Simply fill in the form below or chat with us on WhatsApp. We handle everything – private transfers, lodge bookings, park fees, and exclusive game drives. You just enjoy the experience.</div></div>
+      <div class="faq-item">
+        <div class="faq-q">Is Tsavo East worth it if I'm based in Watamu? <span class="chevron">▾</span></div>
+        <div class="faq-a">Absolutely. It's the closest major safari park to the coast and transforms a beach holiday into a complete Kenya experience. Most of our discerning guests say the safari was the highlight of their trip.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I do a day trip from Watamu? <span class="chevron">▾</span></div>
+        <div class="faq-a">Yes, but we strongly recommend at least 2 nights for a premium experience. A day trip means 5 hours of driving and only 4‑5 hours in the park – you'll miss the best game viewing times (early morning and late afternoon) and the luxury lodge experience.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between Tsavo East and Tsavo West? <span class="chevron">▾</span></div>
+        <div class="faq-a">Tsavo East is vast, open savannah – famous for red elephants, lions, and large herds. Tsavo West is more varied (volcanic landscapes, Mzima Springs, rhino sanctuary). We recommend East for first‑timers and those from the coast; West is better combined with a longer safari.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Will I see the Big Five? <span class="chevron">▾</span></div>
+        <div class="faq-a">Lions, leopards, elephants, and buffalo are common. Rhinos are rare in Tsavo East (they're more often seen in Tsavo West). You'll see plenty of other incredible wildlife.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How do I book a Tsavo East safari from Watamu? <span class="chevron">▾</span></div>
+        <div class="faq-a">Simply fill in the form below. We handle everything – private transfers, lodge bookings, park fees, and exclusive game drives. You just enjoy the experience.</div>
+      </div>
     </div>
   </div>
 </section>
@@ -405,22 +406,22 @@
     <div class="links-bar">
       <p>🗺️ Plan Your Complete Kenya Itinerary</p>
       <div class="links-bar-items">
-        <a href="/watamu-holiday-package-costs-2026/">Watamu Beach Packages</a>
-        <a href="/kenya-travel-costs-2026/">Kenya Travel Costs 2026</a>
-        <a href="/masai-mara-safari-cost-2026/">Masai Mara Safari Costs</a>
-        <a href="/mombasa-travel-costs-2026/">Mombasa Travel Budget</a>
-        <a href="/diani-beach-holiday-costs-2026/">Diani Beach Costs</a>
-        <a href="/nairobi-tourist-budget-2026/">Nairobi Tourist Budget</a>
+        <a href="/watamu-holiday-package/">Watamu Beach Packages</a>
+        <a href="/kenya-travel-guide/">Kenya Travel Guide</a>
+        <a href="/masai-mara-safari/">Masai Mara Safari</a>
+        <a href="/mombasa-holiday-guide/">Mombasa Travel Guide</a>
+        <a href="/diani-beach-guide/">Diani Beach Guide</a>
+        <a href="/nairobi-city-guide/">Nairobi City Guide</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ==================== CONTACT FORM SECTION (Brevo) ==================== -->
+<!-- ==================== CONTACT FORM SECTION ==================== -->
 <section id="contact-form" class="contact-section">
   <div class="container">
-    <h2 class="section-title">Request a Premium Tsavo East Safari Quote</h2>
-    <p style="text-align:center; max-width:600px; margin:0 auto 24px;">Tell us your dates, group size, and preferred accommodation style. We'll create a bespoke safari itinerary and send you a detailed quote within 2 hours.</p>
+    <h2 class="section-title">Request a Bespoke Tsavo East Safari Quote</h2>
+    <p style="text-align:center; max-width:600px; margin:0 auto 24px;">Tell us your dates, group size, and preferred accommodation style. We'll create a personalised safari itinerary and send you a detailed proposal within 2 hours.</p>
 
     <!-- Brevo Form Embed -->
     <div class="sib-form" style="text-align: center; background-color: transparent;">
@@ -444,7 +445,7 @@
         </div>
         <div></div>
         <div id="sib-container" class="sib-container--large sib-container--vertical" style="max-width:540px; text-align:center; background-color:rgba(255,255,255,1); border-width:1px; border-style:solid; border-color:#C0CCD9; border-radius:3px; direction:ltr">
-          <form id="sib-form" method="POST" action="https://36c00b33.sibforms.com/serve/MUIFAFkaTgsiUEKZHrTn-5poIDXCiGJrQqckZp1s4BaCJ6bp7coO0Mv-Qly1OsaocRVE4Q2O0RB-FbYaNgUvenzUgyvHxN9PZ8ThcZLX8k1ZQ0CCj0GQszTHodpVAUNWLONttpOPnzCoWrCnWO1Uju7RRY34RBPKXmLwtB2Ptljj_0jf7-nNP_ipYLj-6PhmcJCrYIg2iwCw1MlREg==" data-type="subscription">
+          <form id="sib-form" method="POST" action="https://36c00b33.sibforms.com/serve/MUIFANfcZGzCdKPu342YOqpHK9e6JpKBxZe9SWHaZf2mIpQ_j5Fx6e7Qdd97s9ACfq4FXsxmfJlgaMUxFWrgCrNKi3Gfo4ntUztGVRvzL1Cw2GgGbxRXni22yCr58bMrmgDqTFLHRAGGDviq617l1Xs-1UX84laWDp-Redf25cmHO5t7b-_1H7FrPiB0E2vegmK10mNXZR50UIwj1w==" data-type="subscription">
             <div style="padding: 8px 0;">
               <div class="sib-form-block" style="font-family:Helvetica, sans-serif; font-size:32px; font-weight:700; text-align:center; color:#3C4858; background-color:transparent; text-align:center">
                 <p>Contact Us</p>
@@ -454,9 +455,9 @@
               <div class="sib-input sib-form-block">
                 <div class="form__entry entry_block">
                   <div class="form__label-row ">
-                    <label class="entry__label" style="font-weight: 700; text-align: left; font-family:Helvetica, sans-serif; font-size:16px; font-weight:700; text-align:left; color:#3c4858;" for="LASTNAME" data-required="*">Enter your name</label>
+                    <label class="entry__label" style="font-weight: 700; text-align: left; font-family:Helvetica, sans-serif; font-size:16px; font-weight:700; text-align:left; color:#3c4858;" for="FIRSTNAME" data-required="*">Enter your name</label>
                     <div class="entry__field">
-                      <input class="input " maxlength="200" type="text" id="LASTNAME" name="LASTNAME" autocomplete="off" placeholder="Name" data-required="true" required />
+                      <input class="input " maxlength="200" type="text" id="FIRSTNAME" name="FIRSTNAME" autocomplete="off" data-required="true" required />
                     </div>
                   </div>
                   <label class="entry__error entry__error--primary" style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#661d1d; background-color:#ffeded; border-color:#ff4949; border-radius:3px;"></label>
@@ -469,7 +470,7 @@
                   <div class="form__label-row ">
                     <label class="entry__label" style="font-weight: 700; text-align: left; font-family:Helvetica, sans-serif; font-size:16px; font-weight:700; text-align:left; color:#3c4858;" for="EMAIL" data-required="*">Enter your email address</label>
                     <div class="entry__field">
-                      <input class="input " type="text" id="EMAIL" name="EMAIL" autocomplete="off" value="" placeholder="EMAIL" data-required="true" required />
+                      <input class="input " type="email" id="EMAIL" name="EMAIL" autocomplete="email" value="" placeholder="EMAIL" data-required="true" required />
                     </div>
                   </div>
                   <label class="entry__error entry__error--primary" style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#661d1d; background-color:#ffeded; border-color:#ff4949; border-radius:3px;"></label>
@@ -483,24 +484,24 @@
               <div class="sib-checkbox-group sib-form-block" data-required="true">
                 <div class="form__entry entry_mcq">
                   <div class="form__label-row ">
-                    <label class="entry__label" style="font-weight: 700; text-align: left; font-family:Helvetica, sans-serif; font-size:16px; font-weight:700; text-align:left; color:#3c4858;" data-required="*">Get a quote today</label>
+                    <label class="entry__label" style="font-weight: 700; text-align: left; font-family:Helvetica, sans-serif; font-size:16px; font-weight:700; text-align:left; color:#3c4858;" data-required="*">Choose your safari</label>
                     <div style="">
                       <div class="entry__choice">
                         <label class="checkbox__label">
-                          <input type="checkbox" class="input_replaced" name="lists_25[]" data-value="Looking to book a family holiday" value="8" data-required="true" />
-                          <span class="checkbox checkbox_tick_positive" style="margin-left:"></span><span style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#3C4858; background-color:transparent;">Looking to book a family holiday</span>
+                          <input type="checkbox" class="input_replaced" name="lists_26[]" data-value="2-Night Private Luxury Safari" value="21" data-required="true" />
+                          <span class="checkbox checkbox_tick_positive" style="margin-left:"></span><span style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#3C4858; background-color:transparent;">2-Night Private Luxury Safari</span>
                         </label>
                       </div>
                       <div class="entry__choice">
                         <label class="checkbox__label">
-                          <input type="checkbox" class="input_replaced" name="lists_25[]" data-value="Looking to book a group holiday (4+)" value="9" data-required="true" />
-                          <span class="checkbox checkbox_tick_positive" style="margin-left:"></span><span style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#3C4858; background-color:transparent;">Looking to book a group holiday (4+)</span>
+                          <input type="checkbox" class="input_replaced" name="lists_26[]" data-value="3-Night Ultimate Tsavo Experience" value="22" data-required="true" />
+                          <span class="checkbox checkbox_tick_positive" style="margin-left:"></span><span style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#3C4858; background-color:transparent;">3-Night Ultimate Tsavo Experience</span>
                         </label>
                       </div>
                       <div class="entry__choice">
                         <label class="checkbox__label">
-                          <input type="checkbox" class="input_replaced" name="lists_25[]" data-value="Looking to book for 1-3 people" value="10" data-required="true" />
-                          <span class="checkbox checkbox_tick_positive" style="margin-left:"></span><span style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#3C4858; background-color:transparent;">Looking to book for 1-3 people</span>
+                          <input type="checkbox" class="input_replaced" name="lists_26[]" data-value="Signature Private Tsavo Experience" value="23" data-required="true" />
+                          <span class="checkbox checkbox_tick_positive" style="margin-left:"></span><span style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#3C4858; background-color:transparent;">Signature Private Tsavo Experience</span>
                         </label>
                       </div>
                     </div>
@@ -515,7 +516,7 @@
                   <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
                     <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
                   </svg>
-                  SUBMIT
+                  REQUEST
                 </button>
               </div>
             </div>
@@ -533,14 +534,15 @@
   <div class="container">
     <div class="footer-grid">
       <div><div class="footer-brand"><span>Watamu</span> Holidays Kenya</div><p class="footer-desc">Your trusted local expert for luxury Kenyan beach and safari experiences. Operated by Bwanaadi Tours (20+ years).</p></div>
-      <div class="footer-col"><h4>Destinations</h4><ul><li><a href="/watamu-holiday-package-costs-2026/">Watamu Beach</a></li><li><a href="/mombasa-travel-costs-2026/">Mombasa</a></li><li><a href="/diani-beach-holiday-costs-2026/">Diani Beach</a></li><li><a href="/masai-mara-safari-cost-2026/">Safari Guide</a></li><li><a href="/tsavo-east-cost-2026/">Tsavo East</a></li><li><a href="/nairobi-tourist-budget-2026/">Nairobi</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul><li>Watamu, Kilifi County, Kenya</li><li>+254 706 688 115</li><li>info@watamuholidays.co.ke</li><li><a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20Tsavo%20East%20safari" target="_blank">Chat with Us</a></li><li><a href="#contact-form">Get a Custom Quote</a></li></ul></div>
+      <div class="footer-col"><h4>Destinations</h4><ul><li><a href="/watamu-holiday-package/">Watamu Beach</a></li><li><a href="/mombasa-holiday-guide/">Mombasa</a></li><li><a href="/diani-beach-guide/">Diani Beach</a></li><li><a href="/masai-mara-safari/">Safari Guide</a></li><li><a href="/tsavo-east-safari-guide/">Tsavo East</a></li><li><a href="/nairobi-city-guide/">Nairobi</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li>Watamu, Kilifi County, Kenya</li><li>+254 706 688 115</li><li>info@watamuholidays.co.ke</li><li><a href="#contact-form" class="btn-scroll">Book Today</a></li></ul></div>
     </div>
   </div>
-  <div class="footer-bottom"><div class="container">&copy; 2026 Watamu Holidays Kenya – Bwanaadi Tours. All rights reserved. | <a href="/kenya-travel-costs-2026/">Kenya Travel Cost Hub</a></div></div>
+  <div class="footer-bottom"><div class="container">&copy; 2026 Watamu Holidays Kenya – Bwanaadi Tours. All rights reserved. | <a href="/kenya-travel-guide/">Kenya Travel Guide</a></div></div>
 </footer>
 
-<a href="https://wa.me/254706688115?text=I%20want%20to%20book%20a%20Tsavo%20East%20safari" target="_blank" class="wa-float" title="Chat with Us">💬</a>
+<!-- Floating "Book Today" button (scrolls to form) -->
+<a href="#contact-form" class="wa-float btn-scroll" title="Book Today">📅</a>
 
 <!-- Brevo required scripts -->
 <script>
@@ -566,6 +568,31 @@
 
 <script src="/script.js" defer></script>
 
+<!-- Smooth scroll & FAQ toggle -->
+<script>
+  document.querySelectorAll('.btn-scroll').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector('#contact-form');
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', function() {
+      const answer = this.nextElementSibling;
+      const chevron = this.querySelector('.chevron');
+      if (answer.classList.contains('open')) {
+        answer.classList.remove('open');
+        chevron.style.transform = 'rotate(0deg)';
+      } else {
+        answer.classList.add('open');
+        chevron.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+</script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -573,7 +600,7 @@
   "name": "Tsavo East National Park",
   "alternateName": "Tsavo East",
   "description": "Kenya's largest national park, famous for red elephants, maneless lions, and vast open savannah. The perfect luxury safari add‑on from Watamu, Mombasa or Diani.",
-  "url": "https://watamuholidays.co.ke/tsavo-east-cost-2026/"
+  "url": "https://watamuholidays.co.ke/tsavo-east-safari-guide/"
 }
 </script>
 </body>
